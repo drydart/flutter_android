@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Editor backup files
+*~
+
+# rst2html outputs
+*.html
+
+# Dart artifacts
+.dart_tool/
+.packages
+build/
+pubspec.lock
