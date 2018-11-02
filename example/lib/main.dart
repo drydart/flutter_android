@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_android/flutter_android.dart';
+import 'package:flutter_android/android.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(ExampleApp());
 
-class MyApp extends StatefulWidget {
+class ExampleApp extends StatefulWidget {
   @override
-  _MyAppState createState() => new _MyAppState();
+  State<ExampleApp> createState() => _ExampleAppState();
 }
 
-class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+class _ExampleAppState extends State<ExampleApp> {
+  String _platformVersion = "Unknown";
 
   @override
   void initState() {
@@ -27,9 +27,10 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await FlutterAndroid.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+      platformVersion = await Android.platformVersion;
+    }
+    on PlatformException {
+      platformVersion = "Failed to get platform version.";
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -44,13 +45,13 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: const Text('Plugin example app'),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("flutter_android"),
         ),
-        body: new Center(
-          child: new Text('Running on: $_platformVersion\n'),
+        body: Center(
+          child: Text("Running on: $_platformVersion\n"),
         ),
       ),
     );
