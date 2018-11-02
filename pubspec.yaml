@@ -7,9 +7,15 @@ author: Arto Bendiken <arto@bendiken.net>
 homepage: https://github.com/drydart/flutter_android
 documentation:
 dependencies:
+  flutter:
+    sdk: flutter
 dev_dependencies:
   test: '>=1.3.4 <2.0.0'
 dependency_overrides:
 environment:
- sdk: '>=2.0.0 <3.0.0'
+  sdk: '>=2.0.0 <3.0.0'
 executables:
+flutter:
+  plugin:
+    androidPackage: com.github.drydart.flutterandroid
+    pluginClass: FlutterAndroidPlugin
