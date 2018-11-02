@@ -1,3 +1,5 @@
+/* This is free and unencumbered software released into the public domain. */
+
 package com.github.drydart.flutter_android;
 
 import io.flutter.plugin.common.MethodCall;
