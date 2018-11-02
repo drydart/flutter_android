@@ -1,4 +1,4 @@
-package com.github.drydart.flutterandroidexample;
+package com.github.drydart.flutter_android.example;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

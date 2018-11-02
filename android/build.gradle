@@ -1,4 +1,4 @@
-group 'com.github.drydart.flutterandroid'
+group 'com.github.drydart.flutter_android'
 version '1.0-SNAPSHOT'
 
 buildscript {

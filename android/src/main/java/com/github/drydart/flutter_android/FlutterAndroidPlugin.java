@@ -1,4 +1,4 @@
-package com.github.drydart.flutterandroid;
+package com.github.drydart.flutter_android;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;

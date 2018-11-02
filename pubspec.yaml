@@ -17,5 +17,5 @@ environment:
 executables:
 flutter:
   plugin:
-    androidPackage: com.github.drydart.flutterandroid
+    androidPackage: com.github.drydart.flutter_android
     pluginClass: FlutterAndroidPlugin
