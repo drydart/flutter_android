@@ -12,3 +12,13 @@
 .packages
 build/
 pubspec.lock
+
+# VS Code artifacts
+android/.classpath
+android/.project
+android/.settings/
+example/android/.project
+example/android/.settings/
+example/android/app/.classpath
+example/android/app/.project
+example/android/app/.settings/
