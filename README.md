@@ -1,5 +1,5 @@
-Android Support for Flutter
-===========================
+Android Bindings for Flutter
+============================
 
 [![Project license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
 [![Pub package](https://img.shields.io/pub/v/flutter_android.svg)](https://pub.dartlang.org/packages/flutter_android)

@@ -2,7 +2,7 @@
 name: flutter_android
 version: 0.1.0
 description: >-
-  Android Support for Flutter
+  Android Bindings for Flutter
 author: Arto Bendiken <arto@bendiken.net>
 homepage: https://github.com/drydart/flutter_android
 documentation:
