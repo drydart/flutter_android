@@ -26,6 +26,7 @@ class ContextMethodHandler implements MethodCallHandler {
     final Context context = registrar.context();
     assert(context != null);
 
+    assert(call.method != null);
     switch (call.method) {
       case "getCacheDir":
         result.success(context.getCacheDir().toString());

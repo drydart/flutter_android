@@ -1,5 +1,6 @@
 /* This is free and unencumbered software released into the public domain. */
 
+/// Android bindings for Flutter.
 library android;
 
 import 'dart:async';
@@ -7,6 +8,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 export 'android_content.dart';
+export 'android_os.dart';
 
 /// Android metadata.
 abstract class Android {

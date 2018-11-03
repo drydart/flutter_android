@@ -22,11 +22,13 @@ class AndroidMethodHandler implements MethodCallHandler {
     assert(call != null);
     assert(result != null);
 
-    if (call.method.equals("getPlatformVersion")) {
-      result.success("Android " + android.os.Build.VERSION.RELEASE);
-      return;
+    assert(call.method != null);
+    switch (call.method) {
+      case "getPlatformVersion":
+        result.success("Android " + android.os.Build.VERSION.RELEASE);
+        break;
+      default:
+        result.notImplemented();
     }
-
-    result.notImplemented();
   }
 }
