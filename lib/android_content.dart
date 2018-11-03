@@ -5,7 +5,8 @@
 /// See: https://developer.android.com/reference/android/content/package-summary
 library android_content;
 
-import 'dart:async';
+import 'dart:async' show Future;
+import 'dart:io' show Directory, File;
 
 import 'package:flutter/services.dart';
 
@@ -31,27 +32,24 @@ abstract class Context {
   /// the filesystem.
   ///
   /// See: https://developer.android.com/reference/android/content/Context.html#getCacheDir()
-  static Future<String> get cacheDir async {
-    final String result = await _channel.invokeMethod('getCacheDir');
-    return result;
+  static Future<Directory> get cacheDir async {
+    return Directory(await _channel.invokeMethod('getCacheDir') as String);
   }
 
   /// Returns the absolute path to the application specific cache directory on
   /// the filesystem designed for storing cached code.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getCodeCacheDir()
-  static Future<String> get codeCacheDir async {
-    final String result = await _channel.invokeMethod('getCodeCacheDir');
-    return result;
+  static Future<Directory> get codeCacheDir async {
+    return Directory(await _channel.invokeMethod('getCodeCacheDir') as String);
   }
 
   /// Returns the absolute path to the directory on the filesystem where all
   /// private files belonging to this app are stored.
   ///
   /// See: https://developer.android.com/reference/android/content/Context.html#getDataDir()
-  static Future<String> get dataDir async {
-    final String result = await _channel.invokeMethod('getDataDir');
-    return result;
+  static Future<Directory> get dataDir async {
+    return Directory(await _channel.invokeMethod('getDataDir') as String);
   }
 
   /// Returns absolute path to application-specific directory on the primary
@@ -60,9 +58,8 @@ abstract class Context {
   /// visible to the user as media.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getExternalCacheDir()
-  static Future<String> get externalCacheDir async {
-    final String result = await _channel.invokeMethod('getExternalCacheDir');
-    return result;
+  static Future<Directory> get externalCacheDir async {
+    return Directory(await _channel.invokeMethod('getExternalCacheDir') as String);
   }
 
   /// Returns the absolute path to the directory on the primary shared/external
@@ -71,27 +68,24 @@ abstract class Context {
   /// the user as media.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getExternalFilesDir(java.lang.String)
-  static Future<String> get externalFilesDir async {
-    final String result = await _channel.invokeMethod('getExternalFilesDir');
-    return result;
+  static Future<Directory> get externalFilesDir async {
+    return Directory(await _channel.invokeMethod('getExternalFilesDir') as String);
   }
 
   /// Returns the absolute path to the directory on the filesystem where files
   /// created with `openFileOutput(String, int)` are stored.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getFilesDir()
-  static Future<String> get filesDir async {
-    final String result = await _channel.invokeMethod('getFilesDir');
-    return result;
+  static Future<Directory> get filesDir async {
+    return Directory(await _channel.invokeMethod('getFilesDir') as String);
   }
 
   /// Returns the absolute path to the directory where files placed under this
   /// directory will be excluded from automatic backup to remote storage.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getNoBackupFilesDir()
-  static Future<String> get noBackupFilesDir async {
-    final String result = await _channel.invokeMethod('getNoBackupFilesDir');
-    return result;
+  static Future<Directory> get noBackupFilesDir async {
+    return Directory(await _channel.invokeMethod('getNoBackupFilesDir') as String);
   }
 
   /// Return the full path to this context's primary Android package. The
@@ -99,17 +93,15 @@ abstract class Context {
   /// and assets.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getPackageCodePath()
-  static Future<String> get packageCodePath async {
-    final String result = await _channel.invokeMethod('getPackageCodePath');
-    return result;
+  static Future<File> get packageCodePath async {
+    return File(await _channel.invokeMethod('getPackageCodePath') as String);
   }
 
   /// Return the name of this application's package.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getPackageName()
   static Future<String> get packageName async {
-    final String result = await _channel.invokeMethod('getPackageName');
-    return result;
+    return await _channel.invokeMethod('getPackageName') as String;
   }
 
   /// Return the full path to this context's primary Android package. The
@@ -117,9 +109,8 @@ abstract class Context {
   /// resources.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getPackageResourcePath()
-  static Future<String> get packageResourcePath async {
-    final String result = await _channel.invokeMethod('getPackageResourcePath');
-    return result;
+  static Future<File> get packageResourcePath async {
+    return File(await _channel.invokeMethod('getPackageResourcePath') as String);
   }
 }
 

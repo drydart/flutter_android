@@ -6,7 +6,7 @@
 /// See: https://developer.android.com/reference/android/os/package-summary
 library android_os;
 
-import 'dart:async';
+import 'dart:async' show Future;
 import 'dart:io' show Directory, File;
 
 import 'package:flutter/services.dart';
@@ -21,16 +21,14 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getDataDirectory()
   static Future<Directory> get dataDirectory async {
-    final String path = await _channel.invokeMethod('getDataDirectory');
-    return Directory(path);
+    return Directory(await _channel.invokeMethod('getDataDirectory') as String);
   }
 
   /// Return the download/cache content directory.
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getDownloadCacheDirectory()
   static Future<Directory> get downloadCacheDirectory async {
-    final String path = await _channel.invokeMethod('getDownloadCacheDirectory');
-    return Directory(path);
+    return Directory(await _channel.invokeMethod('getDownloadCacheDirectory') as String);
   }
 
   /// Return the primary shared/external storage directory.
@@ -42,16 +40,14 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getExternalStorageDirectory()
   static Future<Directory> get externalStorageDirectory async {
-    final String path = await _channel.invokeMethod('getExternalStorageDirectory');
-    return Directory(path);
+    return Directory(await _channel.invokeMethod('getExternalStorageDirectory') as String);
   }
 
   /// Returns the current state of the primary shared/external storage media.
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getExternalStorageState()
   static Future<String> get externalStorageState async {
-    final String value = await _channel.invokeMethod('getExternalStorageState');
-    return value; // TODO: enum values
+    return await _channel.invokeMethod('getExternalStorageState') as String; // TODO: enum values
   }
 
   /// Return root of the "system" partition holding the core Android OS. Always
@@ -59,15 +55,14 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getRootDirectory()
   static Future<Directory> get rootDirectory async {
-    final String path = await _channel.invokeMethod('getRootDirectory');
-    return Directory(path);
+    return Directory(await _channel.invokeMethod('getRootDirectory') as String);
   }
 
   /// Returns whether the primary shared/external storage media is emulated.
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#isExternalStorageEmulated()
   static Future<bool> get isExternalStorageEmulated async {
-    return await _channel.invokeMethod('isExternalStorageEmulated');
+    return await _channel.invokeMethod('isExternalStorageEmulated') as bool;
   }
 
   /// Returns whether the primary shared/external storage media is physically
@@ -75,6 +70,6 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#isExternalStorageRemovable()
   static Future<bool> get isExternalStorageRemovable async {
-    return await _channel.invokeMethod('isExternalStorageRemovable');
+    return await _channel.invokeMethod('isExternalStorageRemovable') as bool;
   }
 }
