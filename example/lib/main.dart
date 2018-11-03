@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_android/android.dart';
+import 'package:flutter_android/android.dart' as android;
 
 void main() => runApp(ExampleApp());
 
@@ -27,7 +27,7 @@ class _ExampleAppState extends State<ExampleApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await Android.platformVersion;
+      platformVersion = await android.Android.platformVersion;
     }
     on PlatformException {
       platformVersion = "Failed to get platform version.";

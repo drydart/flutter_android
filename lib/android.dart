@@ -6,6 +6,8 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 
+export 'android_content.dart';
+
 /// Android metadata.
 abstract class Android {
   static const MethodChannel _channel = MethodChannel('flutter_android/Android');
