@@ -9,8 +9,20 @@ import 'package:flutter/services.dart' show MethodChannel;
 import 'package:platform/platform.dart' show Platform, LocalPlatform;
 
 export 'android_app.dart';
+export 'android_bluetooth.dart';
 export 'android_content.dart';
+export 'android_database.dart';
+export 'android_hardware.dart';
+export 'android_location.dart';
+export 'android_media.dart';
+export 'android_net.dart';
+export 'android_nfc.dart';
 export 'android_os.dart';
+export 'android_provider.dart';
+export 'android_security.dart';
+export 'android_speech.dart';
+export 'android_telephony.dart';
+export 'android_view.dart';
 
 const Platform _platform = LocalPlatform();
 

@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.4] - 2018-11-14
 ### Added
+- `android_bluetooth` library
+- `android_database` library
+- `android_hardware` library
+- `android_location` library
+- `android_media` library
+- `android_net` library
+- `android_nfc` library
+- `android_provider` library
+- `android_security` library
+- `android_speech` library
+- `android_telephony` library
+- `android_view` library
 
 ## [0.1.3] - 2018-11-14
 ### Added

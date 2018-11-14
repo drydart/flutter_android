@@ -2,10 +2,10 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_android/android.dart';
+import 'package:flutter_android/android_speech.dart';
 
 void main() {
-  group("android", () {
+  group("android_speech", () {
     // TODO
   });
 }
