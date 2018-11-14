@@ -4,6 +4,20 @@
 /// inter-process communication on the device.
 ///
 /// See: https://developer.android.com/reference/android/os/package-summary
+///
+/// {@canonicalFor battery_manager.BatteryManager}
+/// {@canonicalFor build.Build}
+/// {@canonicalFor environment.Environment}
+/// {@canonicalFor hardware_properties_manager.HardwarePropertiesManager}
+/// {@canonicalFor parcel.Parcel}
+/// {@canonicalFor parcelable.Parcelable}
+/// {@canonicalFor power_manager.PowerManager}
+/// {@canonicalFor process.Process}
+/// {@canonicalFor stat_fs.StatFs}
+/// {@canonicalFor system_clock.SystemClock}
+/// {@canonicalFor user_manager.UserManager}
+/// {@canonicalFor vibration_effect.VibrationEffect}
+/// {@canonicalFor vibrator.Vibrator}
 library android_os;
 
 export 'src/os/battery_manager.dart' show BatteryManager;

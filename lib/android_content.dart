@@ -3,6 +3,12 @@
 /// Contains classes for accessing and publishing data on a device.
 ///
 /// See: https://developer.android.com/reference/android/content/package-summary
+///
+/// {@canonicalFor context.Context}
+/// {@canonicalFor exceptions.ActivityNotFoundException}
+/// {@canonicalFor intent.Intent}
+/// {@canonicalFor intent_filter.IntentFilter}
+/// {@canonicalFor shared_preferences.SharedPreferences}
 library android_content;
 
 export 'src/content/context.dart' show Context;

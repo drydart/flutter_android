@@ -4,6 +4,20 @@
 /// model.
 ///
 /// See: https://developer.android.com/reference/android/app/package-summary
+///
+/// {@canonicalFor activity.Activity}
+/// {@canonicalFor activity_manager.ActivityManager}
+/// {@canonicalFor alarm_manager.AlarmManager}
+/// {@canonicalFor download_manager.DownloadManager}
+/// {@canonicalFor exceptions.AuthenticationRequiredException}
+/// {@canonicalFor keyguard_manager.KeyguardManager}
+/// {@canonicalFor notification.Notification}
+/// {@canonicalFor notification_builder.NotificationBuilder}
+/// {@canonicalFor notification_manager.NotificationManager}
+/// {@canonicalFor search_manager.SearchManager}
+/// {@canonicalFor wallpaper_colors.WallpaperColors}
+/// {@canonicalFor wallpaper_info.WallpaperInfo}
+/// {@canonicalFor wallpaper_manager.WallpaperManager}
 library android_app;
 
 export 'src/app/activity.dart' show Activity;
