@@ -1,8 +1,9 @@
-PANDOC ?= pandoc
-PUB    ?= pub
+FLUTTER ?= flutter
+PANDOC  ?= pandoc
+PUB     ?= pub
 
 check:
-	$(PUB) run test
+	$(FLUTTER) test
 
 .PHONY: check
 .SECONDARY:

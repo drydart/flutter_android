@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.3] - 2018-11-14
 ### Added
 - `android_content.Context.*_SERVICE` constants
+- `android_content.Context.getSystemService()` method
 ### Changed
 - All plugin code is now protected by a `LocalPlatform().isAndroid` assertion
 - The appropriate classes now implement `android_os.Parcelable`

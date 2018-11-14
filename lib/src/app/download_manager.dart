@@ -4,5 +4,5 @@
 /// downloads.
 ///
 /// See: https://developer.android.com/reference/android/app/DownloadManager
-abstract class DownloadManager {
+class DownloadManager {
 }

@@ -4,5 +4,5 @@
 /// containing process.
 ///
 /// See: https://developer.android.com/reference/android/app/ActivityManager
-abstract class ActivityManager {
+class ActivityManager {
 }

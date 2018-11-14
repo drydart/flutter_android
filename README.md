@@ -27,6 +27,7 @@ Reference
 - [`Context.externalCacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/externalCacheDir.html)
 - [`Context.externalFilesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/externalFilesDir.html)
 - [`Context.filesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/filesDir.html)
+- [`Context.getSystemService()`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/getSystemService.html)
 - [`Context.noBackupFilesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/noBackupFilesDir.html)
 - [`Context.packageCodePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageCodePath.html)
 - [`Context.packageName`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageName.html)

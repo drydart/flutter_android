@@ -6,5 +6,5 @@
 /// dimensions for the wallpaper, set the wallpaper, and more.
 ///
 /// See: https://developer.android.com/reference/android/app/WallpaperManager
-abstract class WallpaperManager {
+class WallpaperManager {
 }

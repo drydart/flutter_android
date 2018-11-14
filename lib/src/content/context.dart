@@ -6,6 +6,20 @@ import 'dart:io' show Directory, File;
 import 'package:flutter/services.dart' show MethodChannel;
 import 'package:platform/platform.dart' show Platform, LocalPlatform;
 
+import '../app/activity_manager.dart' show ActivityManager;
+import '../app/alarm_manager.dart' show AlarmManager;
+import '../app/download_manager.dart' show DownloadManager;
+import '../app/keyguard_manager.dart' show KeyguardManager;
+import '../app/notification_manager.dart' show NotificationManager;
+import '../app/search_manager.dart' show SearchManager;
+import '../app/wallpaper_manager.dart' show WallpaperManager;
+
+import '../os/battery_manager.dart' show BatteryManager;
+import '../os/hardware_properties_manager.dart' show HardwarePropertiesManager;
+import '../os/power_manager.dart' show PowerManager;
+import '../os/user_manager.dart' show UserManager;
+import '../os/vibrator.dart' show Vibrator;
+
 const Platform _platform = LocalPlatform();
 
 /// Interface to global information about an application environment.
@@ -216,6 +230,44 @@ abstract class Context {
 
   /// See: https://developer.android.com/reference/android/content/Context#WINDOW_SERVICE
   static const String WINDOW_SERVICE = "window";
+
+  /// Returns the handle to a system-level service by name.
+  ///
+  /// The class of the returned object varies by the requested name.
+  /// Returns the service or `null` if the name does not exist.
+  ///
+  /// See: https://developer.android.com/reference/android/content/Context.html#getSystemService(java.lang.String)
+  static dynamic getSystemService(final String name) {
+    assert(_platform.isAndroid);
+    switch (name) {
+      case ACTIVITY_SERVICE:
+        return ActivityManager();
+      case ALARM_SERVICE:
+        return AlarmManager();
+      case BATTERY_SERVICE:
+        return BatteryManager();
+      case DOWNLOAD_SERVICE:
+        return DownloadManager();
+      case HARDWARE_PROPERTIES_SERVICE:
+        return HardwarePropertiesManager();
+      case KEYGUARD_SERVICE:
+        return KeyguardManager();
+      case NOTIFICATION_SERVICE:
+        return NotificationManager();
+      case POWER_SERVICE:
+        return PowerManager();
+      case SEARCH_SERVICE:
+        return SearchManager();
+      case USER_SERVICE:
+        return UserManager();
+      case VIBRATOR_SERVICE:
+        return Vibrator();
+      case WALLPAPER_SERVICE:
+        return WallpaperManager();
+      default:
+        return null; // unknown service
+    }
+  }
 
   /// Returns the absolute path to the application specific cache directory on
   /// the filesystem.

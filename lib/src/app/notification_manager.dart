@@ -5,5 +5,5 @@
 /// This is how you tell the user that something has happened in the background.
 ///
 /// See: https://developer.android.com/reference/android/app/NotificationManager
-abstract class NotificationManager {
+class NotificationManager {
 }
