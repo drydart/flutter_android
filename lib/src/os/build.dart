@@ -1,5 +1,9 @@
 /* This is free and unencumbered software released into the public domain. */
 
+import 'package:platform/platform.dart' show Platform, LocalPlatform;
+
+const Platform _platform = LocalPlatform();
+
 /// Information about the current build, extracted from system properties.
 ///
 /// See: https://developer.android.com/reference/android/os/Build.html
@@ -11,6 +15,7 @@ abstract class Build {
   ///
   /// See: https://developer.android.com/reference/android/os/Build.html#getRadioVersion()
   static Future<String> get radioVersion {
+    assert(_platform.isAndroid);
     return null; // TODO
   }
 
@@ -18,6 +23,7 @@ abstract class Build {
   ///
   /// See: https://developer.android.com/reference/android/os/Build.html#getSerial()
   static Future<String> get serial {
+    assert(_platform.isAndroid);
     return null; // TODO
   }
 }
