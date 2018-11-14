@@ -3,9 +3,9 @@
 /// Android bindings for Flutter.
 library android;
 
-import 'dart:async';
+import 'dart:async' show Future;
 
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart' show MethodChannel;
 
 export 'android_content.dart';
 export 'android_os.dart';

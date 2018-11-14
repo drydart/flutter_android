@@ -9,7 +9,7 @@ library android_os;
 import 'dart:async' show Future;
 import 'dart:io' show Directory, File;
 
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart' show MethodChannel;
 
 /// Provides access to environment variables.
 ///

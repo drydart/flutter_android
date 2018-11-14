@@ -8,7 +8,7 @@ library android_content;
 import 'dart:async' show Future;
 import 'dart:io' show Directory, File;
 
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart' show MethodChannel, PlatformException;
 
 /// This exception is thrown when a call to `Context.startActivity(Intent)` or
 /// one of its variants fails because an `Activity` can not be found to execute
