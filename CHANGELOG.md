@@ -7,8 +7,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.1.3] - 2018-11-14
+### Added
+- `android_content.Context.*_SERVICE` constants
 ### Changed
-- All code now protected by a `LocalPlatform().isAndroid` assertion
+- All plugin code is now protected by a `LocalPlatform().isAndroid` assertion
 - The appropriate classes now implement `android_os.Parcelable`
 
 ## [0.1.2] - 2018-11-14
