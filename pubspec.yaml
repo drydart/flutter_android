@@ -9,6 +9,7 @@ documentation:
 dependencies:
   flutter:
     sdk: flutter
+  platform: ^2.2.0
 dev_dependencies:
   test: '>=1.3.4 <2.0.0'
 dependency_overrides:
