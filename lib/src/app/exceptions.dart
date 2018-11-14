@@ -2,6 +2,8 @@
 
 import 'package:flutter/services.dart' show PlatformException;
 
+import '../os/parcelable.dart' show Parcelable;
+
 /// Thrown when authentication is needed from the end user before viewing the
 /// content.
 ///
@@ -10,4 +12,4 @@ import 'package:flutter/services.dart' show PlatformException;
 /// entering authentication credentials, or granting access via other means.
 ///
 /// See: https://developer.android.com/reference/android/app/AuthenticationRequiredException
-class AuthenticationRequiredException extends PlatformException {}
+class AuthenticationRequiredException extends PlatformException implements Parcelable {}
