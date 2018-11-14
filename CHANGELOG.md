@@ -8,29 +8,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.2] - 2018-11-14
 ### Added
+- [platform](https://pub.dartlang.org/packages/platform) dependency
+- `android_app` library
 
 ## [0.1.1] - 2018-11-03
 ### Added
-- `android_os.Environment.dataDirectory`
-- `android_os.Environment.downloadCacheDirectory`
-- `android_os.Environment.externalStorageDirectory`
-- `android_os.Environment.externalStorageState`
-- `android_os.Environment.rootDirectory`
-- `android_os.Environment.isExternalStorageEmulated`
-- `android_os.Environment.isExternalStorageRemovable`
+- `android_os` library
+- `android_os.Environment.dataDirectory` getter
+- `android_os.Environment.downloadCacheDirectory` getter
+- `android_os.Environment.externalStorageDirectory` getter
+- `android_os.Environment.externalStorageState` getter
+- `android_os.Environment.rootDirectory` getter
+- `android_os.Environment.isExternalStorageEmulated` getter
+- `android_os.Environment.isExternalStorageRemovable` getter
 
 ## [0.1.0] - 2018-11-03
 ### Added
-- `android_content.Context.cacheDir`
-- `android_content.Context.codeCacheDir`
-- `android_content.Context.dataDir`
-- `android_content.Context.externalCacheDir`
-- `android_content.Context.externalFilesDir`
-- `android_content.Context.filesDir`
-- `android_content.Context.noBackupFilesDir`
-- `android_content.Context.packageCodePath`
-- `android_content.Context.packageName`
-- `android_content.Context.packageResourcePath`
+- `android_content` library
+- `android_content.Context.cacheDir` getter
+- `android_content.Context.codeCacheDir` getter
+- `android_content.Context.dataDir` getter
+- `android_content.Context.externalCacheDir` getter
+- `android_content.Context.externalFilesDir` getter
+- `android_content.Context.filesDir` getter
+- `android_content.Context.noBackupFilesDir` getter
+- `android_content.Context.packageCodePath` getter
+- `android_content.Context.packageName` getter
+- `android_content.Context.packageResourcePath` getter
 
+[0.1.2]: https://github.com/drydart/flutter_android/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/drydart/flutter_android/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/drydart/flutter_android/compare/0.0.1...0.1.0

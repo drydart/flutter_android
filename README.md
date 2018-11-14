@@ -13,6 +13,10 @@ Reference
 
     import 'package:flutter_android/android.dart' as android;
 
+### [`android_app`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/android_app-library.html)
+
+    import 'package:flutter_android/android_app.dart' as android_app;
+
 ### [`android_content`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/android_content-library.html)
 
     import 'package:flutter_android/android_content.dart' as android_content;

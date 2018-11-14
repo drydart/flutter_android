@@ -7,6 +7,7 @@ import 'dart:async' show Future;
 
 import 'package:flutter/services.dart' show MethodChannel;
 
+export 'android_app.dart';
 export 'android_content.dart';
 export 'android_os.dart';
 
