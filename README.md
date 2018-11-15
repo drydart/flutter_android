@@ -30,12 +30,19 @@ Reference
 - [`Context.externalCacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/externalCacheDir.html)
 - [`Context.externalFilesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/externalFilesDir.html)
 - [`Context.filesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/filesDir.html)
-- [`Context.getSystemService()`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/getSystemService.html)
+- [`Context.getSystemService(String)`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/getSystemService.html)
 - [`Context.noBackupFilesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/noBackupFilesDir.html)
 - [`Context.packageCodePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageCodePath.html)
 - [`Context.packageName`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageName.html)
 - [`Context.packageResourcePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageResourcePath.html)
 - [`Intent`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Intent-class.html)
+
+### [`android_database`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/android_database-library.html)
+
+    import 'package:flutter_android/android_database.dart' as android_database;
+
+- [`Cursor`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/Cursor-class.html)
+- [`DatabaseUtils`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/DatabaseUtils-class.html)
 
 ### [`android_os`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/android_os-library.html)
 

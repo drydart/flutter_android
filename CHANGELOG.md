@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.6] - 2018-11-15
 ### Added
+- `android_database.Cursor` interface
+- `android_database.CursorIndexOutOfBoundsException` exception
+- `android_database.DatabaseUtils` class
+- `android_database.SQLException` exception
 
 ## [0.1.5] - 2018-11-15
 ### Added
