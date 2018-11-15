@@ -40,6 +40,7 @@ Reference
 
     import 'package:flutter_android/android_os.dart' as android_os;
 
+- [`Bundle`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Bundle-class.html)
 - [`Environment.dataDirectory`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/dataDirectory.html)
 - [`Environment.downloadCacheDirectory`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/downloadCacheDirectory.html)
 - [`Environment.externalStorageDirectory`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/externalStorageDirectory.html)

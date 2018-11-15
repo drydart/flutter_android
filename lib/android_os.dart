@@ -7,6 +7,7 @@
 ///
 /// {@canonicalFor battery_manager.BatteryManager}
 /// {@canonicalFor build.Build}
+/// {@canonicalFor bundle.Bundle}
 /// {@canonicalFor environment.Environment}
 /// {@canonicalFor hardware_properties_manager.HardwarePropertiesManager}
 /// {@canonicalFor parcel.Parcel}
@@ -22,6 +23,7 @@ library android_os;
 
 export 'src/os/battery_manager.dart' show BatteryManager;
 export 'src/os/build.dart' show Build;
+export 'src/os/bundle.dart' show Bundle;
 export 'src/os/environment.dart' show Environment;
 export 'src/os/exceptions.dart';
 export 'src/os/hardware_properties_manager.dart' show HardwarePropertiesManager;
