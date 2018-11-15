@@ -23,6 +23,7 @@ Reference
 
     import 'package:flutter_android/android_content.dart' as android_content;
 
+- [`ComponentName`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/ComponentName-class.html)
 - [`Context.cacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/cacheDir.html)
 - [`Context.codeCacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/codeCacheDir.html)
 - [`Context.dataDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/dataDir.html)

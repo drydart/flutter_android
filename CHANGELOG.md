@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.5] - 2018-11-15
 ### Added
 - `android_app.WallpaperColors` class
+- `android_content.ComponentName` class
 
 ## [0.1.4] - 2018-11-14
 ### Added
