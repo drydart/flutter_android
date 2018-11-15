@@ -35,6 +35,7 @@ Reference
 - [`Context.packageCodePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageCodePath.html)
 - [`Context.packageName`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageName.html)
 - [`Context.packageResourcePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageResourcePath.html)
+- [`Intent`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Intent-class.html)
 
 ### [`android_os`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/android_os-library.html)
 
