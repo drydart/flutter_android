@@ -78,10 +78,13 @@ abstract class Cursor {
   /// See: https://developer.android.com/reference/android/database/Cursor.html#close()
   Future<void> close() => Future.value();
 
+  /// Returns the value of the requested column.
+  dynamic get(final int columnIndex);
+
   /// Returns the value of the requested column as a byte array.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#getBlob(int)
-  ByteBuffer getBlob(final int columnIndex);
+  ByteBuffer getBlob(final int columnIndex) => get(columnIndex);
 
   /// Returns the total number of columns.
   ///
@@ -113,7 +116,7 @@ abstract class Cursor {
   /// Returns the value of the requested column as a double.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#getDouble(int)
-  double getDouble(final int columnIndex);
+  double getDouble(final int columnIndex) => get(columnIndex);
 
   /// Returns a bundle of extra values.
   ///
@@ -128,7 +131,7 @@ abstract class Cursor {
   /// Returns the value of the requested column as an int.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#getInt(int)
-  int getInt(final int columnIndex);
+  int getInt(final int columnIndex) => get(columnIndex);
 
   /// Returns the value of the requested column as a long.
   ///
@@ -159,12 +162,21 @@ abstract class Cursor {
   /// Returns the value of the requested column as a string.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#getString(int)
-  String getString(final int columnIndex);
+  String getString(final int columnIndex) => get(columnIndex);
 
   /// Returns data type of the given column's value.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#getType(int)
-  int getType(final int columnIndex);
+  int getType(final int columnIndex) {
+    final dynamic value = get(columnIndex);
+    if (value == null) return FIELD_TYPE_NULL;
+    if (value is int) return FIELD_TYPE_INTEGER;
+    if (value is double) return FIELD_TYPE_FLOAT;
+    if (value is String) return FIELD_TYPE_STRING;
+    if (value is ByteBuffer) return FIELD_TYPE_BLOB;
+    assert(false); // unreachable
+    return null;
+  }
 
   /// Returns whether the cursor is pointing to the position after the last row.
   ///
@@ -195,7 +207,7 @@ abstract class Cursor {
   /// Returns `true` if the value in the indicated column is null.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#isNull(int)
-  bool isNull(final int columnIndex);
+  bool isNull(final int columnIndex) => get(columnIndex) == null;
 
   /// Moves the cursor by a relative amount, forward or backward, from the
   /// current position.

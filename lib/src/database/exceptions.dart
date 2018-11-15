@@ -5,7 +5,13 @@ import 'package:flutter/services.dart' show PlatformException;
 /// An exception indicating that a cursor is out of bounds.
 ///
 /// See: https://developer.android.com/reference/android/database/CursorIndexOutOfBoundsException
-class CursorIndexOutOfBoundsException extends PlatformException {}
+class CursorIndexOutOfBoundsException extends PlatformException {
+  final int index;
+
+  final int size;
+
+  CursorIndexOutOfBoundsException(this.index, this.size);
+}
 
 /// An exception that indicates there was an error with SQL parsing or
 /// execution.
