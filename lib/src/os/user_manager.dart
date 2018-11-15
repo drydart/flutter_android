@@ -13,7 +13,7 @@ class UserManager {
   /// and customizable space.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager.html#supportsMultipleUsers()
-  static Future<bool> supportsMultipleUsers() {
+  static Future<bool> get supportsMultipleUsers {
     assert(_platform.isAndroid);
     return null; // TODO
   }
