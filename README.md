@@ -65,31 +65,9 @@ Reference
 Cross-Reference
 ---------------
 
-### Packages
-
 | Flutter | Android |
 | :--- | :--- |
 | `android_app` | `android.app` |
-| `android_bluetooth` | `android.bluetooth` |
-| `android_content` | `android.content` |
-| `android_database` | `android.database` |
-| `android_hardware` | `android.hardware` |
-| `android_location` | `android.location` |
-| `android_media` | `android.media` |
-| `android_net` | `android.net` |
-| `android_nfc` | `android.nfc` |
-| `android_os` | `android.os` |
-| `android_provider` | `android.provider` |
-| `android_security` | `android.security` |
-| `android_speech` | `android.speech` |
-| `android_telephony` | `android.telephony` |
-| `android_view` | `android.view` |
-| `android_os` | `android.os` |
-
-### Classes
-
-| Flutter | Android |
-| :--- | :--- |
 | `android_app.Activity` | `android.app.Activity` |
 | `android_app.ActivityManager` | `android.app.ActivityManager` |
 | `android_app.AlarmManager` | `android.app.AlarmManager` |
@@ -103,16 +81,25 @@ Cross-Reference
 | `android_app.WallpaperColors` | `android.app.WallpaperColors` |
 | `android_app.WallpaperInfo` | `android.app.WallpaperInfo` |
 | `android_app.WallpaperManager` | `android.app.WallpaperManager` |
+| `android_bluetooth` | `android.bluetooth` |
+| `android_content` | `android.content` |
 | `android_content.ActivityNotFoundException` | `android.content.ActivityNotFoundException` |
 | `android_content.ComponentName` | `android.content.ComponentName` |
 | `android_content.Context` | `android.content.Context` |
 | `android_content.Intent` | `android.content.Intent` |
 | `android_content.IntentFilter` | `android.content.IntentFilter` |
 | `android_content.SharedPreferences` | `android.content.SharedPreferences` |
+| `android_database` | `android.database` |
 | `android_database.Cursor` | `android.database.Cursor` |
 | `android_database.CursorIndexOutOfBoundsException` | `android.database.CursorIndexOutOfBoundsException` |
 | `android_database.DatabaseUtils` | `android.database.DatabaseUtils` |
 | `android_database.SQLException` | `android.database.SQLException` |
+| `android_hardware` | `android.hardware` |
+| `android_location` | `android.location` |
+| `android_media` | `android.media` |
+| `android_net` | `android.net` |
+| `android_nfc` | `android.nfc` |
+| `android_os` | `android.os` |
 | `android_os.BatteryManager` | `android.os.BatteryManager` |
 | `android_os.Build` | `android.os.Build` |
 | `android_os.Bundle` | `android.os.Bundle` |
@@ -127,3 +114,8 @@ Cross-Reference
 | `android_os.UserManager` | `android.os.UserManager` |
 | `android_os.VibrationEffect` | `android.os.VibrationEffect` |
 | `android_os.Vibrator` | `android.os.Vibrator` |
+| `android_provider` | `android.provider` |
+| `android_security` | `android.security` |
+| `android_speech` | `android.speech` |
+| `android_telephony` | `android.telephony` |
+| `android_view` | `android.view` |
