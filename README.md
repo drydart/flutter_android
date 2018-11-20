@@ -61,3 +61,27 @@ Reference
 - [`Environment.rootDirectory`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/rootDirectory.html)
 - [`Environment.isExternalStorageEmulated`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/isExternalStorageEmulated.html)
 - [`Environment.isExternalStorageRemovable`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/isExternalStorageRemovable.html)
+
+Cross-Reference
+---------------
+
+### Packages
+
+| Flutter | Android |
+| --- | --- |
+| `android_app` | `android.app` |
+| `android_bluetooth` | `android.bluetooth` |
+| `android_content` | `android.content` |
+| `android_database` | `android.database` |
+| `android_hardware` | `android.hardware` |
+| `android_location` | `android.location` |
+| `android_media` | `android.media` |
+| `android_net` | `android.net` |
+| `android_nfc` | `android.nfc` |
+| `android_os` | `android.os` |
+| `android_provider` | `android.provider` |
+| `android_security` | `android.security` |
+| `android_speech` | `android.speech` |
+| `android_telephony` | `android.telephony` |
+| `android_view` | `android.view` |
+| `android_os` | `android.os` |
