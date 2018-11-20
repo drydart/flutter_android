@@ -6,6 +6,11 @@ Android Bindings for Flutter
 [![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dartlang.org/documentation/flutter_android/latest/)
 [![Travis CI build status](https://img.shields.io/travis/drydart/flutter_android/master.svg)](https://travis-ci.org/drydart/flutter_android)
 
+Compatibility
+-------------
+
+Android only.
+
 Reference
 ---------
 
