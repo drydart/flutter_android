@@ -1,5 +1,9 @@
 /* This is free and unencumbered software released into the public domain. */
 
+import 'package:flutter/widgets.dart' show Icon;
+
+import 'pending_intent.dart' show PendingIntent;
+
 /// Structure to encapsulate a named action that can be shown as part of a
 /// notification.
 ///
@@ -7,7 +11,7 @@
 /// action is selected by the user.
 ///
 /// See: https://developer.android.com/reference/android/app/Notification.Action
-abstract class NotificationAction {
+class NotificationAction {
   /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_ARCHIVE
   static const int SEMANTIC_ACTION_ARCHIVE = 5;
 
@@ -40,4 +44,28 @@ abstract class NotificationAction {
 
   /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_UNMUTE
   static const int SEMANTIC_ACTION_UNMUTE = 7;
+
+  /// Intent to send when the user invokes this action.
+  ///
+  /// May be null, in which case the action may be rendered in a disabled
+  /// presentation by the system UI.
+  ///
+  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#actionIntent
+  final PendingIntent intent;
+
+  /// Small icon representing the action.
+  ///
+  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#icon
+  final Icon icon;
+
+  /// Title of the action.
+  ///
+  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#title
+  final String title;
+
+  NotificationAction({
+    this.intent,
+    this.icon,
+    this.title,
+  });
 }
