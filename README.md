@@ -50,6 +50,7 @@ Reference
 
 - [`Cursor`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/Cursor-class.html)
 - [`DatabaseUtils`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/DatabaseUtils-class.html)
+- [`MatrixCursor`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/MatrixCursor-class.html)
 
 ### [`android_os`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/android_os-library.html)
 
@@ -97,6 +98,7 @@ Cross-Reference
 | `android.database.Cursor` | `android_database.Cursor` |
 | `android.database.CursorIndexOutOfBoundsException` | `android_database.CursorIndexOutOfBoundsException` |
 | `android.database.DatabaseUtils` | `android_database.DatabaseUtils` |
+| `android.database.MatrixCursor` | `android_database.MatrixCursor` |
 | `android.database.SQLException` | `android_database.SQLException` |
 | `android.graphics.Color` | `dart-ui.Color` |
 | `android.graphics.drawable.Icon` | `flutter.Icon` |
