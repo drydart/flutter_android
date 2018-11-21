@@ -221,17 +221,17 @@ abstract class Cursor {
   /// Moves the cursor to the first row.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToFirst()
-  bool moveToFirst() => moveToPosition(0);
+  bool moveToFirst() => getCount() > 0 && moveToPosition(0);
 
   /// Moves the cursor to the last row.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToLast()
-  bool moveToLast() => moveToPosition(getCount() - 1);
+  bool moveToLast() => getCount() > 0 && moveToPosition(getCount() - 1);
 
   /// Moves the cursor to the next row.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToNext()
-  bool moveToNext() => move(1);
+  bool moveToNext() => (getPosition() < getCount()) && move(1);
 
   /// Moves the cursor to an absolute position.
   ///
@@ -243,5 +243,5 @@ abstract class Cursor {
   /// Moves the cursor to the previous row.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToPrevious()
-  bool moveToPrevious() => move(-1);
+  bool moveToPrevious() => (getPosition() >= 0) && move(-1);
 }

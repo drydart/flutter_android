@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.11] - 2018-11-21
 ### Added
 - `android_database.MatrixCursor` class
+### Changed
+- Corrected return values for `android_database.Cursor#moveTo*()` methods
 
 ## [0.1.10] - 2018-11-21
 ### Added
