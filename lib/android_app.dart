@@ -12,8 +12,10 @@
 /// {@canonicalFor exceptions.AuthenticationRequiredException}
 /// {@canonicalFor keyguard_manager.KeyguardManager}
 /// {@canonicalFor notification.Notification}
+/// {@canonicalFor notification_action.NotificationAction}
 /// {@canonicalFor notification_builder.NotificationBuilder}
 /// {@canonicalFor notification_manager.NotificationManager}
+/// {@canonicalFor pending_intent.PendingIntent}
 /// {@canonicalFor search_manager.SearchManager}
 /// {@canonicalFor wallpaper_colors.WallpaperColors}
 /// {@canonicalFor wallpaper_info.WallpaperInfo}
@@ -27,8 +29,10 @@ export 'src/app/download_manager.dart' show DownloadManager;
 export 'src/app/exceptions.dart' show AuthenticationRequiredException;
 export 'src/app/keyguard_manager.dart' show KeyguardManager;
 export 'src/app/notification.dart' show Notification;
+export 'src/app/notification_action.dart' show NotificationAction;
 export 'src/app/notification_builder.dart' show NotificationBuilder;
 export 'src/app/notification_manager.dart' show NotificationManager;
+export 'src/app/pending_intent.dart' show PendingIntent;
 export 'src/app/search_manager.dart' show SearchManager;
 export 'src/app/wallpaper_colors.dart' show WallpaperColors;
 export 'src/app/wallpaper_info.dart' show WallpaperInfo;
