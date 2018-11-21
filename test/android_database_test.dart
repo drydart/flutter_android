@@ -5,7 +5,25 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_android/android_database.dart';
 
 void main() {
+  Cursor cursor;
+
+  setUp(() {
+    //cursor = ...; // TODO
+  });
+
+  tearDown(() {
+    cursor = null;
+  });
+
   group("android_database", () {
-    // TODO
+    test("DatabaseUtils.dumpCurrentRowToString", () {
+      // TODO
+    });
+    test("DatabaseUtils.dumpCurrentRowToStringBuffer", () {
+      // TODO
+    });
+    test("DatabaseUtils.dumpCursorToString", () {
+      // TODO
+    });
   });
 }

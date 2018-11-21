@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.10] - 2018-11-21
 ### Added
+- `android_database.DatabaseUtils` static methods
 
 ## [0.1.9] - 2018-11-21
 ### Added
