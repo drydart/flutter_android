@@ -22,6 +22,8 @@ Reference
 
     import 'package:flutter_android/android_app.dart' as android_app;
 
+- [`Notification`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/Notification-class.html)
+- [`NotificationAction`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/NotificationAction-class.html)
 - [`WallpaperColors`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/WallpaperColors-class.html)
 
 ### [`android_content`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/android_content-library.html)

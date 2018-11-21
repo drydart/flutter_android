@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.9] - 2018-11-21
 ### Added
+- `android_app.Notification` class
+- `android_app.NotificationAction` class
 
 ## [0.1.8] - 2018-11-20
 ### Added
