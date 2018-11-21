@@ -15,7 +15,7 @@ void main() {
     cursor = null;
   });
 
-  group("android_database", () {
+  group("android_database.DatabaseUtils", () {
     test("DatabaseUtils.dumpCurrentRowToString", () {
       // TODO
     });
@@ -25,5 +25,9 @@ void main() {
     test("DatabaseUtils.dumpCursorToString", () {
       // TODO
     });
+  });
+
+  group("android_database.MatrixCursor", () {
+    // TODO
   });
 }
