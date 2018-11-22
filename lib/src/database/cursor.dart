@@ -231,7 +231,7 @@ abstract class Cursor {
   /// Moves the cursor to the next row.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToNext()
-  bool moveToNext() => (getPosition() < getCount()) && move(1);
+  bool moveToNext() => (getPosition() < getCount() - 1) && move(1);
 
   /// Moves the cursor to an absolute position.
   ///

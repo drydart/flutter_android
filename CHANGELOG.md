@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.12] - 2018-11-22
 ### Added
+### Changed
+- Corrected the return value for `android_database.Cursor#moveToNext()`
 
 ## [0.1.11] - 2018-11-21
 ### Added
