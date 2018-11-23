@@ -28,29 +28,37 @@ class EnvironmentMethodHandler implements MethodCallHandler {
 
     assert(call.method != null);
     switch (call.method) {
-      case "getDataDirectory":
+      case "getDataDirectory": {
         result.success(env.getDataDirectory().toString());
         break;
-      case "getDownloadCacheDirectory":
+      }
+      case "getDownloadCacheDirectory": {
         result.success(env.getDownloadCacheDirectory().toString());
         break;
-      case "getExternalStorageDirectory":
+      }
+      case "getExternalStorageDirectory": {
         result.success(env.getExternalStorageDirectory().toString());
         break;
-      case "getExternalStorageState":
+      }
+      case "getExternalStorageState": {
         result.success(env.getExternalStorageState().toString());
         break;
-      case "getRootDirectory":
+      }
+      case "getRootDirectory": {
         result.success(env.getRootDirectory().toString());
         break;
-      case "isExternalStorageEmulated":
+      }
+      case "isExternalStorageEmulated": {
         result.success(env.isExternalStorageEmulated());
         break;
-      case "isExternalStorageRemovable":
+      }
+      case "isExternalStorageRemovable": {
         result.success(env.isExternalStorageRemovable());
         break;
-      default:
+      }
+      default: {
         result.notImplemented();
+      }
     }
   }
 }

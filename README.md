@@ -6,6 +6,16 @@ Android Bindings for Flutter
 [![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dartlang.org/documentation/flutter_android/latest/)
 [![Travis CI build status](https://img.shields.io/travis/drydart/flutter_android/master.svg)](https://travis-ci.org/drydart/flutter_android)
 
+This is a [Flutter](https://flutter.io/) plugin for Android
+platform-specific APIs.
+
+Features
+--------
+
+- Implements bindings to a growing set of Android's platform-specific APIs.
+
+- Reduces duplication of effort by centralizing Android bindings in a single package.
+
 Compatibility
 -------------
 
@@ -127,3 +137,4 @@ Cross-Reference
 | `android.speech` | `android_speech` |
 | `android.telephony` | `android_telephony` |
 | `android.view` | `android_view` |
+| `java.util.Locale` | `dart-ui.Locale` |

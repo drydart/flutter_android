@@ -12,6 +12,9 @@ public class FlutterAndroidPlugin {
   public static void registerWith(final Registrar registrar) {
     assert(registrar != null);
 
+    (new MethodChannel(registrar.messenger(), ActivityManagerMethodHandler.CHANNEL))
+      .setMethodCallHandler(new ActivityManagerMethodHandler(registrar));
+
     (new MethodChannel(registrar.messenger(), AndroidMethodHandler.CHANNEL))
       .setMethodCallHandler(new AndroidMethodHandler(registrar));
 

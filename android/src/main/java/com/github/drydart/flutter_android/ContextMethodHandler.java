@@ -28,38 +28,49 @@ class ContextMethodHandler implements MethodCallHandler {
 
     assert(call.method != null);
     switch (call.method) {
-      case "getCacheDir":
+      case "getCacheDir": {
         result.success(context.getCacheDir().toString());
         break;
-      case "getCodeCacheDir":
+      }
+      case "getCodeCacheDir": {
         result.success(context.getCodeCacheDir().toString());
         break;
-      case "getDataDir":
+      }
+      case "getDataDir": {
         result.success(context.getDataDir().toString());
         break;
-      case "getExternalCacheDir":
+      }
+      case "getExternalCacheDir": {
         result.success(context.getExternalCacheDir().toString());
         break;
-      case "getExternalFilesDir":
+      }
+      case "getExternalFilesDir": {
         result.success(context.getExternalFilesDir(null).toString());
         break;
-      case "getFilesDir":
+      }
+      case "getFilesDir": {
         result.success(context.getFilesDir().toString());
         break;
-      case "getNoBackupFilesDir":
+      }
+      case "getNoBackupFilesDir": {
         result.success(context.getNoBackupFilesDir().toString());
         break;
-      case "getPackageCodePath":
+      }
+      case "getPackageCodePath": {
         result.success(context.getPackageCodePath().toString());
         break;
-      case "getPackageName":
+      }
+      case "getPackageName": {
         result.success(context.getPackageName().toString());
         break;
-      case "getPackageResourcePath":
+      }
+      case "getPackageResourcePath": {
         result.success(context.getPackageResourcePath().toString());
         break;
-      default:
+      }
+      default: {
         result.notImplemented();
+      }
     }
   }
 }

@@ -2,18 +2,19 @@
 
 package com.github.drydart.flutter_android;
 
+import android.app.ActivityManager;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/** AndroidMethodHandler */
-class AndroidMethodHandler implements MethodCallHandler {
-  static final String CHANNEL = "flutter_android/Android";
+/** ActivityManagerMethodHandler */
+class ActivityManagerMethodHandler implements MethodCallHandler {
+  static final String CHANNEL = "flutter_android/ActivityManager";
 
   final Registrar registrar;
 
-  AndroidMethodHandler(final Registrar registrar) {
+  ActivityManagerMethodHandler(final Registrar registrar) {
     this.registrar = registrar;
   }
 
@@ -24,8 +25,8 @@ class AndroidMethodHandler implements MethodCallHandler {
 
     assert(call.method != null);
     switch (call.method) {
-      case "getPlatformVersion": {
-        result.success("Android " + android.os.Build.VERSION.RELEASE);
+      case "isRunningInTestHarness": {
+        result.success(ActivityManager.isRunningInTestHarness());
         break;
       }
       default: {
