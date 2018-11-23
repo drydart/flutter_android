@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.14] - 2018-11-23
+### Added
+
 ## [0.1.13] - 2018-11-23
 ### Added
 - `android_app.ActivityManager.isRunningInTestHarness` getter
@@ -106,6 +109,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `android_content.Context.packageName` getter
 - `android_content.Context.packageResourcePath` getter
 
+[0.1.14]: https://github.com/drydart/flutter_android/compare/0.1.13...0.1.14
 [0.1.13]: https://github.com/drydart/flutter_android/compare/0.1.12...0.1.13
 [0.1.12]: https://github.com/drydart/flutter_android/compare/0.1.11...0.1.12
 [0.1.11]: https://github.com/drydart/flutter_android/compare/0.1.10...0.1.11
