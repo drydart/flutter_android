@@ -5,6 +5,7 @@
 /// See: https://developer.android.com/reference/android/content/package-summary
 ///
 /// {@canonicalFor component_name.ComponentName}
+/// {@canonicalFor content_values.ContentValues}
 /// {@canonicalFor context.Context}
 /// {@canonicalFor exceptions.ActivityNotFoundException}
 /// {@canonicalFor intent.Intent}
@@ -13,6 +14,7 @@
 library android_content;
 
 export 'src/content/component_name.dart' show ComponentName;
+export 'src/content/content_values.dart' show ContentValues;
 export 'src/content/context.dart' show Context;
 export 'src/content/exceptions.dart' show ActivityNotFoundException;
 export 'src/content/intent.dart' show Intent;

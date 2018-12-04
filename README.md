@@ -41,6 +41,7 @@ Reference
     import 'package:flutter_android/android_content.dart' as android_content;
 
 - [`ComponentName`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/ComponentName-class.html)
+- [`ContentValues`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/ContentValues-class.html)
 - [`Context.cacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/cacheDir.html)
 - [`Context.codeCacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/codeCacheDir.html)
 - [`Context.dataDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/dataDir.html)
@@ -100,6 +101,7 @@ Cross-Reference
 | `android.content` | `android_content` |
 | `android.content.ActivityNotFoundException` | `android_content.ActivityNotFoundException` |
 | `android.content.ComponentName` | `android_content.ComponentName` |
+| `android.content.ContentValues` | `android_content.ContentValues` |
 | `android.content.Context` | `android_content.Context` |
 | `android.content.Intent` | `android_content.Intent` |
 | `android.content.IntentFilter` | `android_content.IntentFilter` |
