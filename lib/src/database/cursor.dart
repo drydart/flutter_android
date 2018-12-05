@@ -1,7 +1,7 @@
 /* This is free and unencumbered software released into the public domain. */
 
 import 'dart:async' show Future;
-import 'dart:typed_data' show ByteBuffer;
+import 'dart:typed_data' show Uint8List;
 
 import '../os/bundle.dart' show Bundle;
 
@@ -84,7 +84,7 @@ abstract class Cursor {
   /// Returns the value of the requested column as a byte array.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#getBlob(int)
-  ByteBuffer getBlob(final int columnIndex) => get(columnIndex);
+  Uint8List getBlob(final int columnIndex) => get(columnIndex);
 
   /// Returns the total number of columns.
   ///
@@ -173,7 +173,7 @@ abstract class Cursor {
     if (value is int) return FIELD_TYPE_INTEGER;
     if (value is double) return FIELD_TYPE_FLOAT;
     if (value is String) return FIELD_TYPE_STRING;
-    if (value is ByteBuffer) return FIELD_TYPE_BLOB;
+    if (value is Uint8List) return FIELD_TYPE_BLOB;
     assert(false); // unreachable
     return null;
   }
