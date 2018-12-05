@@ -9,6 +9,8 @@ class Bundle implements Parcelable {
   /// The canonical empty bundle.
   ///
   /// See: https://developer.android.com/reference/android/os/Bundle#EMPTY
+  ///
+  // ignore: non_constant_identifier_names
   static final Bundle EMPTY = Bundle();
 
   final Map<String, dynamic> mappings = Map.identity();
