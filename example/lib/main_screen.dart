@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'class_tab.dart';
+import 'library_tab.dart';
 import 'method_tab.dart';
 import 'property_tab.dart';
 
@@ -24,6 +25,7 @@ class _MainState extends State<MainScreen> {
         PropertyTab(),
         MethodTab(),
         ClassTab(),
+        LibraryTab(),
       ],
       super();
 
@@ -55,6 +57,10 @@ class _MainState extends State<MainScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
             title: Text("Classes"),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.local_library),
+            title: Text("Libraries"),
           ),
         ],
       ),

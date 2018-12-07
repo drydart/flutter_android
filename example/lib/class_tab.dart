@@ -8,7 +8,18 @@ import 'package:url_launcher/url_launcher.dart';
 
 final Map<String, String> classes = <String, String>{
   'android.Android': "",
+  'android_app.Notification': "",
+  'android_app.NotificationAction': "",
+  'android_app.WallpaperColors': "",
+  'android_content.ComponentName': "",
+  'android_content.ContentValues': "",
   'android_content.Context': "",
+  'android_content.Intent': "",
+  'android_database.Cursor': "",
+  'android_database.DatabaseUtils': "",
+  'android_database.MatrixCursor': "",
+  'android_os.Bundle': "",
+  'android_os.Environment': "",
 };
 
 ////////////////////////////////////////////////////////////////////////////////
