@@ -13,7 +13,7 @@ import '../os/bundle.dart' show Bundle;
 /// using the [Cursor].
 ///
 /// See: https://developer.android.com/reference/android/database/Cursor
-abstract class Cursor {
+abstract class Cursor extends Iterable<Map<String, dynamic>> {
 
   /// Value returned by [getType()] if the specified column type is blob.
   ///
@@ -60,6 +60,12 @@ abstract class Cursor {
   ///
   /// This is simply a Dart-idiomatic getter alias for [getExtras()].
   Bundle get extras => getExtras();
+
+  @override
+  bool get isEmpty => getCount() == 0;
+
+  @override
+  int get length => getCount();
 
   /// The URI at which notifications of changes in this cursor's data will be
   /// delivered.
@@ -230,8 +236,11 @@ abstract class Cursor {
 
   /// Moves the cursor to the next row.
   ///
+  /// This method will return false if the cursor is already past the last entry
+  /// in the result set.
+  ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToNext()
-  bool moveToNext() => (getPosition() < getCount() - 1) && move(1);
+  bool moveToNext() => (getPosition() < getCount()) && move(1) && (getPosition() < getCount());
 
   /// Moves the cursor to an absolute position.
   ///
@@ -244,4 +253,40 @@ abstract class Cursor {
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToPrevious()
   bool moveToPrevious() => (getPosition() >= 0) && move(-1);
+
+  /// An iterator over the rows of this cursor.
+  ///
+  /// The rows are iterated from the current row to the last row.
+  ///
+  /// Note that this implementation does not support concurrent iterators,
+  /// since the returned iterator mutates the cursor state.
+  Iterator<Map<String, dynamic>> get iterator {
+    return _CursorIterator(this);
+  }
+}
+
+class _CursorIterator extends Iterator<Map<String, dynamic>> {
+  final Cursor cursor;
+  final List<String> _columnNames;
+  Map<String, dynamic> _currentRow;
+
+  _CursorIterator(this.cursor)
+    : _columnNames = cursor.getColumnNames();
+
+  @override
+  bool moveNext() {
+    if (!cursor.moveToNext()) {
+      _currentRow = null;
+      return false;
+    }
+
+    _currentRow = <String, dynamic>{};
+    for (var columnIndex = 0; columnIndex < _columnNames.length; columnIndex++) {
+      _currentRow[_columnNames[columnIndex]] = cursor.get(columnIndex);
+    }
+    return true;
+  }
+
+  @override
+  Map<String, dynamic> get current => _currentRow;
 }
