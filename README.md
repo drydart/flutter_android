@@ -48,12 +48,14 @@ Reference
 - [`Context.externalCacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/externalCacheDir.html)
 - [`Context.externalFilesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/externalFilesDir.html)
 - [`Context.filesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/filesDir.html)
-- [`Context.getSystemService(String)`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/getSystemService.html)
+- [`Context.getSharedPreferences()`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/getSharedPreferences.html)
+- [`Context.getSystemService()`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/getSystemService.html)
 - [`Context.noBackupFilesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/noBackupFilesDir.html)
 - [`Context.packageCodePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageCodePath.html)
 - [`Context.packageName`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageName.html)
 - [`Context.packageResourcePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageResourcePath.html)
 - [`Intent`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Intent-class.html)
+- [`SharedPreferences`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/SharedPreferences-class.html)
 
 ### [`android_database`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/android_database-library.html)
 

@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.3] - 2018-12-08
 ### Added
+- `android_content.Context.getSharedPreferences()` method
+- `android_content.SharedPreferences` class
 
 ## [0.2.2] - 2018-12-08
 ### Changed

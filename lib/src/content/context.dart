@@ -20,6 +20,8 @@ import '../os/power_manager.dart' show PowerManager;
 import '../os/user_manager.dart' show UserManager;
 import '../os/vibrator.dart' show Vibrator;
 
+import 'shared_preferences.dart' show SharedPreferences;
+
 const Platform _platform = LocalPlatform();
 
 /// Interface to global information about an application environment.
@@ -362,5 +364,17 @@ abstract class Context {
   static Future<File> get packageResourcePath async {
     assert(_platform.isAndroid);
     return File(await _channel.invokeMethod('getPackageResourcePath') as String);
+  }
+
+  /// Retrieves and holds the contents of the preferences file `name`, returning
+  /// a [SharedPreferences] through which you can retrieve and modify its
+  /// values.
+  ///
+  /// For compatibility with the `shared_preferences` Flutter plugin, use the name
+  /// "FlutterSharedPreferences".
+  ///
+  /// See: https://developer.android.com/reference/android/content/Context#getSharedPreferences(java.lang.String,%20int)
+  static Future<SharedPreferences> getSharedPreferences(final String name, [final int mode = 0]) {
+    return SharedPreferences.open(name, mode);
   }
 }
