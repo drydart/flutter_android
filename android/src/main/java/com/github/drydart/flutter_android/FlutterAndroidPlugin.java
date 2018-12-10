@@ -23,5 +23,8 @@ public class FlutterAndroidPlugin {
 
     (new MethodChannel(registrar.messenger(), EnvironmentMethodHandler.CHANNEL))
       .setMethodCallHandler(new EnvironmentMethodHandler(registrar));
+
+    (new MethodChannel(registrar.messenger(), SharedPreferencesMethodHandler.CHANNEL))
+      .setMethodCallHandler(new SharedPreferencesMethodHandler(registrar));
   }
 }

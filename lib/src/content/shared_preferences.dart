@@ -1,5 +1,9 @@
 /* This is free and unencumbered software released into the public domain. */
 
+import 'dart:async' show Future;
+
+import 'package:flutter/services.dart' show MethodChannel;
+
 /// Interface for accessing and modifying preference data.
 ///
 /// For any particular set of preferences, there is a single instance of this
@@ -9,7 +13,7 @@
 abstract class SharedPreferences {
   /// See [Context.getSharedPreferences].
   static Future<SharedPreferences> open(final String name, [final int mode = 0]) async {
-    return _SharedPreferences(name, mode);
+    return _SharedPreferences(name, mode).load();
   }
 
   /// Retrieves a value from the preferences.
@@ -59,16 +63,25 @@ abstract class SharedPreferences {
 }
 
 class _SharedPreferences extends SharedPreferences {
+  static const MethodChannel _channel = MethodChannel('flutter_android/SharedPreferences');
+
   final String name;
   final int mode;
+  Map<String, dynamic> _cache;
 
   _SharedPreferences(this.name, this.mode);
 
+  Future<SharedPreferences> load() async {
+    final Map<String, dynamic> request = <String, dynamic>{'name': name, 'mode': mode};
+    _cache = (await _channel.invokeMethod('getAll', request) as Map<dynamic, dynamic>).cast<String, dynamic>();
+    return this;
+  }
+
   T get<T>(String key, [T defaultValue]) {
-    return defaultValue; // TODO
+    return _cache[key] ?? defaultValue;
   }
 
   Map<String, dynamic> getAll() {
-    return <String, dynamic>{}; // TODO
+    return Map.unmodifiable(_cache);
   }
 }
