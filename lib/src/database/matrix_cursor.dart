@@ -39,20 +39,22 @@ class MatrixCursor extends Cursor {
 
   @override
   dynamic get(final int columnIndex) {
-    if (_rowIndex < 0 || _rowIndex >= _rows.length) {
+    assert(!_isClosed);
+    if (_rowIndex < 0 || _rowIndex >= _rows?.length ?? 0) {
       throw CursorIndexOutOfBoundsException(_rowIndex, _rows.length);
     }
-    if (columnIndex < 0 || columnIndex >= _columns.length) {
+    if (columnIndex < 0 || columnIndex >= _columns?.length ?? 0) {
       throw CursorIndexOutOfBoundsException(columnIndex, _columns.length);
     }
+    assert(_rows != null);
     return _rows[_rowIndex][columnIndex];
   }
 
   @override
-  List<String> getColumnNames() => _columns;
+  List<String> getColumnNames() => _columns ?? <String>[];
 
   @override
-  int getCount() => _rows.length;
+  int getCount() => _rows?.length ?? 0;
 
   @override
   int getPosition() => _rowIndex;
@@ -62,7 +64,8 @@ class MatrixCursor extends Cursor {
 
   @override
   bool moveToPosition(final int position) {
-    if (position >= -1 && position <= _rows.length) {
+    assert(!_isClosed);
+    if (position >= -1 && position <= _rows?.length ?? 0) {
       _rowIndex = position;
       return true; // request accepted
     }
@@ -73,9 +76,11 @@ class MatrixCursor extends Cursor {
   ///
   /// See: https://developer.android.com/reference/android/database/MatrixCursor#addRow(java.lang.Object[])
   void addRow(final List<dynamic> columnValues) {
-    if (columnValues.length != _columns.length) {
+    assert(!_isClosed);
+    if (columnValues.length != _columns?.length ?? 0) {
       throw ArgumentError();
     }
+    assert(_rows != null);
     _rows.add(columnValues);
   }
 }
