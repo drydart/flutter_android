@@ -39,8 +39,7 @@ abstract class Bitmap implements Parcelable {
 class _ImageBitmap extends Bitmap {
   final Image image;
 
-  _ImageBitmap(this.image)
-      : assert(image != null);
+  _ImageBitmap(this.image) : assert(image != null);
 
   @override
   int get height => image.height;
@@ -55,8 +54,7 @@ class _ImageBitmap extends Bitmap {
 class _AssetBitmap extends Bitmap {
   final AssetImage asset;
 
-  _AssetBitmap(this.asset)
-      : assert(asset != null);
+  _AssetBitmap(this.asset) : assert(asset != null);
 
   @override
   String get assetName => asset.assetName;
