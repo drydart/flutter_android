@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'class_tab.dart';
+import 'demo_tab.dart';
 import 'library_tab.dart';
 import 'method_tab.dart';
 import 'property_tab.dart';
@@ -11,17 +12,18 @@ import 'property_tab.dart';
 
 class MainScreen extends StatefulWidget {
   @override
-  State<MainScreen> createState() => _MainState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class _MainState extends State<MainScreen> {
+class _MainScreenState extends State<MainScreen> {
   final List<Widget> _tabs;
   int _tabIndex = 0;
 
-  _MainState()
+  _MainScreenState()
     : _tabs = [
+        DemoTab(),
         PropertyTab(),
         MethodTab(),
         ClassTab(),
@@ -46,6 +48,10 @@ class _MainState extends State<MainScreen> {
         onTap: _onTabTapped,
         currentIndex: _tabIndex,
         items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.slideshow),
+            title: Text("Demos"),
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.info),
             title: Text("Properties"),

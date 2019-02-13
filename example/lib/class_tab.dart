@@ -29,12 +29,12 @@ final Map<String, String> classes = <String, String>{
 
 class ClassTab extends StatefulWidget {
   @override
-  State<ClassTab> createState() => _ClassState();
+  State<ClassTab> createState() => _ClassTabState();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class _ClassState extends State<ClassTab> {
+class _ClassTabState extends State<ClassTab> {
   @override
   void initState() {
     super.initState();

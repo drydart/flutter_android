@@ -46,12 +46,12 @@ final Map<String, PropertyCallback> properties = <String, PropertyCallback>{
 
 class PropertyTab extends StatefulWidget {
   @override
-  State<PropertyTab> createState() => _PropertyState();
+  State<PropertyTab> createState() => _PropertyTabState();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class _PropertyState extends State<PropertyTab> {
+class _PropertyTabState extends State<PropertyTab> {
   Map<String, Future<dynamic>> _results = <String, Future<dynamic>>{};
 
   @override

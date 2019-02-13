@@ -29,12 +29,12 @@ final Map<String, MethodCallback> methods = <String, MethodCallback>{
 
 class MethodTab extends StatefulWidget {
   @override
-  State<MethodTab> createState() => _MethodState();
+  State<MethodTab> createState() => _MethodTabState();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class _MethodState extends State<MethodTab> {
+class _MethodTabState extends State<MethodTab> {
   Map<String, Future<dynamic>> _results = <String, Future<dynamic>>{};
 
   @override

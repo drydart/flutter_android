@@ -1,5 +1,7 @@
 /* This is free and unencumbered software released into the public domain. */
 
+import 'package:meta/meta.dart' show required;
+
 import '../graphics/bitmap.dart' show Bitmap;
 import 'face.dart' show Face;
 
@@ -23,8 +25,9 @@ class FaceDetector {
   /// Note that the width of the image must be even.
   ///
   /// See: https://developer.android.com/reference/android/media/FaceDetector#FaceDetector(int,%20int,%20int)
-  FaceDetector({this.width, this.height, this.maxFaces = 1})
-      : assert(width % 2 == 0);
+  FaceDetector({@required this.width, @required this.height, this.maxFaces = 1})
+      : assert(width != null && width % 2 == 0),
+        assert(height != null);
 
   /// Finds all the faces found in a given [Bitmap].
   ///

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'main_screen.dart';
+import 'demos/face_detector.dart' show FaceDetectorDemo;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -37,7 +38,9 @@ class _AppState extends State<App> {
         brightness: Brightness.dark,
       ),
       home: MainScreen(),
-      routes: <String, WidgetBuilder>{},
+      routes: <String, WidgetBuilder>{
+        '/face_detection': (context) => FaceDetectorDemo(),
+      },
     );
   }
 }

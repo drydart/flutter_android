@@ -29,12 +29,12 @@ final Map<String, String> libraries = <String, String>{
 
 class LibraryTab extends StatefulWidget {
   @override
-  State<LibraryTab> createState() => _LibraryState();
+  State<LibraryTab> createState() => _LibraryTabState();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class _LibraryState extends State<LibraryTab> {
+class _LibraryTabState extends State<LibraryTab> {
   @override
   void initState() {
     super.initState();
