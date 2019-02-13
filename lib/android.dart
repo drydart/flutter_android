@@ -29,7 +29,8 @@ const Platform _platform = LocalPlatform();
 
 /// Android metadata.
 abstract class Android {
-  static const MethodChannel _channel = MethodChannel('flutter_android/Android');
+  static const MethodChannel _channel =
+      MethodChannel('flutter_android/Android');
 
   /// Returns the Android platform version.
   static Future<String> get platformVersion async {

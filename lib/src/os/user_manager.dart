@@ -8,7 +8,6 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/os/UserManager
 class UserManager {
-
   /// Returns whether this device supports multiple users with their own login
   /// and customizable space.
   ///

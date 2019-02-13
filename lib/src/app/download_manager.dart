@@ -12,7 +12,8 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/app/DownloadManager
 class DownloadManager {
-  static const MethodChannel _channel = MethodChannel('flutter_android/DownloadManager');
+  static const MethodChannel _channel =
+      MethodChannel('flutter_android/DownloadManager');
 
   /// Returns maximum size, in bytes, of downloads that may go over a mobile
   /// connection; or `null` if there's no limit.
@@ -20,7 +21,8 @@ class DownloadManager {
   /// See: https://developer.android.com/reference/android/app/DownloadManager.html#getMaxBytesOverMobile(android.content.Context)
   static Future<int> get maxBytesOverMobile async {
     assert(_platform.isAndroid);
-    return await _channel.invokeMethod('getMaxBytesOverMobile') as int; // TODO: implement backend
+    return await _channel.invokeMethod('getMaxBytesOverMobile')
+        as int; // TODO: implement backend
   }
 
   /// Returns recommended maximum size, in bytes, of downloads that may go over
@@ -30,6 +32,7 @@ class DownloadManager {
   /// See: https://developer.android.com/reference/android/app/DownloadManager.html#getRecommendedMaxBytesOverMobile(android.content.Context)
   static Future<int> get recommendedMaxBytesOverMobile async {
     assert(_platform.isAndroid);
-    return await _channel.invokeMethod('getRecommendedMaxBytesOverMobile') as int; // TODO: implement backend
+    return await _channel.invokeMethod('getRecommendedMaxBytesOverMobile')
+        as int; // TODO: implement backend
   }
 }

@@ -22,11 +22,12 @@ class MatrixCursor extends Cursor {
 
   /// Constructs a cursor from the provided column/row data.
   @experimental
-  MatrixCursor.from({@required List<String> columns, @required List<List<dynamic>> rows})
-    : assert(columns != null),
-      assert(rows != null),
-      _columns = List.unmodifiable(columns),
-      _rows = rows;
+  MatrixCursor.from(
+      {@required List<String> columns, @required List<List<dynamic>> rows})
+      : assert(columns != null),
+        assert(rows != null),
+        _columns = List.unmodifiable(columns),
+        _rows = rows;
 
   @override
   Future<void> close() {

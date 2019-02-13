@@ -8,7 +8,6 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/os/Build.html
 abstract class Build {
-
   /// Returns the version string for the radio firmware.
   ///
   /// May return `null` (if, for instance, the radio is not currently on).

@@ -3,5 +3,4 @@
 /// Provides access to the system alarm services.
 ///
 /// See: https://developer.android.com/reference/android/app/AlarmManager
-class AlarmManager {
-}
+class AlarmManager {}

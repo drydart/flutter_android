@@ -12,7 +12,8 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/app/ActivityManager
 class ActivityManager {
-  static const MethodChannel _channel = MethodChannel('flutter_android/ActivityManager');
+  static const MethodChannel _channel =
+      MethodChannel('flutter_android/ActivityManager');
 
   /// Returns `true` if device is running in a test harness.
   ///

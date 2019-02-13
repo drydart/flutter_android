@@ -33,7 +33,8 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/content/Context
 abstract class Context {
-  static const MethodChannel _channel = MethodChannel('flutter_android/Context');
+  static const MethodChannel _channel =
+      MethodChannel('flutter_android/Context');
 
   /// See: https://developer.android.com/reference/android/content/Context#ACCESSIBILITY_SERVICE
   static const String ACCESSIBILITY_SERVICE = "accessibility";
@@ -189,7 +190,8 @@ abstract class Context {
   static const String TELEPHONY_SERVICE = "phone";
 
   /// See: https://developer.android.com/reference/android/content/Context#TELEPHONY_SUBSCRIPTION_SERVICE
-  static const String TELEPHONY_SUBSCRIPTION_SERVICE = "telephony_subscription_service";
+  static const String TELEPHONY_SUBSCRIPTION_SERVICE =
+      "telephony_subscription_service";
 
   /// See: https://developer.android.com/reference/android/content/Context#TEXT_CLASSIFICATION_SERVICE
   static const String TEXT_CLASSIFICATION_SERVICE = "textclassification";
@@ -306,7 +308,8 @@ abstract class Context {
   /// See: https://developer.android.com/reference/android/content/Context#getExternalCacheDir()
   static Future<Directory> get externalCacheDir async {
     assert(_platform.isAndroid);
-    return Directory(await _channel.invokeMethod('getExternalCacheDir') as String);
+    return Directory(
+        await _channel.invokeMethod('getExternalCacheDir') as String);
   }
 
   /// Returns the absolute path to the directory on the primary shared/external
@@ -317,7 +320,8 @@ abstract class Context {
   /// See: https://developer.android.com/reference/android/content/Context#getExternalFilesDir(java.lang.String)
   static Future<Directory> get externalFilesDir async {
     assert(_platform.isAndroid);
-    return Directory(await _channel.invokeMethod('getExternalFilesDir') as String);
+    return Directory(
+        await _channel.invokeMethod('getExternalFilesDir') as String);
   }
 
   /// Returns the absolute path to the directory on the filesystem where files
@@ -335,7 +339,8 @@ abstract class Context {
   /// See: https://developer.android.com/reference/android/content/Context#getNoBackupFilesDir()
   static Future<Directory> get noBackupFilesDir async {
     assert(_platform.isAndroid);
-    return Directory(await _channel.invokeMethod('getNoBackupFilesDir') as String);
+    return Directory(
+        await _channel.invokeMethod('getNoBackupFilesDir') as String);
   }
 
   /// Return the full path to this context's primary Android package. The
@@ -363,7 +368,8 @@ abstract class Context {
   /// See: https://developer.android.com/reference/android/content/Context#getPackageResourcePath()
   static Future<File> get packageResourcePath async {
     assert(_platform.isAndroid);
-    return File(await _channel.invokeMethod('getPackageResourcePath') as String);
+    return File(
+        await _channel.invokeMethod('getPackageResourcePath') as String);
   }
 
   /// Retrieves and holds the contents of the preferences file `name`, returning
@@ -374,7 +380,8 @@ abstract class Context {
   /// "FlutterSharedPreferences".
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getSharedPreferences(java.lang.String,%20int)
-  static Future<SharedPreferences> getSharedPreferences(final String name, [final int mode = 0]) {
+  static Future<SharedPreferences> getSharedPreferences(final String name,
+      [final int mode = 0]) {
     return SharedPreferences.open(name, mode);
   }
 }

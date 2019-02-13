@@ -12,7 +12,8 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/os/Environment
 abstract class Environment {
-  static const MethodChannel _channel = MethodChannel('flutter_android/Environment');
+  static const MethodChannel _channel =
+      MethodChannel('flutter_android/Environment');
 
   /// Return the user data directory.
   ///
@@ -27,7 +28,8 @@ abstract class Environment {
   /// See: https://developer.android.com/reference/android/os/Environment#getDownloadCacheDirectory()
   static Future<Directory> get downloadCacheDirectory async {
     assert(_platform.isAndroid);
-    return Directory(await _channel.invokeMethod('getDownloadCacheDirectory') as String);
+    return Directory(
+        await _channel.invokeMethod('getDownloadCacheDirectory') as String);
   }
 
   /// Return the primary shared/external storage directory.
@@ -40,7 +42,8 @@ abstract class Environment {
   /// See: https://developer.android.com/reference/android/os/Environment#getExternalStorageDirectory()
   static Future<Directory> get externalStorageDirectory async {
     assert(_platform.isAndroid);
-    return Directory(await _channel.invokeMethod('getExternalStorageDirectory') as String);
+    return Directory(
+        await _channel.invokeMethod('getExternalStorageDirectory') as String);
   }
 
   /// Returns the current state of the primary shared/external storage media.
@@ -48,7 +51,8 @@ abstract class Environment {
   /// See: https://developer.android.com/reference/android/os/Environment#getExternalStorageState()
   static Future<String> get externalStorageState async {
     assert(_platform.isAndroid);
-    return await _channel.invokeMethod('getExternalStorageState') as String; // TODO: enum values
+    return await _channel.invokeMethod('getExternalStorageState')
+        as String; // TODO: enum values
   }
 
   /// Return root of the "system" partition holding the core Android OS. Always

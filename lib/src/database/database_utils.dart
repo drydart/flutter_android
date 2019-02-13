@@ -12,7 +12,6 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/database/DatabaseUtils
 abstract class DatabaseUtils {
-
   /// Prints the contents of a [Cursor]'s current row to standard output.
   ///
   /// See: https://developer.android.com/reference/android/database/DatabaseUtils.html#dumpCurrentRow(android.database.Cursor)
@@ -36,11 +35,14 @@ abstract class DatabaseUtils {
   /// Prints the contents of a [Cursor]'s current row to a string buffer.
   ///
   /// See: https://developer.android.com/reference/android/database/DatabaseUtils.html#dumpCurrentRowToString(android.database.Cursor)
-  static Future<void> dumpCurrentRowToStringBuffer(final Cursor cursor, final StringBuffer buffer) async {
+  static Future<void> dumpCurrentRowToStringBuffer(
+      final Cursor cursor, final StringBuffer buffer) async {
     assert(_platform.isAndroid);
 
     buffer.write("[");
-    for (int columnIndex = 0; columnIndex < cursor.getColumnCount(); columnIndex++) {
+    for (int columnIndex = 0;
+        columnIndex < cursor.getColumnCount();
+        columnIndex++) {
       if (columnIndex > 0) buffer.write(", ");
       switch (cursor.getType(columnIndex)) {
         case Cursor.FIELD_TYPE_NULL:

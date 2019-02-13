@@ -9,5 +9,4 @@ import '../os/parcelable.dart' show Parcelable;
 /// "priority" value which is used to order multiple matching filters.
 ///
 /// See: https://developer.android.com/reference/android/content/IntentFilter
-abstract class IntentFilter implements Parcelable {
-}
+abstract class IntentFilter implements Parcelable {}

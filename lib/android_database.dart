@@ -13,5 +13,6 @@ library android_database;
 
 export 'src/database/cursor.dart' show Cursor;
 export 'src/database/database_utils.dart' show DatabaseUtils;
-export 'src/database/exceptions.dart' show CursorIndexOutOfBoundsException, SQLException;
+export 'src/database/exceptions.dart'
+    show CursorIndexOutOfBoundsException, SQLException;
 export 'src/database/matrix_cursor.dart' show MatrixCursor;

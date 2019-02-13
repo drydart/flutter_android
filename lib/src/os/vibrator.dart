@@ -5,5 +5,4 @@
 /// If your process exits, any vibration you started will stop.
 ///
 /// See: https://developer.android.com/reference/android/os/Vibrator
-class Vibrator {
-}
+class Vibrator {}

@@ -12,7 +12,8 @@ import 'package:flutter/services.dart' show MethodChannel;
 /// See: https://developer.android.com/reference/android/content/SharedPreferences
 abstract class SharedPreferences {
   /// See [Context.getSharedPreferences].
-  static Future<SharedPreferences> open(final String name, [final int mode = 0]) async {
+  static Future<SharedPreferences> open(final String name,
+      [final int mode = 0]) async {
     return _SharedPreferences(name, mode).load();
   }
 
@@ -59,11 +60,13 @@ abstract class SharedPreferences {
   /// Retrieves a set of string values from the preferences.
   ///
   /// See: https://developer.android.com/reference/android/content/SharedPreferences#getStringSet(java.lang.String,%20java.util.Set%3Cjava.lang.String%3E)
-  Set<String> getStringSet(String key, [Set<String> defaultValue]) => get(key, defaultValue);
+  Set<String> getStringSet(String key, [Set<String> defaultValue]) =>
+      get(key, defaultValue);
 }
 
 class _SharedPreferences extends SharedPreferences {
-  static const MethodChannel _channel = MethodChannel('flutter_android/SharedPreferences');
+  static const MethodChannel _channel =
+      MethodChannel('flutter_android/SharedPreferences');
 
   final String name;
   final int mode;
@@ -72,8 +75,13 @@ class _SharedPreferences extends SharedPreferences {
   _SharedPreferences(this.name, this.mode);
 
   Future<SharedPreferences> load() async {
-    final Map<String, dynamic> request = <String, dynamic>{'name': name, 'mode': mode};
-    _cache = (await _channel.invokeMethod('getAll', request) as Map<dynamic, dynamic>).cast<String, dynamic>();
+    final Map<String, dynamic> request = <String, dynamic>{
+      'name': name,
+      'mode': mode
+    };
+    _cache = (await _channel.invokeMethod('getAll', request)
+            as Map<dynamic, dynamic>)
+        .cast<String, dynamic>();
     return this;
   }
 

@@ -4,5 +4,4 @@
 /// battery temperatures, CPU usage per core, fan speed, etc.
 ///
 /// See: https://developer.android.com/reference/android/os/HardwarePropertiesManager
-class HardwarePropertiesManager {
-}
+class HardwarePropertiesManager {}

@@ -7,7 +7,7 @@ import 'package:flutter_android/android.dart' show Android;
 import 'package:flutter_android/android_app.dart' as android_app;
 import 'package:flutter_android/android_content.dart' as android_content;
 import 'package:flutter_android/android_os.dart' as android_os;
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart' show launch;
 
 ////////////////////////////////////////////////////////////////////////////////
 

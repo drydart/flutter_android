@@ -4,5 +4,4 @@
 /// [Parcel].
 ///
 /// See: https://developer.android.com/reference/android/os/Parcelable
-/*mixin*/ abstract class Parcelable {
-}
+/*mixin*/ abstract class Parcelable {}

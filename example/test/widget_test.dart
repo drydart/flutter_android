@@ -9,7 +9,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_android_example/main.dart';
+import 'package:flutter_android_example/main.dart' show App;
 
 void main() {
   testWidgets("Verify Android platform version", (final WidgetTester tester) async {

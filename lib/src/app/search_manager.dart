@@ -3,5 +3,4 @@
 /// Provides access to the system search services.
 ///
 /// See: https://developer.android.com/reference/android/app/SearchManager
-class SearchManager {
-}
+class SearchManager {}

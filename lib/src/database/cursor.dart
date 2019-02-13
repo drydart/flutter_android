@@ -14,7 +14,6 @@ import '../os/bundle.dart' show Bundle;
 ///
 /// See: https://developer.android.com/reference/android/database/Cursor
 abstract class Cursor extends Iterable<Map<String, dynamic>> {
-
   /// Value returned by [getType()] if the specified column type is blob.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor#FIELD_TYPE_BLOB
@@ -101,7 +100,8 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
   /// column doesn't exist.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#getColumnIndex(java.lang.String)
-  int getColumnIndex(final String columnName) => getColumnNames().indexOf(columnName);
+  int getColumnIndex(final String columnName) =>
+      getColumnNames().indexOf(columnName);
 
   /// Returns the column name at the given zero-based column index.
   ///
@@ -240,7 +240,8 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
   /// in the result set.
   ///
   /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToNext()
-  bool moveToNext() => (getPosition() < getCount()) && move(1) && (getPosition() < getCount());
+  bool moveToNext() =>
+      (getPosition() < getCount()) && move(1) && (getPosition() < getCount());
 
   /// Moves the cursor to an absolute position.
   ///
@@ -270,8 +271,7 @@ class _CursorIterator extends Iterator<Map<String, dynamic>> {
   final List<String> _columnNames;
   Map<String, dynamic> _currentRow;
 
-  _CursorIterator(this.cursor)
-    : _columnNames = cursor.getColumnNames();
+  _CursorIterator(this.cursor) : _columnNames = cursor.getColumnNames();
 
   @override
   bool moveNext() {
@@ -281,7 +281,9 @@ class _CursorIterator extends Iterator<Map<String, dynamic>> {
     }
 
     _currentRow = <String, dynamic>{};
-    for (var columnIndex = 0; columnIndex < _columnNames.length; columnIndex++) {
+    for (var columnIndex = 0;
+        columnIndex < _columnNames.length;
+        columnIndex++) {
       _currentRow[_columnNames[columnIndex]] = cursor.get(columnIndex);
     }
     return true;

@@ -6,5 +6,4 @@
 /// generate content views using the platform's notification layout template.
 ///
 /// See: https://developer.android.com/reference/android/app/Notification.Builder
-abstract class NotificationBuilder {
-}
+abstract class NotificationBuilder {}

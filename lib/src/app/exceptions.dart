@@ -12,4 +12,5 @@ import '../os/parcelable.dart' show Parcelable;
 /// entering authentication credentials, or granting access via other means.
 ///
 /// See: https://developer.android.com/reference/android/app/AuthenticationRequiredException
-class AuthenticationRequiredException extends PlatformException implements Parcelable {}
+class AuthenticationRequiredException extends PlatformException
+    implements Parcelable {}

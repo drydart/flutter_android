@@ -4,5 +4,4 @@
 /// through an `IBinder`.
 ///
 /// See: https://developer.android.com/reference/android/os/Parcel
-abstract class Parcel {
-}
+abstract class Parcel {}

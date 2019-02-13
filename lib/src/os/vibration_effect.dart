@@ -8,5 +8,4 @@ import 'parcelable.dart' show Parcelable;
 /// complex waveforms.
 ///
 /// See: https://developer.android.com/reference/android/os/VibrationEffect
-abstract class VibrationEffect implements Parcelable {
-}
+abstract class VibrationEffect implements Parcelable {}

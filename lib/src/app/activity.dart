@@ -3,5 +3,4 @@
 /// An activity is a single, focused thing that the user can do.
 ///
 /// See: https://developer.android.com/reference/android/app/Activity
-abstract class Activity {
-}
+abstract class Activity {}

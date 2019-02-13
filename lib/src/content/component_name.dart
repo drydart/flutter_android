@@ -20,8 +20,8 @@ class ComponentName implements Parcelable {
   ///
   /// See: https://developer.android.com/reference/android/content/ComponentName.html#ComponentName(java.lang.String,%20java.lang.String)
   ComponentName(this.packageName, this.className)
-    : assert(packageName != null),
-      assert(className != null);
+      : assert(packageName != null),
+        assert(className != null);
 
   /// Return a string that unambiguously describes both the package and class
   /// names contained in the [ComponentName].
