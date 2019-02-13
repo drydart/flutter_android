@@ -65,6 +65,12 @@ Reference
 - [`DatabaseUtils`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/DatabaseUtils-class.html)
 - [`MatrixCursor`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/MatrixCursor-class.html)
 
+### [`android_graphics`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/android_graphics-library.html)
+
+    import 'package:flutter_android/android_graphics.dart' as android_graphics;
+
+- [`Bitmap`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/Bitmap-class.html)
+
 ### [`android_os`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/android_os-library.html)
 
     import 'package:flutter_android/android_os.dart' as android_os;

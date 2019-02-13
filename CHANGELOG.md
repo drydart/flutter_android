@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.5] - 2019-02-13
 ### Added
 - `android_graphics` library
+- `android_graphics.Bitmap` class
 
 ## [0.2.4] - 2019-01-28
 ### Changed

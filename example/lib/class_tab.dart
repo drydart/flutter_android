@@ -18,6 +18,7 @@ final Map<String, String> classes = <String, String>{
   'android_database.Cursor': "",
   'android_database.DatabaseUtils': "",
   'android_database.MatrixCursor': "",
+  'android_graphics.Bitmap': "",
   'android_os.Bundle': "",
   'android_os.Environment': "",
 };
