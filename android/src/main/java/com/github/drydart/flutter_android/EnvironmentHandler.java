@@ -4,18 +4,15 @@ package com.github.drydart.flutter_android;
 
 import android.os.Environment;
 import io.flutter.plugin.common.MethodCall;
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** EnvironmentHandler */
-class EnvironmentHandler implements MethodCallHandler {
+class EnvironmentHandler extends FlutterMethodCallHandler {
   static final String CHANNEL = "flutter_android/Environment";
 
-  final Registrar registrar;
-
   EnvironmentHandler(final Registrar registrar) {
-    this.registrar = registrar;
+    super(registrar);
   }
 
   @Override

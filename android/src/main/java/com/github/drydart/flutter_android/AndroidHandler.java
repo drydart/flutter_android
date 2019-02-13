@@ -3,18 +3,15 @@
 package com.github.drydart.flutter_android;
 
 import io.flutter.plugin.common.MethodCall;
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** AndroidHandler */
-class AndroidHandler implements MethodCallHandler {
+class AndroidHandler extends FlutterMethodCallHandler {
   static final String CHANNEL = "flutter_android/Android";
 
-  final Registrar registrar;
-
   AndroidHandler(final Registrar registrar) {
-    this.registrar = registrar;
+    super(registrar);
   }
 
   @Override
