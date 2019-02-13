@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /** FaceDetectorHandler */
+@SuppressWarnings("unchecked")
 class FaceDetectorHandler extends FlutterMethodCallHandler {
   static final String CHANNEL = "flutter_android/FaceDetector";
 
