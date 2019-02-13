@@ -9,9 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.6] - 2019-02-13
 ### Added
 - `android_graphics.Bitmap.fromImage` static method
+- `android_graphics.Bitmap.fromAssetImage` static method
 - `android_graphics.Bitmap#getHeight()` method
 - `android_graphics.Bitmap#getWidth()` method
 - `android_graphics.Bitmap#toImage()` method
+- `android_graphics.Point` class
+- `android_graphics.PointF` class
 - `android_media.Face` class
 - `android_media.FaceDetector` class
 

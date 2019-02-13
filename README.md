@@ -70,6 +70,8 @@ Reference
     import 'package:flutter_android/android_graphics.dart' as android_graphics;
 
 - [`Bitmap`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/Bitmap-class.html)
+- [`Point`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/Point-class.html)
+- [`PointF`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/PointF-class.html)
 
 ### [`android_media`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/android_media-library.html)
 
@@ -131,6 +133,8 @@ Cross-Reference
 | `android.graphics` | `android_graphics` |
 | `android.graphics.Bitmap` | `android_graphics.Bitmap` |
 | `android.graphics.Color` | `dart-ui.Color` |
+| `android.graphics.Point` | `android_graphics.Point` |
+| `android.graphics.PointF` | `android_graphics.PointF` |
 | `android.graphics.drawable.Icon` | `flutter.Icon` |
 | `android.hardware` | `android_hardware` |
 | `android.location` | `android_location` |

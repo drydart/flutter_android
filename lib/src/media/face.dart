@@ -1,6 +1,6 @@
 /* This is free and unencumbered software released into the public domain. */
 
-import 'dart:math' show Point;
+import '../graphics/pointf.dart' show PointF;
 
 /// A [Face] contains all the information identifying the location of a face in
 /// a bitmap.
@@ -43,7 +43,7 @@ class Face {
   /// The position of the mid-point between the eyes.
   ///
   /// See: https://developer.android.com/reference/android/media/FaceDetector.Face.html#getMidPoint(android.graphics.PointF)
-  final Point<double> midPoint;
+  final PointF midPoint;
 
   /// The Euler angle of the face, around the X axis.
   final double poseX;

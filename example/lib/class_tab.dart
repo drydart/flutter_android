@@ -19,6 +19,8 @@ final Map<String, String> classes = <String, String>{
   'android_database.DatabaseUtils': "",
   'android_database.MatrixCursor': "",
   'android_graphics.Bitmap': "",
+  'android_graphics.Point': "",
+  'android_graphics.PointF': "",
   'android_media.Face': "",
   'android_media.FaceDetector': "",
   'android_os.Bundle': "",

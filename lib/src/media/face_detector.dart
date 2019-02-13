@@ -1,11 +1,10 @@
 /* This is free and unencumbered software released into the public domain. */
 
-import 'dart:math' show Point;
-
 import 'package:flutter/services.dart' show MethodChannel;
 import 'package:meta/meta.dart' show required;
 
 import '../graphics/bitmap.dart' show Bitmap;
+import '../graphics/pointf.dart' show PointF;
 import 'face.dart' show Face;
 
 /// Identifies the faces of people in a [Bitmap] graphic object.
@@ -53,7 +52,7 @@ class FaceDetector {
       final List<double> result = input.cast<double>();
       return Face(
         confidence: result[0],
-        midPoint: Point(result[1], result[2]),
+        midPoint: PointF(result[1], result[2]),
         eyesDistance: result[3],
         poseX: result[4],
         poseY: result[5],
