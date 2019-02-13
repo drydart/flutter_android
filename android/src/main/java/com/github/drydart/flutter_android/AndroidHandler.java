@@ -7,13 +7,13 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/** AndroidMethodHandler */
-class AndroidMethodHandler implements MethodCallHandler {
+/** AndroidHandler */
+class AndroidHandler implements MethodCallHandler {
   static final String CHANNEL = "flutter_android/Android";
 
   final Registrar registrar;
 
-  AndroidMethodHandler(final Registrar registrar) {
+  AndroidHandler(final Registrar registrar) {
     this.registrar = registrar;
   }
 

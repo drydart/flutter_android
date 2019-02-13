@@ -12,19 +12,19 @@ public class FlutterAndroidPlugin {
   public static void registerWith(final Registrar registrar) {
     assert(registrar != null);
 
-    (new MethodChannel(registrar.messenger(), ActivityManagerMethodHandler.CHANNEL))
-      .setMethodCallHandler(new ActivityManagerMethodHandler(registrar));
+    (new MethodChannel(registrar.messenger(), ActivityManagerHandler.CHANNEL))
+      .setMethodCallHandler(new ActivityManagerHandler(registrar));
 
-    (new MethodChannel(registrar.messenger(), AndroidMethodHandler.CHANNEL))
-      .setMethodCallHandler(new AndroidMethodHandler(registrar));
+    (new MethodChannel(registrar.messenger(), AndroidHandler.CHANNEL))
+      .setMethodCallHandler(new AndroidHandler(registrar));
 
-    (new MethodChannel(registrar.messenger(), ContextMethodHandler.CHANNEL))
-      .setMethodCallHandler(new ContextMethodHandler(registrar));
+    (new MethodChannel(registrar.messenger(), ContextHandler.CHANNEL))
+      .setMethodCallHandler(new ContextHandler(registrar));
 
-    (new MethodChannel(registrar.messenger(), EnvironmentMethodHandler.CHANNEL))
-      .setMethodCallHandler(new EnvironmentMethodHandler(registrar));
+    (new MethodChannel(registrar.messenger(), EnvironmentHandler.CHANNEL))
+      .setMethodCallHandler(new EnvironmentHandler(registrar));
 
-    (new MethodChannel(registrar.messenger(), SharedPreferencesMethodHandler.CHANNEL))
-      .setMethodCallHandler(new SharedPreferencesMethodHandler(registrar));
+    (new MethodChannel(registrar.messenger(), SharedPreferencesHandler.CHANNEL))
+      .setMethodCallHandler(new SharedPreferencesHandler(registrar));
   }
 }

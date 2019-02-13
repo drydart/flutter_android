@@ -8,13 +8,13 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/** ContextMethodHandler */
-class ContextMethodHandler implements MethodCallHandler {
+/** ContextHandler */
+class ContextHandler implements MethodCallHandler {
   static final String CHANNEL = "flutter_android/Context";
 
   final Registrar registrar;
 
-  ContextMethodHandler(final Registrar registrar) {
+  ContextHandler(final Registrar registrar) {
     this.registrar = registrar;
   }
 

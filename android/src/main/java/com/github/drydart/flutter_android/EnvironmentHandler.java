@@ -8,13 +8,13 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/** EnvironmentMethodHandler */
-class EnvironmentMethodHandler implements MethodCallHandler {
+/** EnvironmentHandler */
+class EnvironmentHandler implements MethodCallHandler {
   static final String CHANNEL = "flutter_android/Environment";
 
   final Registrar registrar;
 
-  EnvironmentMethodHandler(final Registrar registrar) {
+  EnvironmentHandler(final Registrar registrar) {
     this.registrar = registrar;
   }
 

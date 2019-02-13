@@ -8,13 +8,13 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/** ActivityManagerMethodHandler */
-class ActivityManagerMethodHandler implements MethodCallHandler {
+/** ActivityManagerHandler */
+class ActivityManagerHandler implements MethodCallHandler {
   static final String CHANNEL = "flutter_android/ActivityManager";
 
   final Registrar registrar;
 
-  ActivityManagerMethodHandler(final Registrar registrar) {
+  ActivityManagerHandler(final Registrar registrar) {
     this.registrar = registrar;
   }
 

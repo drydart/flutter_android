@@ -9,14 +9,14 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/** SharedPreferencesMethodHandler */
+/** SharedPreferencesHandler */
 @SuppressWarnings("unchecked")
-class SharedPreferencesMethodHandler implements MethodCallHandler {
+class SharedPreferencesHandler implements MethodCallHandler {
   static final String CHANNEL = "flutter_android/SharedPreferences";
 
   final Registrar registrar;
 
-  SharedPreferencesMethodHandler(final Registrar registrar) {
+  SharedPreferencesHandler(final Registrar registrar) {
     this.registrar = registrar;
   }
 
