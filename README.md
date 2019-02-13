@@ -71,6 +71,13 @@ Reference
 
 - [`Bitmap`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/Bitmap-class.html)
 
+### [`android_media`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/android_media-library.html)
+
+    import 'package:flutter_android/android_media.dart' as android_media;
+
+- [`Face`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/Face-class.html)
+- [`FaceDetector`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/FaceDetector-class.html)
+
 ### [`android_os`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/android_os-library.html)
 
     import 'package:flutter_android/android_os.dart' as android_os;
@@ -127,6 +134,8 @@ Cross-Reference
 | `android.hardware` | `android_hardware` |
 | `android.location` | `android_location` |
 | `android.media` | `android_media` |
+| `android.media.FaceDetector` | `android_media.FaceDetector` |
+| `android.media.FaceDetector.Face` | `android_media.Face` |
 | `android.net` | `android_net` |
 | `android.nfc` | `android_nfc` |
 | `android.os` | `android_os` |

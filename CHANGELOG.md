@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `android_graphics.Bitmap#getHeight()` method
 - `android_graphics.Bitmap#getWidth()` method
 - `android_graphics.Bitmap#toImage()` method
+- `android_media.Face` class
+- `android_media.FaceDetector` class
 
 ## [0.2.5] - 2019-02-13
 ### Added
