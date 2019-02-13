@@ -121,6 +121,7 @@ Cross-Reference
 | `android.database.MatrixCursor` | `android_database.MatrixCursor` |
 | `android.database.SQLException` | `android_database.SQLException` |
 | `android.graphics` | `android_graphics` |
+| `android.graphics.Bitmap` | `android_graphics.Bitmap` |
 | `android.graphics.Color` | `dart-ui.Color` |
 | `android.graphics.drawable.Icon` | `flutter.Icon` |
 | `android.hardware` | `android_hardware` |
