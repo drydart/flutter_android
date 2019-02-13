@@ -5,4 +5,5 @@
 /// devices.
 ///
 /// See: https://developer.android.com/reference/android/bluetooth/package-summary
+/// See: https://developer.android.com/reference/android/bluetooth/le/package-summary
 library android_bluetooth;

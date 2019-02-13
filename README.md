@@ -113,6 +113,7 @@ Cross-Reference
 | `android.app.WallpaperInfo` | `android_app.WallpaperInfo` |
 | `android.app.WallpaperManager` | `android_app.WallpaperManager` |
 | `android.bluetooth` | `android_bluetooth` |
+| `android.bluetooth.le` | `android_bluetooth` |
 | `android.content` | `android_content` |
 | `android.content.ActivityNotFoundException` | `android_content.ActivityNotFoundException` |
 | `android.content.ComponentName` | `android_content.ComponentName` |
