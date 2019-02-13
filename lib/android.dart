@@ -12,6 +12,7 @@ export 'android_app.dart';
 export 'android_bluetooth.dart';
 export 'android_content.dart';
 export 'android_database.dart';
+export 'android_graphics.dart';
 export 'android_hardware.dart';
 export 'android_location.dart';
 export 'android_media.dart';

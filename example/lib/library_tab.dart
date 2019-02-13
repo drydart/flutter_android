@@ -11,6 +11,7 @@ final Map<String, String> libraries = <String, String>{
   'android_bluetooth': "",
   'android_content': "",
   'android_database': "",
+  'android_graphics': "",
   'android_hardware': "",
   'android_location': "",
   'android_media': "",
