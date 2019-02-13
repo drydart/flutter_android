@@ -19,6 +19,7 @@ class _FaceDetectorState extends State<FaceDetectorDemo> {
 
   final Image _image = Image(image: photo);
   FaceDetector _detector;
+  List<Face> _faces = <Face>[];
 
   _FaceDetectorState();
 
@@ -34,12 +35,55 @@ class _FaceDetectorState extends State<FaceDetectorDemo> {
       appBar: AppBar(
         title: Text("Face Detection"),
       ),
-      body: Center(child: _image),
+      body: Center(
+        child: CustomPaint(
+          child: _image,
+          foregroundPainter: _FaceDetectorPainter(faces: _faces),
+        ),
+      ),
     );
   }
 
   Future<void> _initPlatformState() async {
     _detector = FaceDetector(width: 280, height: 396, maxFaces: 1);
-    print(await _detector.findFaces(Bitmap.fromAssetImage(photo))); // TODO
+    final faces = await _detector.findFaces(Bitmap.fromAssetImage(photo));
+    setState(() {
+      _faces = faces;
+    });
   }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+class _FaceDetectorPainter extends CustomPainter {
+  final List<Face> faces;
+
+  _FaceDetectorPainter({this.faces});
+
+  @override
+  void paint(final Canvas canvas, final Size size) {
+    const eyeRadius = 12.0;
+    final line = Paint()
+        ..color = Colors.blue
+        ..strokeCap = StrokeCap.round
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2;
+
+    for (final face in faces) {
+      if (face.confidence < Face.CONFIDENCE_THRESHOLD) continue;
+
+      final midPoint = Offset(face.midPoint.x, face.midPoint.y);
+      final leftEye = midPoint.translate(-(face.eyesDistance/2), 0);
+      final rightEye = midPoint.translate((face.eyesDistance/2), 0);
+      final noseBridge = Path()
+        ..moveTo(leftEye.dx+eyeRadius, leftEye.dy)
+        ..quadraticBezierTo(midPoint.dx, midPoint.dy-eyeRadius, rightEye.dx-eyeRadius, rightEye.dy);
+      canvas.drawCircle(leftEye, eyeRadius, line);
+      canvas.drawCircle(rightEye, eyeRadius, line);
+      canvas.drawPath(noseBridge, line);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_FaceDetectorPainter oldDelegate) => false;
 }
