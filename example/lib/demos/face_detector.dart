@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:flutter_android/android_graphics.dart' show Bitmap;
 import 'package:flutter_android/android_media.dart' show Face, FaceDetector;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -14,13 +15,17 @@ class FaceDetectorDemo extends StatefulWidget {
 ////////////////////////////////////////////////////////////////////////////////
 
 class _FaceDetectorState extends State<FaceDetectorDemo> {
-  final detector = FaceDetector(width: 480, height: 640, maxFaces: 1);
+  static const photo = AssetImage('images/einstein.png');
+
+  final Image _image = Image(image: photo);
+  FaceDetector _detector;
 
   _FaceDetectorState();
 
   @override
   void initState() {
     super.initState();
+    _initPlatformState();
   }
 
   @override
@@ -29,7 +34,12 @@ class _FaceDetectorState extends State<FaceDetectorDemo> {
       appBar: AppBar(
         title: Text("Face Detection"),
       ),
-      body: Center(child: Text("To be implemented.")), // TODO
+      body: Center(child: _image),
     );
+  }
+
+  Future<void> _initPlatformState() async {
+    _detector = FaceDetector(width: 280, height: 396, maxFaces: 1);
+    print(await _detector.findFaces(Bitmap.fromAssetImage(photo))); // TODO
   }
 }

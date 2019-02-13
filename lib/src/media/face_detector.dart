@@ -1,5 +1,8 @@
 /* This is free and unencumbered software released into the public domain. */
 
+import 'dart:math' show Point;
+
+import 'package:flutter/services.dart' show MethodChannel;
 import 'package:meta/meta.dart' show required;
 
 import '../graphics/bitmap.dart' show Bitmap;
@@ -9,6 +12,9 @@ import 'face.dart' show Face;
 ///
 /// See: https://developer.android.com/reference/android/media/FaceDetector
 class FaceDetector {
+  static const MethodChannel _channel =
+      MethodChannel('flutter_android/FaceDetector');
+
   /// The width of the images to be analyzed.
   final int width;
 
@@ -26,17 +32,33 @@ class FaceDetector {
   ///
   /// See: https://developer.android.com/reference/android/media/FaceDetector#FaceDetector(int,%20int,%20int)
   FaceDetector({@required this.width, @required this.height, this.maxFaces = 1})
-      : assert(width != null && width % 2 == 0),
-        assert(height != null);
+      : assert(width != null && width > 0 && width % 2 == 0),
+        assert(height != null && height > 0);
 
   /// Finds all the faces found in a given [Bitmap].
   ///
   /// Returns an array of [Face] for each face found.
   ///
-  /// The bitmap must be in 565 format (for now).
-  ///
   /// See: https://developer.android.com/reference/android/media/FaceDetector#findFaces(android.graphics.Bitmap,%20android.media.FaceDetector.Face[])
-  List<Face> findFaces(final Bitmap bitmap) {
-    return <Face>[]; // TODO
+  Future<List<Face>> findFaces(final Bitmap bitmap) async {
+    final Map<String, dynamic> request = <String, dynamic>{
+      'width': width,
+      'height': height,
+      'maxFaces': maxFaces,
+      'bitmapName': bitmap.assetName, // TODO: support dynamic images as well
+    };
+    final List<dynamic> response =
+        await _channel.invokeMethod('findFaces', request);
+    return response.cast<List<dynamic>>().map((final List<dynamic> input) {
+      final List<double> result = input.cast<double>();
+      return Face(
+        confidence: result[0],
+        midPoint: Point(result[1], result[2]),
+        eyesDistance: result[3],
+        poseX: result[4],
+        poseY: result[5],
+        poseZ: result[6],
+      );
+    }).toList();
   }
 }
