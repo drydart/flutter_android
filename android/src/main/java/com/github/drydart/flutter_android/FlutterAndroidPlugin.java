@@ -18,6 +18,21 @@ public class FlutterAndroidPlugin {
     (new MethodChannel(registrar.messenger(), AndroidHandler.CHANNEL))
       .setMethodCallHandler(new AndroidHandler(registrar));
 
+    (new MethodChannel(registrar.messenger(), BluetoothAdapterHandler.CHANNEL))
+      .setMethodCallHandler(new BluetoothAdapterHandler(registrar));
+
+    (new MethodChannel(registrar.messenger(), BluetoothDeviceHandler.CHANNEL))
+      .setMethodCallHandler(new BluetoothDeviceHandler(registrar));
+
+    (new MethodChannel(registrar.messenger(), BluetoothHeadsetHandler.CHANNEL))
+      .setMethodCallHandler(new BluetoothHeadsetHandler(registrar));
+
+    (new MethodChannel(registrar.messenger(), BluetoothLeScannerHandler.CHANNEL))
+      .setMethodCallHandler(new BluetoothLeScannerHandler(registrar));
+
+    (new MethodChannel(registrar.messenger(), BluetoothManagerHandler.CHANNEL))
+      .setMethodCallHandler(new BluetoothManagerHandler(registrar));
+
     (new MethodChannel(registrar.messenger(), ContextHandler.CHANNEL))
       .setMethodCallHandler(new ContextHandler(registrar));
 

@@ -8,7 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.3.1] - 2019-02-14
 ### Added
-- Bluetooth scanner demo in the example app
+- `android.bluetooth.BluetoothAdapter` class stub
+- `android.bluetooth.BluetoothDevice` class stub
+- `android.bluetooth.BluetoothHeadset` class stub
+- `android.bluetooth.BluetoothLeScanner` class stub
+- `android.bluetooth.BluetoothManager` class stub
 
 ## [0.3.0] - 2019-02-14
 ### Changed

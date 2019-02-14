@@ -7,7 +7,7 @@ Android Bindings for Flutter
 [![Travis CI build status](https://img.shields.io/travis/drydart/flutter_android/master.svg)](https://travis-ci.org/drydart/flutter_android)
 
 This is a [Flutter](https://flutter.io/) plugin for using Android's
-platform-specific APIs from Flutter apps.
+numerous platform-specific APIs in Flutter apps.
 
 Features
 --------
@@ -18,8 +18,9 @@ Features
 
 ### Feature Table
 
-| Feature | Flutter |
+| Feature | Flutter API |
 | :--- | :--- |
+| Bluetooth scanning | `android_bluetooth.BluetoothLeScanner` |
 | Face detection | `android_media.FaceDetector` |
 
 Compatibility
@@ -77,6 +78,16 @@ Reference
 - [`Notification`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/Notification-class.html)
 - [`NotificationAction`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/NotificationAction-class.html)
 - [`WallpaperColors`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/WallpaperColors-class.html)
+
+### [`android_bluetooth`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/android_bluetooth-library.html)
+
+    import 'package:flutter_android/android_bluetooth.dart' as android_bluetooth;
+
+- [`BluetoothAdapter`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothAdapter-class.html)
+- [`BluetoothDevice`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothDevice-class.html)
+- [`BluetoothHeadset`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothHeadset-class.html)
+- [`BluetoothLeScanner`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothLeScanner-class.html)
+- [`BluetoothManager`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothManager-class.html)
 
 ### [`android_content`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/android_content-library.html)
 
@@ -157,6 +168,11 @@ Cross-Reference
 | `android.app.WallpaperInfo` | `android_app.WallpaperInfo` |
 | `android.app.WallpaperManager` | `android_app.WallpaperManager` |
 | `android.bluetooth` | `android_bluetooth` |
+| `android.bluetooth.BluetoothAdapter` | `android_bluetooth.BluetoothAdapter` |
+| `android.bluetooth.BluetoothDevice` | `android_bluetooth.BluetoothDevice` |
+| `android.bluetooth.BluetoothHeadset` | `android_bluetooth.BluetoothHeadset` |
+| `android.bluetooth.BluetoothManager` | `android_bluetooth.BluetoothManager` |
+| `android.bluetooth.le.BluetoothLeScanner` | `android_bluetooth.BluetoothLeScanner` |
 | `android.bluetooth.le` | `android_bluetooth` |
 | `android.content` | `android_content` |
 | `android.content.ActivityNotFoundException` | `android_content.ActivityNotFoundException` |
