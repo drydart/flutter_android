@@ -6,8 +6,8 @@ Android Bindings for Flutter
 [![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dartlang.org/documentation/flutter_android/latest/)
 [![Travis CI build status](https://img.shields.io/travis/drydart/flutter_android/master.svg)](https://travis-ci.org/drydart/flutter_android)
 
-This is a [Flutter](https://flutter.io/) plugin for Android
-platform-specific APIs.
+This is a [Flutter](https://flutter.io/) plugin for using Android's
+platform-specific APIs from Flutter apps.
 
 Features
 --------
@@ -16,10 +16,52 @@ Features
 
 - Reduces duplication of effort by centralizing Android bindings in a single package.
 
+### Feature Table
+
+| Feature | Flutter |
+| :--- | :--- |
+| Face detection | `android_media.FaceDetector` |
+
 Compatibility
 -------------
 
 Android only.
+
+Examples
+--------
+
+### Face detection
+
+```dart
+import 'package:flutter_android/android_graphics.dart' show Bitmap;
+import 'package:flutter_android/android_media.dart' show Face, FaceDetector;
+
+var photo = Image.asset("images/einstein.png");
+
+var bitmap = Bitmap.fromAssetImage(photo.image as AssetImage);
+var detector = FaceDetector(width: 280, height: 396);
+
+for (var face in await detector.findFaces(bitmap)) {
+  if (face.confidence < Face.CONFIDENCE_THRESHOLD) {
+    continue; // skip dubious results below the cut-off threshold
+  }
+  print("Found a face at (${face.midPoint.x}, ${face.midPoint.y}) with confidence ${face.confidence}");
+}
+```
+
+Frequently Asked Questions
+--------------------------
+
+TODO
+
+Caveats
+-------
+
+- **iOS is not and cannot be supported.**
+  All `flutter_android` APIs throw an `AssertionError` if they are invoked
+  when running on iOS. For cross-platform apps, we recommend that you depend
+  on the [platform](https://pub.dartlang.org/packages/platform) package to
+  conditionalize your use of Android APIs.
 
 Reference
 ---------
@@ -164,3 +206,9 @@ Cross-Reference
 | `android.telephony` | `android_telephony` |
 | `android.view` | `android_view` |
 | `java.util.Locale` | `dart-ui.Locale` |
+
+See Also
+--------
+
+- The [flutter_sqlcipher](https://pub.dartlang.org/packages/flutter_sqlcipher) package
+  that implements encrypted SQLite databases based on the `android.database` APIs.
