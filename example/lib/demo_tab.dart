@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 ////////////////////////////////////////////////////////////////////////////////
 
 final Map<String, String> demos = <String, String>{
+  "Bluetooth scanning": "Using android_bluetooth.BluetoothLeScanner.",
   "Face detection": "Using android_media.FaceDetector.",
 };
 
@@ -55,6 +56,9 @@ class _DemoTabState extends State<DemoTab> {
 
   void _launchDemo(final String demoTitle) {
     switch (demoTitle) {
+      case "Bluetooth scanning":
+        Navigator.of(context).pushNamed('/bluetooth_scanner');
+        break;
       case "Face detection":
         Navigator.of(context).pushNamed('/face_detection');
         break;

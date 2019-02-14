@@ -8,11 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.3.1] - 2019-02-14
 ### Added
+- Bluetooth scanner demo in the example app
 
 ## [0.3.0] - 2019-02-14
 ### Changed
-- Require Dart SDK 2.1+
+- Required Dart SDK 2.1+
 ### Added
+- Face detection demo in the example app
 - `android_graphics.Bitmap.fromImage` static method
 - `android_graphics.Bitmap.fromAssetImage` static method
 - `android_graphics.Bitmap#getHeight()` method

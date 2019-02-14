@@ -21,8 +21,6 @@ class _FaceDetectorState extends State<FaceDetectorDemo> {
   FaceDetector _detector;
   List<Face> _faces = <Face>[];
 
-  _FaceDetectorState();
-
   @override
   void initState() {
     super.initState();
@@ -33,7 +31,7 @@ class _FaceDetectorState extends State<FaceDetectorDemo> {
   Widget build(final BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Face Detection"),
+        title: Text("Face Detector"),
       ),
       body: Center(
         child: CustomPaint(
