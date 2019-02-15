@@ -7,22 +7,14 @@ import 'package:flutter_android/android.dart' show Android;
 import 'package:flutter_android/android_content.dart' as android_content;
 import 'package:url_launcher/url_launcher.dart' show launch;
 
+//import 'src/metadata.dart' show metadata;
+
 ////////////////////////////////////////////////////////////////////////////////
 
 typedef Future<dynamic> MethodCallback();
 
 final Map<String, MethodCallback> methods = <String, MethodCallback>{
-  'android.Android.platformVersion': () => Android.platformVersion,
-  'android_content.Context.cacheDir': () => android_content.Context.cacheDir,
-  'android_content.Context.codeCacheDir': () => android_content.Context.codeCacheDir,
-  'android_content.Context.dataDir': () => android_content.Context.dataDir,
-  'android_content.Context.externalCacheDir': () => android_content.Context.externalCacheDir,
-  'android_content.Context.externalFilesDir': () => android_content.Context.externalFilesDir,
-  'android_content.Context.filesDir': () => android_content.Context.filesDir,
-  'android_content.Context.noBackupFilesDir': () => android_content.Context.noBackupFilesDir,
-  'android_content.Context.packageCodePath': () => android_content.Context.packageCodePath,
-  'android_content.Context.packageName': () => android_content.Context.packageName,
-  'android_content.Context.packageResourcePath': () => android_content.Context.packageResourcePath,
+  // TODO
 };
 
 ////////////////////////////////////////////////////////////////////////////////

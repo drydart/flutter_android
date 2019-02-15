@@ -3,44 +3,20 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show PlatformException;
-import 'package:flutter_android/android.dart' show Android;
-import 'package:flutter_android/android_app.dart' as android_app;
-import 'package:flutter_android/android_content.dart' as android_content;
-import 'package:flutter_android/android_os.dart' as android_os;
 import 'package:url_launcher/url_launcher.dart' show launch;
+
+import 'src/metadata.dart' show metadata;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-typedef Future<dynamic> PropertyCallback();
+class PropertyItem {
+  final String libraryName;
+  final String className;
+  final String propertyName;
+  final Future<dynamic> propertyValue;
 
-final Map<String, PropertyCallback> properties = <String, PropertyCallback>{
-  'android.Android.platformVersion': () => Android.platformVersion,
-  'android_app.ActivityManager.isRunningInTestHarness': () => android_app.ActivityManager.isRunningInTestHarness,
-  // FIXME: 'android_app.DownloadManager.maxBytesOverMobile': () => android_app.DownloadManager.maxBytesOverMobile,
-  // FIXME: 'android_app.DownloadManager.recommendedMaxBytesOverMobile': () => android_app.DownloadManager.recommendedMaxBytesOverMobile,
-  'android_content.Context.cacheDir': () => android_content.Context.cacheDir,
-  'android_content.Context.codeCacheDir': () => android_content.Context.codeCacheDir,
-  'android_content.Context.dataDir': () => android_content.Context.dataDir,
-  'android_content.Context.externalCacheDir': () => android_content.Context.externalCacheDir,
-  'android_content.Context.externalFilesDir': () => android_content.Context.externalFilesDir,
-  'android_content.Context.filesDir': () => android_content.Context.filesDir,
-  'android_content.Context.noBackupFilesDir': () => android_content.Context.noBackupFilesDir,
-  'android_content.Context.packageCodePath': () => android_content.Context.packageCodePath,
-  'android_content.Context.packageName': () => android_content.Context.packageName,
-  'android_content.Context.packageResourcePath': () => android_content.Context.packageResourcePath,
-  'android_os.Build.radioVersion': () => android_os.Build.radioVersion,
-  'android_os.Build.serial': () => android_os.Build.serial,
-  'android_os.Environment.dataDirectory': () => android_os.Environment.dataDirectory,
-  'android_os.Environment.downloadCacheDirectory': () => android_os.Environment.downloadCacheDirectory,
-  'android_os.Environment.externalStorageDirectory': () => android_os.Environment.externalStorageDirectory,
-  'android_os.Environment.externalStorageState': () => android_os.Environment.externalStorageState,
-  'android_os.Environment.rootDirectory': () => android_os.Environment.rootDirectory,
-  'android_os.Environment.isExternalStorageEmulated': () => android_os.Environment.isExternalStorageEmulated,
-  'android_os.Environment.isExternalStorageRemovable': () => android_os.Environment.isExternalStorageRemovable,
-  'android_os.Process.is64Bit': () => android_os.Process.is64Bit,
-  'android_os.Process.isIsolated': () => android_os.Process.isIsolated,
-  'android_os.UserManager.supportsMultipleUsers': () => android_os.UserManager.supportsMultipleUsers,
-};
+  const PropertyItem(this.libraryName, this.className, this.propertyName, this.propertyValue);
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -52,7 +28,7 @@ class PropertyTab extends StatefulWidget {
 ////////////////////////////////////////////////////////////////////////////////
 
 class _PropertyTabState extends State<PropertyTab> {
-  Map<String, Future<dynamic>> _results = <String, Future<dynamic>>{};
+  Map<String, PropertyItem> _properties = <String, PropertyItem>{};
 
   @override
   void initState() {
@@ -62,25 +38,26 @@ class _PropertyTabState extends State<PropertyTab> {
 
   @override
   Widget build(final BuildContext context) {
-    final propertyKeys = properties.keys.toList();
+    final propertyKeys = _properties.keys.toList();
     return ListView.separated(
       padding: EdgeInsets.all(8.0),
       itemCount: propertyKeys.length,
       itemBuilder: (final BuildContext context, final int index) {
         final String propertyKey = propertyKeys[index];
+        final PropertyItem property = _properties[propertyKey];
         return GestureDetector(
-          onTap: () => launch(_getURL(propertyKey)),
+          onTap: () => launch(_getURL(property)),
           child: ListTile(
             leading: Icon(Icons.info),
-            title: Text(_getTitle(propertyKey)),
+            title: Text(_getTitle(property)),
             subtitle: FutureBuilder<dynamic>(
-              future: _results[propertyKey],
+              future: _properties[propertyKey].propertyValue,
               builder: (final BuildContext context, final AsyncSnapshot<dynamic> snapshot) {
                 switch (snapshot.connectionState) {
                   case ConnectionState.none:
                   case ConnectionState.active:
                   case ConnectionState.waiting:
-                    return Text("Unknown");
+                    return Text("Unknown", style: TextStyle(fontStyle: FontStyle.italic));
                   case ConnectionState.done:
                     return snapshot.hasError ?
                       Text(snapshot.error) :
@@ -98,38 +75,43 @@ class _PropertyTabState extends State<PropertyTab> {
     );
   }
 
-  String _getTitle(final String qualifiedPropertyName) {
-    final propertyInfo = qualifiedPropertyName.split(".");
-    return <String>[propertyInfo[1], propertyInfo[2]].join(".");
+  String _getTitle(final PropertyItem property) {
+    return <String>[property.className, property.propertyName].join(".");
   }
 
-  String _getURL(final String qualifiedPropertyName) {
-    final propertyInfo = qualifiedPropertyName.split(".");
-    final libraryName = propertyInfo[0];
-    final className = propertyInfo[1];
-    final propertyName = propertyInfo[2];
+  String _getURL(final PropertyItem property) {
+    final libraryName = property.libraryName,
+          className = property.className,
+          propertyName = property.propertyName;
     return "https://pub.dartlang.org/documentation/flutter_android/latest/$libraryName/$className/$propertyName.html";
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> _initPlatformState() async {
-    Map<String, Future<dynamic>> results = <String, Future<dynamic>>{};
+    final Map<String, PropertyItem> properties = <String, PropertyItem>{};
 
     // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      properties.forEach((k, v) {
-        results[k] = v();
-      });
-    }
-    on PlatformException {
-      // TODO: improve error handling
-    }
+    metadata.forEach((libraryName, classInfos) {
+      for (final classInfo in classInfos) {
+        final className = classInfo.name;
+        classInfo.properties.forEach((propertyName, propertyCallback) {
+          try {
+            final propertyKey = "${libraryName}.${className}.${propertyName}";
+            properties[propertyKey] = PropertyItem(libraryName, className, propertyName, propertyCallback());
+          }
+          on PlatformException catch (e) {
+            // TODO: improve error handling
+            print(e);
+          }
+        });
+      }
+    });
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
     if (!mounted) return;
 
-    setState(() { _results = results; });
+    setState(() { _properties = properties; });
   }
 }

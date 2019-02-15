@@ -4,37 +4,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' show launch;
 
-////////////////////////////////////////////////////////////////////////////////
-
-final Map<String, String> classes = <String, String>{
-  'android.Android': "",
-  'android_app.Notification': "",
-  'android_app.NotificationAction': "",
-  'android_app.WallpaperColors': "",
-  'android.bluetooth.BluetoothAdapter': "",
-  'android.bluetooth.BluetoothDevice': "",
-  'android.bluetooth.BluetoothHeadset': "",
-  'android.bluetooth.BluetoothLeScanner': "",
-  'android.bluetooth.BluetoothManager': "",
-  'android_content.ComponentName': "",
-  'android_content.ContentValues': "",
-  'android_content.Context': "",
-  'android_content.Intent': "",
-  'android_database.Cursor': "",
-  'android_database.DatabaseUtils': "",
-  'android_database.MatrixCursor': "",
-  'android_graphics.Bitmap': "",
-  'android_graphics.Point': "",
-  'android_graphics.PointF': "",
-  'android.hardware.Sensor': "",
-  'android.hardware.SensorEvent': "",
-  'android.hardware.SensorEventListener': "",
-  'android.hardware.SensorManager': "",
-  'android_media.Face': "",
-  'android_media.FaceDetector': "",
-  'android_os.Bundle': "",
-  'android_os.Environment': "",
-};
+import 'src/metadata.dart' show metadata;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -46,26 +16,32 @@ class ClassTab extends StatefulWidget {
 ////////////////////////////////////////////////////////////////////////////////
 
 class _ClassTabState extends State<ClassTab> {
+  final List<MapEntry<String, String>> _classes = [];
+
   @override
   void initState() {
     super.initState();
+    metadata.forEach((libraryName, classInfos) {
+      for (final classInfo in classInfos) {
+        _classes.add(MapEntry(libraryName, classInfo.name));
+      }
+    });
     _initPlatformState();
   }
 
   @override
   Widget build(final BuildContext context) {
-    final classKeys = classes.keys.toList();
     return ListView.separated(
       padding: EdgeInsets.all(8.0),
-      itemCount: classKeys.length, // TODO
+      itemCount: _classes.length,
       itemBuilder: (final BuildContext context, final int index) {
-        final String classKey = classKeys[index];
+        final classEntry = _classes[index];
         return GestureDetector(
-          onTap: () => launch(_getURL(classKey)),
+          onTap: () => launch(_getURL(classEntry.key, classEntry.value)),
           child: ListTile(
             leading: Icon(Icons.info),
-            title: Text(_getTitle(classKey)),
-            subtitle: Text(classKey),
+            title: Text(classEntry.value),
+            subtitle: Text("${classEntry.key}.${classEntry.value}"),
             //trailing: Icon(Icons.info, color: Theme.of(context).disabledColor),
           ),
         );
@@ -76,15 +52,7 @@ class _ClassTabState extends State<ClassTab> {
     );
   }
 
-  String _getTitle(final String qualifiedClassName) {
-    final classInfo = qualifiedClassName.split(".");
-    return classInfo[1];
-  }
-
-  String _getURL(final String qualifiedClassName) {
-    final classInfo = qualifiedClassName.split(".");
-    final libraryName = classInfo[0];
-    final className = classInfo[1];
+  String _getURL(final String libraryName, final String className) {
     return "https://pub.dartlang.org/documentation/flutter_android/latest/$libraryName/$className-class.html";
   }
 

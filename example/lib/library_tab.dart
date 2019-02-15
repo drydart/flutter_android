@@ -4,26 +4,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' show launch;
 
-////////////////////////////////////////////////////////////////////////////////
-
-final Map<String, String> libraries = <String, String>{
-  'android_app': "",
-  'android_bluetooth': "",
-  'android_content': "",
-  'android_database': "",
-  'android_graphics': "",
-  'android_hardware': "",
-  'android_location': "",
-  'android_media': "",
-  'android_net': "",
-  'android_nfc': "",
-  'android_os': "",
-  'android_provider': "",
-  'android_security': "",
-  'android_speech': "",
-  'android_telephony': "",
-  'android_view': "",
-};
+import 'src/metadata.dart' show metadata;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -43,18 +24,18 @@ class _LibraryTabState extends State<LibraryTab> {
 
   @override
   Widget build(final BuildContext context) {
-    final libraryKeys = libraries.keys.toList();
+    final libraryNames = metadata.keys.toList();
     return ListView.separated(
       padding: EdgeInsets.all(8.0),
-      itemCount: libraryKeys.length, // TODO
+      itemCount: libraryNames.length,
       itemBuilder: (final BuildContext context, final int index) {
-        final String libraryKey = libraryKeys[index];
+        final String libraryName = libraryNames[index];
         return GestureDetector(
-          onTap: () => launch(_getURL(libraryKey)),
+          onTap: () => launch(_getURL(libraryName)),
           child: ListTile(
             leading: Icon(Icons.info),
-            title: Text(_getTitle(libraryKey)),
-            subtitle: Text(libraries[libraryKey]),
+            title: Text(libraryName),
+            subtitle: Text(""), // TODO
             //trailing: Icon(Icons.info, color: Theme.of(context).disabledColor),
           ),
         );
@@ -65,12 +46,7 @@ class _LibraryTabState extends State<LibraryTab> {
     );
   }
 
-  String _getTitle(final String qualifiedLibraryName) {
-    return qualifiedLibraryName;
-  }
-
-  String _getURL(final String qualifiedLibraryName) {
-    final libraryName = qualifiedLibraryName;
+  String _getURL(final String libraryName) {
     return "https://pub.dartlang.org/documentation/flutter_android/latest/$libraryName/$libraryName-library.html";
   }
 

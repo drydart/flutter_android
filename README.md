@@ -241,4 +241,4 @@ See Also
 --------
 
 - The [flutter_sqlcipher](https://pub.dartlang.org/packages/flutter_sqlcipher) package
-  that implements encrypted SQLite databases based on the `android.database` APIs.
+  implements encrypted SQLite databases based on the `android.database` APIs.
