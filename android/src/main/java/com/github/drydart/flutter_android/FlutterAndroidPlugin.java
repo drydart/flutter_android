@@ -42,6 +42,9 @@ public class FlutterAndroidPlugin {
     (new MethodChannel(registrar.messenger(), FaceDetectorHandler.CHANNEL))
       .setMethodCallHandler(new FaceDetectorHandler(registrar));
 
+    (new MethodChannel(registrar.messenger(), LocationHandler.CHANNEL))
+      .setMethodCallHandler(new LocationHandler(registrar));
+
     (new MethodChannel(registrar.messenger(), SensorManagerHandler.CHANNEL))
       .setMethodCallHandler(new SensorManagerHandler(registrar));
 

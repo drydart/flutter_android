@@ -22,6 +22,7 @@ Features
 | :--- | :--- |
 | Bluetooth scanning | `android_bluetooth.BluetoothLeScanner` |
 | Face detection | `android_media.FaceDetector` |
+| Distance calculation | `android_location.Location.distanceBetween()` |
 | Heart-rate monitoring | `android_hardware.SensorManager` |
 
 Compatibility
@@ -136,6 +137,12 @@ Reference
 - [`SensorEventListener`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/SensorEventListener-class.html)
 - [`SensorManager`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/SensorManager-class.html)
 
+### [`android_location`](https://pub.dartlang.org/documentation/flutter_android/latest/android_location/android_location-library.html)
+
+    import 'package:flutter_android/android_location.dart' as android_location;
+
+- [`Location`](https://pub.dartlang.org/documentation/flutter_android/latest/android_location/Location-class.html)
+
 ### [`android_media`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/android_media-library.html)
 
     import 'package:flutter_android/android_media.dart' as android_media;
@@ -210,6 +217,7 @@ Cross-Reference
 | `android.hardware.SensorEventListener` | `android_hardware.SensorEventListener` |
 | `android.hardware.SensorManager` | `android_hardware.SensorManager` |
 | `android.location` | `android_location` |
+| `android.location.Location` | `android_location.Location` |
 | `android.media` | `android_media` |
 | `android.media.FaceDetector` | `android_media.FaceDetector` |
 | `android.media.FaceDetector.Face` | `android_media.Face` |

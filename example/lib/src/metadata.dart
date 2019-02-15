@@ -107,7 +107,9 @@ final Map<String, List<ClassDescription>> metadata = <String, List<ClassDescript
     ClassDescription('SensorEventListener'),
     ClassDescription('SensorManager'),
   ],
-  'android_location': <ClassDescription>[],
+  'android_location': <ClassDescription>[
+    ClassDescription('Location'),
+  ],
   'android_media': <ClassDescription>[
     ClassDescription('Face'),
     ClassDescription('FaceDetector'),
