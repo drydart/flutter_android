@@ -1,11 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.github.drydart.flutter_android.example">
 
     <!-- The INTERNET permission is required for development. Specifically,
          flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
+    <!-- See: https://developer.android.com/reference/android/Manifest.permission#INTERNET -->
     <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- See: https://developer.android.com/reference/android/Manifest.permission.html#ACCESS_COARSE_LOCATION -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- See: https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <!-- See: https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_ADMIN -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -13,8 +24,9 @@
          additional functionality it is fine to subclass or reimplement
          FlutterApplication and put your custom class here. -->
     <application
+        tools:replace="android:label"
         android:name="io.flutter.app.FlutterApplication"
-        android:label="flutter_android_example"
+        android:label="Flutter Android Example"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
