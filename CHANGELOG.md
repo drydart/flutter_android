@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.3] - 2019-02-15
 ### Added
 - `android_location.Location` class stub
+- `android_location.Location.distanceBetween()` static method
 
 ## [0.3.2] - 2019-02-15
 ### Added
@@ -32,8 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Required Dart SDK 2.1+
 ### Added
 - Face detection demo in the example app
-- `android_graphics.Bitmap.fromImage` static method
-- `android_graphics.Bitmap.fromAssetImage` static method
+- `android_graphics.Bitmap.fromImage()` static method
+- `android_graphics.Bitmap.fromAssetImage()` static method
 - `android_graphics.Bitmap#getHeight()` method
 - `android_graphics.Bitmap#getWidth()` method
 - `android_graphics.Bitmap#toImage()` method

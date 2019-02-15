@@ -2,6 +2,7 @@
 
 package com.github.drydart.flutter_android;
 
+import android.location.Location;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
@@ -22,7 +23,16 @@ class LocationHandler extends FlutterMethodCallHandler {
 
     assert(call.method != null);
     switch (call.method) {
-      // TODO
+      case "distanceBetween": {
+        final double startLatitude = getRequiredArgument(call, "startLatitude");
+        final double startLongitude = getRequiredArgument(call, "startLongitude");
+        final double endLatitude = getRequiredArgument(call, "endLatitude");
+        final double endLongitude = getRequiredArgument(call, "endLongitude");
+        final float[] distance = new float[1];
+        Location.distanceBetween(startLatitude, startLongitude, endLatitude, endLongitude, distance);
+        result.success((double)distance[0]);
+        break;
+      }
 
       default: {
         result.notImplemented();
