@@ -3,11 +3,38 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
+import 'demos/bluetooth_scanner.dart' show BluetoothScannerDemo;
+import 'demos/face_detector.dart' show FaceDetectorDemo;
+import 'demos/heartrate_monitor.dart' show HeartrateMonitorDemo;
+
 ////////////////////////////////////////////////////////////////////////////////
 
-final Map<String, String> demos = <String, String>{
-  "Bluetooth scanning": "Using android_bluetooth.BluetoothLeScanner.",
-  "Face detection": "Using android_media.FaceDetector.",
+class DemoDescription {
+  final String title;
+  final String subtitle;
+  final WidgetBuilder widget;
+
+  const DemoDescription({this.title, this.subtitle, this.widget});
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+final Map<String, DemoDescription> demos = <String, DemoDescription>{
+  'bluetooth_scanner': DemoDescription(
+    title: "Bluetooth scanning",
+    subtitle: "Using android_bluetooth.BluetoothLeScanner.",
+    widget: (context) => BluetoothScannerDemo(),
+  ),
+  'face_detector': DemoDescription(
+    title: "Face detection",
+    subtitle: "Using android_media.FaceDetector.",
+    widget: (context) => FaceDetectorDemo(),
+  ),
+  'heartrate_monitor': DemoDescription(
+    title: "Heart-rate monitoring",
+    subtitle: "Using android_hardware.SensorManager.",
+    widget: (context) => HeartrateMonitorDemo(),
+  ),
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -33,14 +60,18 @@ class _DemoTabState extends State<DemoTab> {
       padding: EdgeInsets.all(8.0),
       itemCount: demoKeys.length,
       itemBuilder: (final BuildContext context, final int index) {
-        final String demoTitle = demoKeys[index];
-        final String demoSubtitle = demos[demoTitle];
+        final String demoKey = demoKeys[index];
+        final DemoDescription demo = demos[demoKey];
         return GestureDetector(
-          onTap: () => _launchDemo(demoTitle),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: demo.widget,
+            ));
+          },
           child: ListTile(
             leading: Icon(Icons.play_circle_outline),
-            title: Text(demoTitle),
-            subtitle: Text(demoSubtitle),
+            title: Text(demo.title),
+            subtitle: Text(demo.subtitle),
           ),
         );
       },
@@ -52,18 +83,5 @@ class _DemoTabState extends State<DemoTab> {
 
   Future<void> _initPlatformState() async {
     // TODO
-  }
-
-  void _launchDemo(final String demoTitle) {
-    switch (demoTitle) {
-      case "Bluetooth scanning":
-        Navigator.of(context).pushNamed('/bluetooth_scanner');
-        break;
-      case "Face detection":
-        Navigator.of(context).pushNamed('/face_detection');
-        break;
-      default:
-        break;
-    }
   }
 }

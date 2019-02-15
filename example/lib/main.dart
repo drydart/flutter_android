@@ -3,8 +3,6 @@
 import 'package:flutter/material.dart';
 
 import 'main_screen.dart';
-import 'demos/bluetooth_scanner.dart' show BluetoothScannerDemo;
-import 'demos/face_detector.dart' show FaceDetectorDemo;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -39,10 +37,7 @@ class _AppState extends State<App> {
         brightness: Brightness.dark,
       ),
       home: MainScreen(),
-      routes: <String, WidgetBuilder>{
-        '/bluetooth_scanner': (context) => BluetoothScannerDemo(),
-        '/face_detection': (context) => FaceDetectorDemo(),
-      },
+      routes: <String, WidgetBuilder>{},
     );
   }
 }
