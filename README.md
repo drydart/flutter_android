@@ -22,6 +22,7 @@ Features
 | :--- | :--- |
 | Bluetooth scanning | `android_bluetooth.BluetoothLeScanner` |
 | Face detection | `android_media.FaceDetector` |
+| Heart-rate monitoring | `android_hardware.SensorManager` |
 
 Compatibility
 -------------
@@ -126,6 +127,15 @@ Reference
 - [`Point`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/Point-class.html)
 - [`PointF`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/PointF-class.html)
 
+### [`android_hardware`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/android_hardware-library.html)
+
+    import 'package:flutter_android/android_hardware.dart' as android_hardware;
+
+- [`Sensor`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/Sensor-class.html)
+- [`SensorEvent`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/SensorEvent-class.html)
+- [`SensorEventListener`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/SensorEventListener-class.html)
+- [`SensorManager`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/SensorManager-class.html)
+
 ### [`android_media`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/android_media-library.html)
 
     import 'package:flutter_android/android_media.dart' as android_media;
@@ -195,6 +205,10 @@ Cross-Reference
 | `android.graphics.PointF` | `android_graphics.PointF` |
 | `android.graphics.drawable.Icon` | `flutter.Icon` |
 | `android.hardware` | `android_hardware` |
+| `android.hardware.Sensor` | `android_hardware.Sensor` |
+| `android.hardware.SensorEvent` | `android_hardware.SensorEvent` |
+| `android.hardware.SensorEventListener` | `android_hardware.SensorEventListener` |
+| `android.hardware.SensorManager` | `android_hardware.SensorManager` |
 | `android.location` | `android_location` |
 | `android.media` | `android_media` |
 | `android.media.FaceDetector` | `android_media.FaceDetector` |

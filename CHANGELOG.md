@@ -10,14 +10,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Declared Bluetooth permissions for the example app
 - Declared body sensor permissions for the example app
+- `android_hardware.Sensor` class stub
+- `android_hardware.SensorEvent` class stub
+- `android_hardware.SensorEventListener` class stub
+- `android_hardware.SensorManager` class stub
 
 ## [0.3.1] - 2019-02-14
 ### Added
-- `android.bluetooth.BluetoothAdapter` class stub
-- `android.bluetooth.BluetoothDevice` class stub
-- `android.bluetooth.BluetoothHeadset` class stub
-- `android.bluetooth.BluetoothLeScanner` class stub
-- `android.bluetooth.BluetoothManager` class stub
+- `android_bluetooth.BluetoothAdapter` class stub
+- `android_bluetooth.BluetoothDevice` class stub
+- `android_bluetooth.BluetoothHeadset` class stub
+- `android_bluetooth.BluetoothLeScanner` class stub
+- `android_bluetooth.BluetoothManager` class stub
 
 ## [0.3.0] - 2019-02-14
 ### Changed
