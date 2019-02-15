@@ -18,6 +18,9 @@
     <!-- See: https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_ADMIN -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 
+    <!-- See: https://developer.android.com/reference/android/Manifest.permission#BODY_SENSORS -->
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
          In most cases you can leave this as-is, but you if you want to provide
