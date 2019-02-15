@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(final BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Android Bindings for Flutter"),
+        title: Text("Flutter Android Bindings"),
       ),
       body: _tabs[_tabIndex],
       bottomNavigationBar: BottomNavigationBar(
