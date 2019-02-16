@@ -23,7 +23,8 @@ Features
 | Bluetooth scanning | `android_bluetooth.BluetoothLeScanner` |
 | Face detection | `android_media.FaceDetector` |
 | Distance calculation | `android_location.Location.distanceBetween()` |
-| Heart-rate monitoring | `android_hardware.SensorManager` |
+| Heart-rate monitoring | `android_hardware.SensorManager.getDefaultSensor()` |
+| Sensor event streams | `android_hardware.Sensor#subscribe()` |
 
 Compatibility
 -------------
@@ -50,6 +51,19 @@ for (var face in await detector.findFaces(bitmap)) {
   }
   print("Found a face at (${face.midPoint.x}, ${face.midPoint.y}) with confidence ${face.confidence}");
 }
+```
+
+### Heart-rate monitoring
+
+```dart
+import 'package:flutter_android/android_hardware.dart'
+    show Sensor, SensorEvent, SensorManager;
+
+var sensor = await SensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
+
+sensor.subscribe().listen((SensorEvent event) {
+  print(event.values);
+});
 ```
 
 Frequently Asked Questions
