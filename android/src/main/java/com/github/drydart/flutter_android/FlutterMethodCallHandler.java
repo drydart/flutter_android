@@ -73,6 +73,7 @@ abstract class FlutterMethodCallHandler implements MethodCallHandler {
     assert(call != null);
     assert(name != null);
 
-    return call.hasArgument(name) ? (T)call.argument(name) : defaultValue;
+    return call.hasArgument(name) && call.argument(name) != null ?
+        (T)call.argument(name) : defaultValue;
   }
 }

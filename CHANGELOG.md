@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `android_hardware.Sensor#subscribe()` method
 - `android_hardware.SensorEvent` class
 - `android_hardware.SensorManager.getDefaultSensor()` static method
+- `android_hardware.SensorManager.registerListener()` static method
 
 ## [0.3.3] - 2019-02-15
 ### Added

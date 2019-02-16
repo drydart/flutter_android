@@ -61,8 +61,9 @@ import 'package:flutter_android/android_hardware.dart'
 
 var sensor = await SensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
 
-sensor.subscribe().listen((SensorEvent event) {
-  print(event.values);
+var events = await sensor.subscribe();
+events.listen((SensorEvent event) {
+  print(event.values[0]);
 });
 ```
 
