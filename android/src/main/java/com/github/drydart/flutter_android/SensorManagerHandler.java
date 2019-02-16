@@ -57,11 +57,12 @@ class SensorManagerHandler extends FlutterMethodCallHandler {
       case "registerListener": {
         final int sensorKey = getRequiredArgument(call, "key");
         if (this.channels.containsKey(sensorKey)) {
-          result.success(true); // already registered
+          final String channelID = String.valueOf(sensorKey);
+          result.success(channelID); // already registered
           break;
         }
         if (!this.sensors.containsKey(sensorKey)) {
-          result.success(false); // invalid sensor key
+          result.success(null); // invalid sensor key
           break;
         }
         final int samplingPeriodUs = getOptionalArgument(call, "samplingPeriodUs", SensorManager.SENSOR_DELAY_NORMAL);
