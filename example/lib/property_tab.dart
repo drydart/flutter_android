@@ -96,7 +96,7 @@ class _PropertyTabState extends State<PropertyTab> {
         final className = classInfo.name;
         classInfo.properties.forEach((propertyName, propertyCallback) {
           try {
-            final propertyKey = "${libraryName}.${className}.${propertyName}";
+            final propertyKey = "$libraryName.$className.$propertyName";
             properties[propertyKey] = PropertyItem(libraryName, className, propertyName, propertyCallback());
           }
           on PlatformException catch (e) {

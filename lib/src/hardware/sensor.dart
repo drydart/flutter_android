@@ -2,7 +2,7 @@
 
 import 'package:meta/meta.dart' show required;
 
-import 'package:flutter/services.dart' show EventChannel, MethodChannel;
+import 'package:flutter/services.dart' show EventChannel;
 
 import 'sensor_event.dart' show SensorEvent;
 import 'sensor_manager.dart' show SensorManager;

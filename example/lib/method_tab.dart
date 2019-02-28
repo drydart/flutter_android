@@ -3,8 +3,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show PlatformException;
-import 'package:flutter_android/android.dart' show Android;
-import 'package:flutter_android/android_content.dart' as android_content;
 import 'package:url_launcher/url_launcher.dart' show launch;
 
 //import 'src/metadata.dart' show metadata;

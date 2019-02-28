@@ -39,6 +39,8 @@ abstract class SensorManager {
     };
     final String channelID =
         await _channel.invokeMethod('registerListener', request);
-    return (channelID != null) ? EventChannel('flutter_android/SensorManager/$channelID') : null;
+    return (channelID != null)
+        ? EventChannel('flutter_android/SensorManager/$channelID')
+        : null;
   }
 }

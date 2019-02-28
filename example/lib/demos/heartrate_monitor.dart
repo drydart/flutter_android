@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:flutter_android/android_hardware.dart';
+//import 'package:flutter_android/android_hardware.dart';
 
 ////////////////////////////////////////////////////////////////////////////////
 
