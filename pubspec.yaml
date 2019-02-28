@@ -1,6 +1,6 @@
 # See: https://www.dartlang.org/tools/pub/pubspec
 name: flutter_android
-version: 0.3.5
+version: 0.3.6
 description: >-
   Flutter plugin for Android platform-specific APIs, to reduce duplication
   of effort by centralizing Android bindings in a single package.
