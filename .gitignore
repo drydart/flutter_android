@@ -14,6 +14,7 @@ build/
 pubspec.lock
 
 # VS Code artifacts
+.vscode/
 android/.classpath
 android/.project
 android/.settings/
