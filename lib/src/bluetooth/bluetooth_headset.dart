@@ -12,27 +12,32 @@ abstract class BluetoothHeadset {
   /// Intent used to broadcast the change in connection state of the Headset profile.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothHeadset#ACTION_CONNECTION_STATE_CHANGED
-  static const String ACTION_CONNECTION_STATE_CHANGED = "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED";
+  static const String ACTION_CONNECTION_STATE_CHANGED =
+      "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED";
 
   /// Intent used to broadcast the change in the Audio Connection state of the A2DP profile.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothHeadset#ACTION_AUDIO_STATE_CHANGED
-  static const String ACTION_AUDIO_STATE_CHANGED = "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED";
+  static const String ACTION_AUDIO_STATE_CHANGED =
+      "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED";
 
   /// Intent used to broadcast that the headset has posted a vendor-specific event.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothHeadset#ACTION_VENDOR_SPECIFIC_HEADSET_EVENT
-  static const String ACTION_VENDOR_SPECIFIC_HEADSET_EVENT = "android.bluetooth.headset.action.VENDOR_SPECIFIC_HEADSET_EVENT";
+  static const String ACTION_VENDOR_SPECIFIC_HEADSET_EVENT =
+      "android.bluetooth.headset.action.VENDOR_SPECIFIC_HEADSET_EVENT";
 
   /// A String extra field in `ACTION_VENDOR_SPECIFIC_HEADSET_EVENT` intents that contains the name of the vendor-specific command.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothHeadset#EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD
-  static const String EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD";
+  static const String EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD =
+      "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD";
 
   /// An int extra field in `ACTION_VENDOR_SPECIFIC_HEADSET_EVENT` intents that contains the AT command type of the vendor-specific command.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothHeadset#EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE
-  static const String EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE";
+  static const String EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE =
+      "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE";
 
   /// AT command type READ used with `EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE` For example, AT+VGM?.
   ///
@@ -62,12 +67,14 @@ abstract class BluetoothHeadset {
   /// A Parcelable String array extra field in `ACTION_VENDOR_SPECIFIC_HEADSET_EVENT` intents that contains the arguments to the vendor-specific command.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothHeadset#EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS
-  static const String EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_ARGS";
+  static const String EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS =
+      "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_ARGS";
 
   /// The intent category to be used with `ACTION_VENDOR_SPECIFIC_HEADSET_EVENT` for the companyId.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothHeadset#VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY
-  static const String VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY = "android.bluetooth.headset.intent.category.companyid";
+  static const String VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY =
+      "android.bluetooth.headset.intent.category.companyid";
 
   /// A vendor-specific command for unsolicited result code.
   ///

@@ -22,32 +22,38 @@ abstract class BluetoothDevice {
   /// Broadcast Action: Bluetooth class of a remote device has changed.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_CLASS_CHANGED
-  static const String ACTION_CLASS_CHANGED = "android.bluetooth.device.action.CLASS_CHANGED";
+  static const String ACTION_CLASS_CHANGED =
+      "android.bluetooth.device.action.CLASS_CHANGED";
 
   /// Broadcast Action: Indicates a low level (ACL) connection has been established with a remote device.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_ACL_CONNECTED
-  static const String ACTION_ACL_CONNECTED = "android.bluetooth.device.action.ACL_CONNECTED";
+  static const String ACTION_ACL_CONNECTED =
+      "android.bluetooth.device.action.ACL_CONNECTED";
 
   /// Broadcast Action: Indicates that a low level (ACL) disconnection has been requested for a remote device, and it will soon be disconnected.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_ACL_DISCONNECT_REQUESTED
-  static const String ACTION_ACL_DISCONNECT_REQUESTED = "android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED";
+  static const String ACTION_ACL_DISCONNECT_REQUESTED =
+      "android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED";
 
   /// Broadcast Action: Indicates a low level (ACL) disconnection from a remote device.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_ACL_DISCONNECTED
-  static const String ACTION_ACL_DISCONNECTED = "android.bluetooth.device.action.ACL_DISCONNECTED";
+  static const String ACTION_ACL_DISCONNECTED =
+      "android.bluetooth.device.action.ACL_DISCONNECTED";
 
   /// Broadcast Action: Indicates the friendly name of a remote device has been retrieved for the first time, or changed since the last retrieval.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_NAME_CHANGED
-  static const String ACTION_NAME_CHANGED = "android.bluetooth.device.action.NAME_CHANGED";
+  static const String ACTION_NAME_CHANGED =
+      "android.bluetooth.device.action.NAME_CHANGED";
 
   /// contain a hidden extra field EXTRA_REASON with the result code.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_BOND_STATE_CHANGED
-  static const String ACTION_BOND_STATE_CHANGED = "android.bluetooth.device.action.BOND_STATE_CHANGED";
+  static const String ACTION_BOND_STATE_CHANGED =
+      "android.bluetooth.device.action.BOND_STATE_CHANGED";
 
   /// Used as a Parcelable `BluetoothDevice` extra field in every intent broadcast by this class.
   ///
@@ -72,12 +78,14 @@ abstract class BluetoothDevice {
   /// Used as an int extra field in `ACTION_BOND_STATE_CHANGED` intents.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#EXTRA_BOND_STATE
-  static const String EXTRA_BOND_STATE = "android.bluetooth.device.extra.BOND_STATE";
+  static const String EXTRA_BOND_STATE =
+      "android.bluetooth.device.extra.BOND_STATE";
 
   /// Used as an int extra field in `ACTION_BOND_STATE_CHANGED` intents.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#EXTRA_PREVIOUS_BOND_STATE
-  static const String EXTRA_PREVIOUS_BOND_STATE = "android.bluetooth.device.extra.PREVIOUS_BOND_STATE";
+  static const String EXTRA_PREVIOUS_BOND_STATE =
+      "android.bluetooth.device.extra.PREVIOUS_BOND_STATE";
 
   /// Indicates the remote device is not bonded (paired).
   ///
@@ -97,12 +105,14 @@ abstract class BluetoothDevice {
   /// Used as an int extra field in `ACTION_PAIRING_REQUEST` intents to indicate pairing method used.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#EXTRA_PAIRING_VARIANT
-  static const String EXTRA_PAIRING_VARIANT = "android.bluetooth.device.extra.PAIRING_VARIANT";
+  static const String EXTRA_PAIRING_VARIANT =
+      "android.bluetooth.device.extra.PAIRING_VARIANT";
 
   /// Used as an int extra field in `ACTION_PAIRING_REQUEST` intents as the value of passkey.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#EXTRA_PAIRING_KEY
-  static const String EXTRA_PAIRING_KEY = "android.bluetooth.device.extra.PAIRING_KEY";
+  static const String EXTRA_PAIRING_KEY =
+      "android.bluetooth.device.extra.PAIRING_KEY";
 
   /// Bluetooth device type, Unknown.
   ///
@@ -132,12 +142,14 @@ abstract class BluetoothDevice {
   /// TODO: is this actually useful?.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_NAME_FAILED
-  static const String ACTION_NAME_FAILED = "android.bluetooth.device.action.NAME_FAILED";
+  static const String ACTION_NAME_FAILED =
+      "android.bluetooth.device.action.NAME_FAILED";
 
   /// Broadcast Action: This intent is used to broadcast PAIRING REQUEST Requires `android.Manifest.permission#BLUETOOTH_ADMIN` to receive.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_PAIRING_REQUEST
-  static const String ACTION_PAIRING_REQUEST = "android.bluetooth.device.action.PAIRING_REQUEST";
+  static const String ACTION_PAIRING_REQUEST =
+      "android.bluetooth.device.action.PAIRING_REQUEST";
 
   /// The user will be prompted to enter a pin or an app will enter a pin for user.
   ///
