@@ -11,6 +11,6 @@ class ContentValues implements Parcelable {
 
   /// Creates an empty set of values using the default initial size.
   ///
-  /// See: https://developer.android.com/reference/android/content/ContentValues.html#ContentValues()
+  /// See: https://developer.android.com/reference/android/content/ContentValues#ContentValues()
   const ContentValues();
 }

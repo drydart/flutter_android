@@ -12,37 +12,37 @@ import 'pending_intent.dart' show PendingIntent;
 ///
 /// See: https://developer.android.com/reference/android/app/Notification.Action
 class NotificationAction {
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_ARCHIVE
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_ARCHIVE
   static const int SEMANTIC_ACTION_ARCHIVE = 5;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_CALL
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_CALL
   static const int SEMANTIC_ACTION_CALL = 10;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_DELETE
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_DELETE
   static const int SEMANTIC_ACTION_DELETE = 4;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_MARK_AS_READ
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_MARK_AS_READ
   static const int SEMANTIC_ACTION_MARK_AS_READ = 2;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_MARK_AS_UNREAD
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_MARK_AS_UNREAD
   static const int SEMANTIC_ACTION_MARK_AS_UNREAD = 3;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_MUTE
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_MUTE
   static const int SEMANTIC_ACTION_MUTE = 6;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_NONE
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_NONE
   static const int SEMANTIC_ACTION_NONE = 0;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_REPLY
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_REPLY
   static const int SEMANTIC_ACTION_REPLY = 1;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_THUMBS_DOWN
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_THUMBS_DOWN
   static const int SEMANTIC_ACTION_THUMBS_DOWN = 9;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_THUMBS_UP
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_THUMBS_UP
   static const int SEMANTIC_ACTION_THUMBS_UP = 8;
 
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#SEMANTIC_ACTION_UNMUTE
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#SEMANTIC_ACTION_UNMUTE
   static const int SEMANTIC_ACTION_UNMUTE = 7;
 
   /// Intent to send when the user invokes this action.
@@ -50,17 +50,17 @@ class NotificationAction {
   /// May be null, in which case the action may be rendered in a disabled
   /// presentation by the system UI.
   ///
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#actionIntent
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#actionIntent
   final PendingIntent intent;
 
   /// Small icon representing the action.
   ///
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#icon
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#icon
   final Icon icon;
 
   /// Title of the action.
   ///
-  /// See: https://developer.android.com/reference/android/app/Notification.Action.html#title
+  /// See: https://developer.android.com/reference/android/app/Notification.Action#title
   final String title;
 
   NotificationAction({

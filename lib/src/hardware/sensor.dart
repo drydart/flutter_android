@@ -14,10 +14,10 @@ class Sensor {
   /// An internal handle.
   final int key;
 
-  /// See: https://developer.android.com/reference/android/hardware/Sensor.html#getName()
+  /// See: https://developer.android.com/reference/android/hardware/Sensor#getName()
   final String name;
 
-  /// See: https://developer.android.com/reference/android/hardware/Sensor.html#getType()
+  /// See: https://developer.android.com/reference/android/hardware/Sensor#getType()
   final int type;
 
   const Sensor({

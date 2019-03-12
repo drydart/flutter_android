@@ -12,7 +12,7 @@ const MethodChannel _channel = MethodChannel('flutter_android/SensorManager');
 abstract class SensorManager {
   /// Gets the default sensor for a given type.
   ///
-  /// See: https://developer.android.com/reference/android/hardware/SensorManager.html#getDefaultSensor(int)
+  /// See: https://developer.android.com/reference/android/hardware/SensorManager#getDefaultSensor(int)
   static Future<Sensor> getDefaultSensor(final int type) async {
     final Map<String, dynamic> request = <String, dynamic>{'type': type};
     final int key = await _channel.invokeMethod('getDefaultSensor', request);

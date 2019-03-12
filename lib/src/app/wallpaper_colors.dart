@@ -12,21 +12,21 @@ import '../os/parcelable.dart' show Parcelable;
 class WallpaperColors implements Parcelable {
   /// The most visually representative color of the wallpaper.
   ///
-  /// See: https://developer.android.com/reference/android/app/WallpaperColors.html#getPrimaryColor()
+  /// See: https://developer.android.com/reference/android/app/WallpaperColors#getPrimaryColor()
   final Color primaryColor;
 
   /// The second most preeminent color of the wallpaper.
   ///
-  /// See: https://developer.android.com/reference/android/app/WallpaperColors.html#getSecondaryColor()
+  /// See: https://developer.android.com/reference/android/app/WallpaperColors#getSecondaryColor()
   final Color secondaryColor;
 
   /// The third most preeminent color of the wallpaper.
   ///
-  /// See: https://developer.android.com/reference/android/app/WallpaperColors.html#getTertiaryColor()
+  /// See: https://developer.android.com/reference/android/app/WallpaperColors#getTertiaryColor()
   final Color tertiaryColor;
 
   /// Constructs a new object from three colors.
   ///
-  /// See: https://developer.android.com/reference/android/app/WallpaperColors.html#WallpaperColors(android.graphics.Color,%20android.graphics.Color,%20android.graphics.Color)
+  /// See: https://developer.android.com/reference/android/app/WallpaperColors#WallpaperColors(android.graphics.Color,%20android.graphics.Color,%20android.graphics.Color)
   WallpaperColors(this.primaryColor, this.secondaryColor, this.tertiaryColor);
 }

@@ -80,7 +80,7 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
   /// Closes the cursor, releasing all of its resources and making it completely
   /// invalid.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#close()
+  /// See: https://developer.android.com/reference/android/database/Cursor#close()
   Future<void> close() => Future.value();
 
   /// Returns the value of the requested column.
@@ -88,66 +88,66 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
 
   /// Returns the value of the requested column as a byte array.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getBlob(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getBlob(int)
   Uint8List getBlob(final int columnIndex) => get(columnIndex);
 
   /// Returns the total number of columns.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getColumnCount()
+  /// See: https://developer.android.com/reference/android/database/Cursor#getColumnCount()
   int getColumnCount() => getColumnNames().length;
 
   /// Returns the zero-based index for the given column name, or -1 if the
   /// column doesn't exist.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getColumnIndex(java.lang.String)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getColumnIndex(java.lang.String)
   int getColumnIndex(final String columnName) =>
       getColumnNames().indexOf(columnName);
 
   /// Returns the column name at the given zero-based column index.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getColumnName(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getColumnName(int)
   String getColumnName(final int columnIndex) => getColumnNames()[columnIndex];
 
   /// Returns a string array holding the names of all of the columns in the
   /// result set in the order in which they were listed in the result.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getColumnNames()
+  /// See: https://developer.android.com/reference/android/database/Cursor#getColumnNames()
   List<String> getColumnNames();
 
   /// Returns the number of rows in the cursor.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getCount()
+  /// See: https://developer.android.com/reference/android/database/Cursor#getCount()
   int getCount();
 
   /// Returns the value of the requested column as a double.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getDouble(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getDouble(int)
   double getDouble(final int columnIndex) => get(columnIndex);
 
   /// Returns a bundle of extra values.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getExtras()
+  /// See: https://developer.android.com/reference/android/database/Cursor#getExtras()
   Bundle getExtras() => Bundle.EMPTY;
 
   /// Returns the value of the requested column as a float.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getFloat(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getFloat(int)
   double getFloat(final int columnIndex) => getDouble(columnIndex);
 
   /// Returns the value of the requested column as an int.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getInt(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getInt(int)
   int getInt(final int columnIndex) => get(columnIndex);
 
   /// Returns the value of the requested column as a long.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getLong(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getLong(int)
   int getLong(final int columnIndex) => getInt(columnIndex);
 
   /// Return the URI at which notifications of changes in this cursor's data
   /// will be delivered.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getNotificationUri()
+  /// See: https://developer.android.com/reference/android/database/Cursor#getNotificationUri()
   Uri getNotificationUri() => null;
 
   /// Returns the current position of the cursor in the row set.
@@ -157,22 +157,22 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
   /// is returned another call to [moveToNext()] will leave the cursor past the
   /// last entry, at a position of [count].
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getPosition()
+  /// See: https://developer.android.com/reference/android/database/Cursor#getPosition()
   int getPosition();
 
   /// Returns the value of the requested column as a short.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getShort(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getShort(int)
   int getShort(final int columnIndex) => getInt(columnIndex);
 
   /// Returns the value of the requested column as a string.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getString(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getString(int)
   String getString(final int columnIndex) => get(columnIndex);
 
   /// Returns data type of the given column's value.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#getType(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#getType(int)
   int getType(final int columnIndex) {
     final dynamic value = get(columnIndex);
     if (value == null) return FIELD_TYPE_NULL;
@@ -186,33 +186,33 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
 
   /// Returns whether the cursor is pointing to the position after the last row.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#isAfterLast()
+  /// See: https://developer.android.com/reference/android/database/Cursor#isAfterLast()
   bool get isAfterLast => getPosition() >= getCount();
 
   /// Returns whether the cursor is pointing to the position before the first
   /// row.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#isBeforeFirst()
+  /// See: https://developer.android.com/reference/android/database/Cursor#isBeforeFirst()
   bool get isBeforeFirst => getPosition() < 0;
 
   /// Returns `true` if the cursor is closed.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#isClosed()
+  /// See: https://developer.android.com/reference/android/database/Cursor#isClosed()
   bool get isClosed;
 
   /// Returns whether the cursor is pointing to the first row.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#isFirst()
+  /// See: https://developer.android.com/reference/android/database/Cursor#isFirst()
   bool get isFirst => getPosition() == 0;
 
   /// Returns whether the cursor is pointing to the last row.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#isLast()
+  /// See: https://developer.android.com/reference/android/database/Cursor#isLast()
   bool get isLast => getPosition() == getCount() - 1;
 
   /// Returns `true` if the value in the indicated column is null.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#isNull(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#isNull(int)
   bool isNull(final int columnIndex) => get(columnIndex) == null;
 
   /// Moves the cursor by a relative amount, forward or backward, from the
@@ -221,17 +221,17 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
   /// This method will return `true` if the requested destination was reachable,
   /// otherwise, it returns `false`.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#move(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#move(int)
   bool move(final int offset) => moveToPosition(getPosition() + offset);
 
   /// Moves the cursor to the first row.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToFirst()
+  /// See: https://developer.android.com/reference/android/database/Cursor#moveToFirst()
   bool moveToFirst() => getCount() > 0 && moveToPosition(0);
 
   /// Moves the cursor to the last row.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToLast()
+  /// See: https://developer.android.com/reference/android/database/Cursor#moveToLast()
   bool moveToLast() => getCount() > 0 && moveToPosition(getCount() - 1);
 
   /// Moves the cursor to the next row.
@@ -239,7 +239,7 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
   /// This method will return false if the cursor is already past the last entry
   /// in the result set.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToNext()
+  /// See: https://developer.android.com/reference/android/database/Cursor#moveToNext()
   bool moveToNext() =>
       (getPosition() < getCount()) && move(1) && (getPosition() < getCount());
 
@@ -247,12 +247,12 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
   ///
   /// The valid range of values is -1 <= [position] <= [count].
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToPosition(int)
+  /// See: https://developer.android.com/reference/android/database/Cursor#moveToPosition(int)
   bool moveToPosition(final int position);
 
   /// Moves the cursor to the previous row.
   ///
-  /// See: https://developer.android.com/reference/android/database/Cursor.html#moveToPrevious()
+  /// See: https://developer.android.com/reference/android/database/Cursor#moveToPrevious()
   bool moveToPrevious() => (getPosition() >= 0) && move(-1);
 
   /// An iterator over the rows of this cursor.

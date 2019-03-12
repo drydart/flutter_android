@@ -6,13 +6,13 @@ const Platform _platform = LocalPlatform();
 
 /// Information about the current build, extracted from system properties.
 ///
-/// See: https://developer.android.com/reference/android/os/Build.html
+/// See: https://developer.android.com/reference/android/os/Build
 abstract class Build {
   /// Returns the version string for the radio firmware.
   ///
   /// May return `null` (if, for instance, the radio is not currently on).
   ///
-  /// See: https://developer.android.com/reference/android/os/Build.html#getRadioVersion()
+  /// See: https://developer.android.com/reference/android/os/Build#getRadioVersion()
   static Future<String> get radioVersion {
     assert(_platform.isAndroid);
     return null; // TODO
@@ -20,7 +20,7 @@ abstract class Build {
 
   /// Gets the hardware serial number, if available.
   ///
-  /// See: https://developer.android.com/reference/android/os/Build.html#getSerial()
+  /// See: https://developer.android.com/reference/android/os/Build#getSerial()
   static Future<String> get serial {
     assert(_platform.isAndroid);
     return null; // TODO

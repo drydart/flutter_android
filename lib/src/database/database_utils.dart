@@ -14,7 +14,7 @@ const Platform _platform = LocalPlatform();
 abstract class DatabaseUtils {
   /// Prints the contents of a [Cursor]'s current row to standard output.
   ///
-  /// See: https://developer.android.com/reference/android/database/DatabaseUtils.html#dumpCurrentRow(android.database.Cursor)
+  /// See: https://developer.android.com/reference/android/database/DatabaseUtils#dumpCurrentRow(android.database.Cursor)
   static Future<void> dumpCurrentRow(final Cursor cursor) async {
     assert(_platform.isAndroid);
 
@@ -23,7 +23,7 @@ abstract class DatabaseUtils {
 
   /// Prints the contents of a [Cursor]'s current row to a string.
   ///
-  /// See: https://developer.android.com/reference/android/database/DatabaseUtils.html#dumpCurrentRowToString(android.database.Cursor)
+  /// See: https://developer.android.com/reference/android/database/DatabaseUtils#dumpCurrentRowToString(android.database.Cursor)
   static Future<String> dumpCurrentRowToString(final Cursor cursor) async {
     assert(_platform.isAndroid);
 
@@ -34,7 +34,7 @@ abstract class DatabaseUtils {
 
   /// Prints the contents of a [Cursor]'s current row to a string buffer.
   ///
-  /// See: https://developer.android.com/reference/android/database/DatabaseUtils.html#dumpCurrentRowToString(android.database.Cursor)
+  /// See: https://developer.android.com/reference/android/database/DatabaseUtils#dumpCurrentRowToString(android.database.Cursor)
   static Future<void> dumpCurrentRowToStringBuffer(
       final Cursor cursor, final StringBuffer buffer) async {
     assert(_platform.isAndroid);
@@ -72,7 +72,7 @@ abstract class DatabaseUtils {
   ///
   /// The position is restored after printing.
   ///
-  /// See: https://developer.android.com/reference/android/database/DatabaseUtils.html#dumpCursor(android.database.Cursor)
+  /// See: https://developer.android.com/reference/android/database/DatabaseUtils#dumpCursor(android.database.Cursor)
   static Future<void> dumpCursor(final Cursor cursor) async {
     assert(_platform.isAndroid);
 
@@ -87,7 +87,7 @@ abstract class DatabaseUtils {
   ///
   /// The position is restored after printing.
   ///
-  /// See: https://developer.android.com/reference/android/database/DatabaseUtils.html#dumpCursorToString(android.database.Cursor)
+  /// See: https://developer.android.com/reference/android/database/DatabaseUtils#dumpCursorToString(android.database.Cursor)
   static Future<String> dumpCursorToString(final Cursor cursor) async {
     assert(_platform.isAndroid);
 

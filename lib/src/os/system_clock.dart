@@ -6,21 +6,21 @@
 abstract class SystemClock {
   /// Returns milliseconds running in the current thread.
   ///
-  /// See: https://developer.android.com/reference/android/os/SystemClock.html#currentThreadTimeMillis()
+  /// See: https://developer.android.com/reference/android/os/SystemClock#currentThreadTimeMillis()
   int get currentThreadTimeMillis {
     return null; // TODO
   }
 
   /// Returns milliseconds since boot, including time spent in sleep.
   ///
-  /// See: https://developer.android.com/reference/android/os/SystemClock.html#elapsedRealtime()
+  /// See: https://developer.android.com/reference/android/os/SystemClock#elapsedRealtime()
   int get elapsedRealtime {
     return null; // TODO
   }
 
   /// Returns nanoseconds since boot, including time spent in sleep.
   ///
-  /// See: https://developer.android.com/reference/android/os/SystemClock.html#elapsedRealtimeNanos()
+  /// See: https://developer.android.com/reference/android/os/SystemClock#elapsedRealtimeNanos()
   int get elapsedRealtimeNanos {
     return null; // TODO
   }
@@ -29,21 +29,21 @@ abstract class SystemClock {
   ///
   /// Requires the calling process to have appropriate permissions.
   ///
-  /// See: https://developer.android.com/reference/android/os/SystemClock.html#setCurrentTimeMillis(long)
+  /// See: https://developer.android.com/reference/android/os/SystemClock#setCurrentTimeMillis(long)
   set currentThreadTimeMillis(final int millis) {
     return null; // TODO
   }
 
   /// Waits a given number of milliseconds (of [uptimeMillis]) before returning.
   ///
-  /// See: https://developer.android.com/reference/android/os/SystemClock.html#sleep(long)
+  /// See: https://developer.android.com/reference/android/os/SystemClock#sleep(long)
   void sleep(final int ms) {
     return null; // TODO
   }
 
   /// Returns milliseconds since boot, not counting time spent in deep sleep.
   ///
-  /// See: https://developer.android.com/reference/android/os/SystemClock.html#uptimeMillis()
+  /// See: https://developer.android.com/reference/android/os/SystemClock#uptimeMillis()
   int get uptimeMillis {
     return null; // TODO
   }

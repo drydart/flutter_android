@@ -240,7 +240,7 @@ abstract class Context {
   /// The class of the returned object varies by the requested name.
   /// Returns the service or `null` if the name does not exist.
   ///
-  /// See: https://developer.android.com/reference/android/content/Context.html#getSystemService(java.lang.String)
+  /// See: https://developer.android.com/reference/android/content/Context#getSystemService(java.lang.String)
   static dynamic getSystemService(final String name) {
     assert(_platform.isAndroid);
     switch (name) {
@@ -276,7 +276,7 @@ abstract class Context {
   /// Returns the absolute path to the application specific cache directory on
   /// the filesystem.
   ///
-  /// See: https://developer.android.com/reference/android/content/Context.html#getCacheDir()
+  /// See: https://developer.android.com/reference/android/content/Context#getCacheDir()
   static Future<Directory> get cacheDir async {
     assert(_platform.isAndroid);
     return Directory(await _channel.invokeMethod('getCacheDir') as String);
@@ -294,7 +294,7 @@ abstract class Context {
   /// Returns the absolute path to the directory on the filesystem where all
   /// private files belonging to this app are stored.
   ///
-  /// See: https://developer.android.com/reference/android/content/Context.html#getDataDir()
+  /// See: https://developer.android.com/reference/android/content/Context#getDataDir()
   static Future<Directory> get dataDir async {
     assert(_platform.isAndroid);
     return Directory(await _channel.invokeMethod('getDataDir') as String);

@@ -34,7 +34,7 @@ class Intent implements Parcelable {
 
   /// Flags used on this [Intent].
   ///
-  /// See: https://developer.android.com/reference/android/content/Intent.html#flags
+  /// See: https://developer.android.com/reference/android/content/Intent#flags
   final int flags;
 
   Intent({

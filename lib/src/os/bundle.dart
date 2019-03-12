@@ -17,22 +17,22 @@ class Bundle implements Parcelable {
 
   /// Constructs a new, empty [Bundle].
   ///
-  /// See: https://developer.android.com/reference/android/os/Bundle.html#Bundle()
+  /// See: https://developer.android.com/reference/android/os/Bundle#Bundle()
   Bundle();
 
   /// Returns whether the mapping of this [Bundle] is empty.
   ///
-  /// See: https://developer.android.com/reference/android/os/BaseBundle.html#isEmpty()
+  /// See: https://developer.android.com/reference/android/os/BaseBundle#isEmpty()
   bool get isEmpty => mappings.isEmpty;
 
   /// Reports whether the bundle contains any parcelled file descriptors.
   ///
-  /// See: https://developer.android.com/reference/android/os/Bundle.html#hasFileDescriptors()
+  /// See: https://developer.android.com/reference/android/os/Bundle#hasFileDescriptors()
   bool get hasFileDescriptors => false;
 
   /// Returns the number of mappings contained in this [Bundle].
   ///
-  /// See: https://developer.android.com/reference/android/os/BaseBundle.html#size()
+  /// See: https://developer.android.com/reference/android/os/BaseBundle#size()
   int get size => mappings.length;
 
   /// Removes all elements from the mapping of this [Bundle].
@@ -47,22 +47,22 @@ class Bundle implements Parcelable {
 
   /// Returns whether the given key is contained in the mapping of this [Bundle].
   ///
-  /// See: https://developer.android.com/reference/android/os/BaseBundle.html#containsKey(java.lang.String)
+  /// See: https://developer.android.com/reference/android/os/BaseBundle#containsKey(java.lang.String)
   bool containsKey(final String key) => mappings.containsKey(key);
 
   /// Returns the entry with the given key as an object.
   ///
-  /// See: https://developer.android.com/reference/android/os/BaseBundle.html#get(java.lang.String)
+  /// See: https://developer.android.com/reference/android/os/BaseBundle#get(java.lang.String)
   dynamic get(final String key) => mappings[key];
 
   /// Returns the entry with the given key.
   ///
-  /// See: https://developer.android.com/reference/android/os/BaseBundle.html#getString(java.lang.String)
+  /// See: https://developer.android.com/reference/android/os/BaseBundle#getString(java.lang.String)
   String getString(final String key) => get(key);
 
   /// Inserts a string value into the mapping of this [Bundle], replacing any
   /// existing value for the given key.
   ///
-  /// See: https://developer.android.com/reference/android/os/BaseBundle.html#putString(java.lang.String,%20java.lang.String)
+  /// See: https://developer.android.com/reference/android/os/BaseBundle#putString(java.lang.String,%20java.lang.String)
   void putString(final String key, final String value) => mappings[key] = value;
 }

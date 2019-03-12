@@ -9,43 +9,43 @@ abstract class Process {
   /// Defines the start of a range of UIDs (and GIDs), going from this number to
   /// [LAST_APPLICATION_UID] that are reserved for assigning to applications.
   ///
-  /// See: https://developer.android.com/reference/android/os/Process.html#FIRST_APPLICATION_UID
+  /// See: https://developer.android.com/reference/android/os/Process#FIRST_APPLICATION_UID
   static const int FIRST_APPLICATION_UID = 10000;
 
   /// Last of application-specific UIDs starting at [FIRST_APPLICATION_UID].
   ///
-  /// See: https://developer.android.com/reference/android/os/Process.html#LAST_APPLICATION_UID
+  /// See: https://developer.android.com/reference/android/os/Process#LAST_APPLICATION_UID
   static const int LAST_APPLICATION_UID = 19999;
 
   /// Defines the UID/GID under which the telephony code runs.
   ///
-  /// See: https://developer.android.com/reference/android/os/Process.html#PHONE_UID
+  /// See: https://developer.android.com/reference/android/os/Process#PHONE_UID
   static const int PHONE_UID = 1001;
 
-  // See: https://developer.android.com/reference/android/os/Process.html#SIGNAL_KILL
+  // See: https://developer.android.com/reference/android/os/Process#SIGNAL_KILL
   static const int SIGNAL_KILL = 9;
 
-  // See: https://developer.android.com/reference/android/os/Process.html#SIGNAL_QUIT
+  // See: https://developer.android.com/reference/android/os/Process#SIGNAL_QUIT
   static const int SIGNAL_QUIT = 3;
 
-  // See: https://developer.android.com/reference/android/os/Process.html#SIGNAL_USR1
+  // See: https://developer.android.com/reference/android/os/Process#SIGNAL_USR1
   static const int SIGNAL_USR1 = 10;
 
   /// Defines the UID/GID under which system code runs.
   ///
-  /// See: https://developer.android.com/reference/android/os/Process.html#SYSTEM_UID
+  /// See: https://developer.android.com/reference/android/os/Process#SYSTEM_UID
   static const int SYSTEM_UID = 1000;
 
   /// Returns whether the current process is a 64-bit runtime.
   ///
-  /// See: https://developer.android.com/reference/android/os/Process.html#is64Bit()
+  /// See: https://developer.android.com/reference/android/os/Process#is64Bit()
   static Future<bool> get is64Bit {
     return null; // TODO
   }
 
   /// Returns whether the current process is in an isolated sandbox.
   ///
-  /// See: https://developer.android.com/reference/android/os/Process.html#isIsolated()
+  /// See: https://developer.android.com/reference/android/os/Process#isIsolated()
   static Future<bool> get isIsolated {
     return null; // TODO
   }

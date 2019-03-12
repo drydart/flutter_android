@@ -11,7 +11,7 @@ class UserManager {
   /// Returns whether this device supports multiple users with their own login
   /// and customizable space.
   ///
-  /// See: https://developer.android.com/reference/android/os/UserManager.html#supportsMultipleUsers()
+  /// See: https://developer.android.com/reference/android/os/UserManager#supportsMultipleUsers()
   static Future<bool> get supportsMultipleUsers {
     assert(_platform.isAndroid);
     return null; // TODO
