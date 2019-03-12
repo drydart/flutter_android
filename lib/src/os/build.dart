@@ -8,7 +8,6 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/os/Build
 abstract class Build {
-
   /// Value used for when a build property is unknown.
   ///
   /// See: https://developer.android.com/reference/android/os/Build#UNKNOWN

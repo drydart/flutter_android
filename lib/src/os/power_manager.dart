@@ -4,7 +4,6 @@
 ///
 /// See: https://developer.android.com/reference/android/os/PowerManager
 abstract class PowerManager {
-
   /// See: https://developer.android.com/reference/android/os/PowerManager#PARTIAL_WAKE_LOCK
   static const int PARTIAL_WAKE_LOCK = 1;
 
@@ -72,10 +71,12 @@ abstract class PowerManager {
   /// Intent that is broadcast when the state of `isPowerSaveMode()` changes.
   ///
   /// See: https://developer.android.com/reference/android/os/PowerManager#ACTION_POWER_SAVE_MODE_CHANGED
-  static const String ACTION_POWER_SAVE_MODE_CHANGED = "android.os.action.POWER_SAVE_MODE_CHANGED";
+  static const String ACTION_POWER_SAVE_MODE_CHANGED =
+      "android.os.action.POWER_SAVE_MODE_CHANGED";
 
   /// Intent that is broadcast when the state of `isDeviceIdleMode()` changes.
   ///
   /// See: https://developer.android.com/reference/android/os/PowerManager#ACTION_DEVICE_IDLE_MODE_CHANGED
-  static const String ACTION_DEVICE_IDLE_MODE_CHANGED = "android.os.action.DEVICE_IDLE_MODE_CHANGED";
+  static const String ACTION_DEVICE_IDLE_MODE_CHANGED =
+      "android.os.action.DEVICE_IDLE_MODE_CHANGED";
 }

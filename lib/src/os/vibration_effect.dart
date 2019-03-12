@@ -9,7 +9,6 @@ import 'parcelable.dart' show Parcelable;
 ///
 /// See: https://developer.android.com/reference/android/os/VibrationEffect
 abstract class VibrationEffect implements Parcelable {
-
   /// The default vibration strength of the device.
   ///
   /// See: https://developer.android.com/reference/android/os/VibrationEffect#DEFAULT_AMPLITUDE

@@ -6,7 +6,6 @@ import 'dart:async' show Future;
 ///
 /// See: https://developer.android.com/reference/android/os/Process
 abstract class Process {
-
   /// Defines the UID/GID under which system code runs.
   ///
   /// See: https://developer.android.com/reference/android/os/Process#SYSTEM_UID

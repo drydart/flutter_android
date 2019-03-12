@@ -4,7 +4,6 @@
 ///
 /// See: https://developer.android.com/reference/android/os/BatteryManager
 abstract class BatteryManager {
-
   /// Extra for `android.content.Intent#ACTION_BATTERY_CHANGED`: integer containing the current status constant.
   ///
   /// See: https://developer.android.com/reference/android/os/BatteryManager#EXTRA_STATUS

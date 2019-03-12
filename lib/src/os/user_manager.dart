@@ -8,7 +8,6 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/os/UserManager
 abstract class UserManager {
-
   /// Specifies if a user is disallowed from adding and removing accounts.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_MODIFY_ACCOUNTS
@@ -57,12 +56,14 @@ abstract class UserManager {
   /// Specifies if a user is disallowed from changing screen off timeout.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_CONFIG_SCREEN_TIMEOUT
-  static const String DISALLOW_CONFIG_SCREEN_TIMEOUT = "no_config_screen_timeout";
+  static const String DISALLOW_CONFIG_SCREEN_TIMEOUT =
+      "no_config_screen_timeout";
 
   /// Specifies if a user is disallowed from enabling the "Unknown Sources" setting, that allows installation of apps from unknown sources.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_INSTALL_UNKNOWN_SOURCES
-  static const String DISALLOW_INSTALL_UNKNOWN_SOURCES = "no_install_unknown_sources";
+  static const String DISALLOW_INSTALL_UNKNOWN_SOURCES =
+      "no_install_unknown_sources";
 
   /// Specifies if a user is disallowed from configuring bluetooth.
   ///
@@ -97,7 +98,8 @@ abstract class UserManager {
   /// Specifies if managed profiles of this user can be removed, other than by its profile owner.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_REMOVE_MANAGED_PROFILE
-  static const String DISALLOW_REMOVE_MANAGED_PROFILE = "no_remove_managed_profile";
+  static const String DISALLOW_REMOVE_MANAGED_PROFILE =
+      "no_remove_managed_profile";
 
   /// Specifies if a user is disallowed from enabling or accessing debugging features.
   ///
@@ -152,12 +154,14 @@ abstract class UserManager {
   /// Specifies if a user is disallowed from configuring cell broadcasts.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_CONFIG_CELL_BROADCASTS
-  static const String DISALLOW_CONFIG_CELL_BROADCASTS = "no_config_cell_broadcasts";
+  static const String DISALLOW_CONFIG_CELL_BROADCASTS =
+      "no_config_cell_broadcasts";
 
   /// Specifies if a user is disallowed from configuring mobile networks.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_CONFIG_MOBILE_NETWORKS
-  static const String DISALLOW_CONFIG_MOBILE_NETWORKS = "no_config_mobile_networks";
+  static const String DISALLOW_CONFIG_MOBILE_NETWORKS =
+      "no_config_mobile_networks";
 
   /// Specifies if a user is disallowed from modifying applications in Settings or launchers.
   ///
@@ -207,7 +211,8 @@ abstract class UserManager {
   /// Specifies if what is copied in the clipboard of this profile can be pasted in related profiles.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_CROSS_PROFILE_COPY_PASTE
-  static const String DISALLOW_CROSS_PROFILE_COPY_PASTE = "no_cross_profile_copy_paste";
+  static const String DISALLOW_CROSS_PROFILE_COPY_PASTE =
+      "no_cross_profile_copy_paste";
 
   /// Specifies if the user is not allowed to use NFC to beam out data from apps.
   ///
@@ -242,7 +247,8 @@ abstract class UserManager {
   /// Allows apps in the parent profile to handle web links from the managed profile.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#ALLOW_PARENT_PROFILE_APP_LINKING
-  static const String ALLOW_PARENT_PROFILE_APP_LINKING = "allow_parent_profile_app_linking";
+  static const String ALLOW_PARENT_PROFILE_APP_LINKING =
+      "allow_parent_profile_app_linking";
 
   /// Specifies if a user is not allowed to use Autofill Services.
   ///
@@ -257,7 +263,8 @@ abstract class UserManager {
   /// Specifies whether the user can share file / picture / data from the primary user into the managed profile, either by sending them from the primary side, or by picking up data within an app in the managed profile.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_SHARE_INTO_MANAGED_PROFILE
-  static const String DISALLOW_SHARE_INTO_MANAGED_PROFILE = "no_sharing_into_profile";
+  static const String DISALLOW_SHARE_INTO_MANAGED_PROFILE =
+      "no_sharing_into_profile";
 
   /// Specifies whether the user is allowed to print.
   ///

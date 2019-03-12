@@ -5,7 +5,6 @@
 ///
 /// See: https://developer.android.com/reference/android/os/HardwarePropertiesManager
 abstract class HardwarePropertiesManager {
-
   /// Temperature of CPUs in Celsius.
   ///
   /// See: https://developer.android.com/reference/android/os/HardwarePropertiesManager#DEVICE_TEMPERATURE_CPU
