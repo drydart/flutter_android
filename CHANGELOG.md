@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.4.0] - 2019-03-12
 ### Added
+- `android_os.*.*` constants
 
 ## [0.3.7] - 2019-03-12
 ### Added

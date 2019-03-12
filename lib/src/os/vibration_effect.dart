@@ -8,4 +8,13 @@ import 'parcelable.dart' show Parcelable;
 /// complex waveforms.
 ///
 /// See: https://developer.android.com/reference/android/os/VibrationEffect
-abstract class VibrationEffect implements Parcelable {}
+abstract class VibrationEffect implements Parcelable {
+
+  /// The default vibration strength of the device.
+  ///
+  /// See: https://developer.android.com/reference/android/os/VibrationEffect#DEFAULT_AMPLITUDE
+  static const int DEFAULT_AMPLITUDE = -1;
+
+  /// See: https://developer.android.com/reference/android/os/VibrationEffect#CREATOR
+  //static const Parcelable.Creator<VibrationEffect> CREATOR = null; // TODO
+}

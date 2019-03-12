@@ -8,6 +8,12 @@ const Platform _platform = LocalPlatform();
 ///
 /// See: https://developer.android.com/reference/android/os/Build
 abstract class Build {
+
+  /// Value used for when a build property is unknown.
+  ///
+  /// See: https://developer.android.com/reference/android/os/Build#UNKNOWN
+  static const String UNKNOWN = "unknown";
+
   /// Returns the version string for the radio firmware.
   ///
   /// May return `null` (if, for instance, the radio is not currently on).

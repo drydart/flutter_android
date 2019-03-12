@@ -13,6 +13,9 @@ class Bundle implements Parcelable {
   // ignore: non_constant_identifier_names
   static final Bundle EMPTY = Bundle();
 
+  /// See: https://developer.android.com/reference/android/os/Bundle#CREATOR
+  //static const Parcelable.Creator<Bundle> CREATOR = null; // TODO
+
   final Map<String, dynamic> mappings = Map.identity();
 
   /// Constructs a new, empty [Bundle].

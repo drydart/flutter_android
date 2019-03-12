@@ -4,4 +4,8 @@
 /// through an `IBinder`.
 ///
 /// See: https://developer.android.com/reference/android/os/Parcel
-abstract class Parcel {}
+abstract class Parcel {
+
+  /// See: https://developer.android.com/reference/android/os/Parcel#STRING_CREATOR
+  //static const Parcelable.Creator<String> STRING_CREATOR = null; // TODO
+}
