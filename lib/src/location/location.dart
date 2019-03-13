@@ -15,6 +15,30 @@ class Location implements Parcelable {
   static const MethodChannel _channel =
       MethodChannel('flutter_android/Location');
 
+  /// Constant used to specify formatting of a latitude or longitude in the form
+  /// "[+-]DDD.DDDDD where D indicates degrees.
+  ///
+  /// See: https://developer.android.com/reference/android/location/Location#FORMAT_DEGREES
+  static const int FORMAT_DEGREES = 0;
+
+  /// Constant used to specify formatting of a latitude or longitude in the form
+  /// "[+-]DDD:MM.MMMMM" where D indicates degrees and M indicates minutes of
+  /// arc (1 minute = 1/60th of a degree).
+  ///
+  /// See: https://developer.android.com/reference/android/location/Location#FORMAT_MINUTES
+  static const int FORMAT_MINUTES = 1;
+
+  /// Constant used to specify formatting of a latitude or longitude in the form
+  /// "DDD:MM:SS.SSSSS" where D indicates degrees, M indicates minutes of arc,
+  /// and S indicates seconds of arc (1 minute = 1/60th of a degree, 1 second =
+  /// 1/3600th of a degree).
+  ///
+  /// See: https://developer.android.com/reference/android/location/Location#FORMAT_SECONDS
+  static const int FORMAT_SECONDS = 2;
+
+  /// See: https://developer.android.com/reference/android/location/Location#CREATOR
+  //static const Parcelable.Creator<Location> CREATOR = null; // TODO
+
   /// The estimated horizontal accuracy of this location, radial, in meters.
   ///
   /// See: https://developer.android.com/reference/android/location/Location#getAccuracy()
