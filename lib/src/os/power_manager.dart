@@ -4,34 +4,15 @@
 ///
 /// See: https://developer.android.com/reference/android/os/PowerManager
 abstract class PowerManager {
+  /// Wake lock level: Ensures that the CPU is running; the screen and keyboard backlight will be allowed to go off.
+  ///
   /// See: https://developer.android.com/reference/android/os/PowerManager#PARTIAL_WAKE_LOCK
   static const int PARTIAL_WAKE_LOCK = 1;
-
-  /// Wake lock level: Ensures that the screen is on (but may be dimmed); the keyboard backlight will be allowed to go off.
-  ///
-  /// See: https://developer.android.com/reference/android/os/PowerManager#SCREEN_DIM_WAKE_LOCK
-  static const int SCREEN_DIM_WAKE_LOCK = 6;
-
-  /// Wake lock level: Ensures that the screen is on at full brightness; the keyboard backlight will be allowed to go off.
-  ///
-  /// See: https://developer.android.com/reference/android/os/PowerManager#SCREEN_BRIGHT_WAKE_LOCK
-  static const int SCREEN_BRIGHT_WAKE_LOCK = 10;
-
-  /// Wake lock level: Ensures that the screen and keyboard backlight are on at full brightness.
-  ///
-  /// See: https://developer.android.com/reference/android/os/PowerManager#FULL_WAKE_LOCK
-  static const int FULL_WAKE_LOCK = 26;
 
   /// Wake lock level: Turns the screen off when the proximity sensor activates.
   ///
   /// See: https://developer.android.com/reference/android/os/PowerManager#PROXIMITY_SCREEN_OFF_WAKE_LOCK
   static const int PROXIMITY_SCREEN_OFF_WAKE_LOCK = 32;
-
-  /// See: https://developer.android.com/reference/android/os/PowerManager#DOZE_WAKE_LOCK
-  static const int DOZE_WAKE_LOCK = 0x40;
-
-  /// See: https://developer.android.com/reference/android/os/PowerManager#DRAW_WAKE_LOCK
-  static const int DRAW_WAKE_LOCK = 0x80;
 
   /// Wake lock flag: Turn the screen on when the wake lock is acquired.
   ///

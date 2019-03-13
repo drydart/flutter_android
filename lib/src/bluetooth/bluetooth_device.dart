@@ -14,7 +14,7 @@ abstract class BluetoothDevice {
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ERROR
   static const int ERROR = -2147483648;
 
-  /// TODO: Change API to not broadcast RSSI if not available (incoming connection).
+  /// Broadcast Action: Remote device discovered.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_FOUND
   static const String ACTION_FOUND = "android.bluetooth.device.action.FOUND";
@@ -49,7 +49,7 @@ abstract class BluetoothDevice {
   static const String ACTION_NAME_CHANGED =
       "android.bluetooth.device.action.NAME_CHANGED";
 
-  /// contain a hidden extra field EXTRA_REASON with the result code.
+  /// Broadcast Action: Indicates a change in the bond state of a remote device.
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_BOND_STATE_CHANGED
   static const String ACTION_BOND_STATE_CHANGED =
@@ -138,12 +138,6 @@ abstract class BluetoothDevice {
   ///
   /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_UUID
   static const String ACTION_UUID = "android.bluetooth.device.action.UUID";
-
-  /// TODO: is this actually useful?.
-  ///
-  /// See: https://developer.android.com/reference/android/bluetooth/BluetoothDevice#ACTION_NAME_FAILED
-  static const String ACTION_NAME_FAILED =
-      "android.bluetooth.device.action.NAME_FAILED";
 
   /// Broadcast Action: This intent is used to broadcast PAIRING REQUEST Requires `android.Manifest.permission#BLUETOOTH_ADMIN` to receive.
   ///
