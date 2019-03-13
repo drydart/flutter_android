@@ -7,7 +7,7 @@ const Platform _platform = LocalPlatform();
 /// Manages users and user details on a multi-user system.
 ///
 /// See: https://developer.android.com/reference/android/os/UserManager
-abstract class UserManager {
+class UserManager {
   /// Specifies if a user is disallowed from adding and removing accounts.
   ///
   /// See: https://developer.android.com/reference/android/os/UserManager#DISALLOW_MODIFY_ACCOUNTS

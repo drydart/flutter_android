@@ -3,7 +3,7 @@
 /// This class gives you control of the power state of the device.
 ///
 /// See: https://developer.android.com/reference/android/os/PowerManager
-abstract class PowerManager {
+class PowerManager {
   /// Wake lock level: Ensures that the CPU is running; the screen and keyboard backlight will be allowed to go off.
   ///
   /// See: https://developer.android.com/reference/android/os/PowerManager#PARTIAL_WAKE_LOCK
