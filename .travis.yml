@@ -1,24 +1,10 @@
-# See: https://docs.travis-ci.com/user/languages/dart/
-# See: https://github.com/google/flutter.plugins/blob/master/.travis.yml
-dist: xenial
-sudo: false
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - lib32stdc++6 # https://github.com/flutter/flutter/issues/6207
-      - libstdc++6
-before_script:
-  - mkdir -p /opt/flutter
-  - git clone https://github.com/flutter/flutter.git --branch beta --depth 1 /opt/flutter
-  - export PATH=/opt/flutter/bin:/opt/flutter/bin/cache/dart-sdk/bin:$PATH
-  - flutter doctor
+# See: https://drycop.org
+language: go
+go:
+  - 1.12
+git:
+  depth: 1
+install:
+  - go get -u github.com/dryproject/drycop/drycop
 script:
-  - flutter analyze
-  #- flutter test
-cache:
-  directories:
-    - $HOME/.pub-cache
-branches:
-  only: [master]
+  - drycop check -v
