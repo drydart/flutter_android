@@ -5,6 +5,7 @@ Flutter Android Bindings
 [![Pub package](https://img.shields.io/pub/v/flutter_android.svg)](https://pub.dartlang.org/packages/flutter_android)
 [![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dartlang.org/documentation/flutter_android/latest/)
 [![Travis CI build status](https://img.shields.io/travis/drydart/flutter_android/master.svg)](https://travis-ci.org/drydart/flutter_android)
+[![Liberapay patrons](http://img.shields.io/liberapay/patrons/drydart.svg?logo=liberapay)](https://liberapay.com/drydart/donate)
 
 This is a [Flutter](https://flutter.dev) plugin for using Android's
 numerous platform-specific APIs in Flutter apps.
