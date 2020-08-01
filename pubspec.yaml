@@ -16,6 +16,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  pedantic: ^1.9.0
 dependency_overrides:
 environment:
   sdk: ">=2.7.0 <3.0.0"
