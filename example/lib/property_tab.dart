@@ -83,7 +83,7 @@ class _PropertyTabState extends State<PropertyTab> {
     final libraryName = property.libraryName,
           className = property.className,
           propertyName = property.propertyName;
-    return "https://pub.dartlang.org/documentation/flutter_android/latest/$libraryName/$className/$propertyName.html";
+    return "https://pub.dev/documentation/flutter_android/latest/$libraryName/$className/$propertyName.html";
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.

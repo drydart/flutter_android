@@ -81,7 +81,7 @@ class _MethodTabState extends State<MethodTab> {
     final libraryName = methodInfo[0];
     final className = methodInfo[1];
     final methodName = methodInfo[2];
-    return "https://pub.dartlang.org/documentation/flutter_android/latest/$libraryName/$className/$methodName.html";
+    return "https://pub.dev/documentation/flutter_android/latest/$libraryName/$className/$methodName.html";
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.

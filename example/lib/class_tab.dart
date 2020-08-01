@@ -53,7 +53,7 @@ class _ClassTabState extends State<ClassTab> {
   }
 
   String _getURL(final String libraryName, final String className) {
-    return "https://pub.dartlang.org/documentation/flutter_android/latest/$libraryName/$className-class.html";
+    return "https://pub.dev/documentation/flutter_android/latest/$libraryName/$className-class.html";
   }
 
   Future<void> _initPlatformState() async {

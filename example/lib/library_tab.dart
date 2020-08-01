@@ -47,7 +47,7 @@ class _LibraryTabState extends State<LibraryTab> {
   }
 
   String _getURL(final String libraryName) {
-    return "https://pub.dartlang.org/documentation/flutter_android/latest/$libraryName/$libraryName-library.html";
+    return "https://pub.dev/documentation/flutter_android/latest/$libraryName/$libraryName-library.html";
   }
 
   Future<void> _initPlatformState() async {

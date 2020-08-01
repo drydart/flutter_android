@@ -2,8 +2,8 @@ Flutter Android Bindings
 ========================
 
 [![Project license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
-[![Pub package](https://img.shields.io/pub/v/flutter_android.svg)](https://pub.dartlang.org/packages/flutter_android)
-[![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dartlang.org/documentation/flutter_android/latest/)
+[![Pub package](https://img.shields.io/pub/v/flutter_android.svg)](https://pub.dev/packages/flutter_android)
+[![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dev/documentation/flutter_android/latest/)
 [![Travis CI build status](https://img.shields.io/travis/drydart/flutter_android/master.svg)](https://travis-ci.org/drydart/flutter_android)
 [![Liberapay patrons](http://img.shields.io/liberapay/patrons/drydart.svg?logo=liberapay)](https://liberapay.com/drydart/donate)
 
@@ -84,105 +84,105 @@ Caveats
 - **iOS is not and cannot be supported.**
   All `flutter_android` APIs throw an `AssertionError` if they are invoked
   when running on iOS. For cross-platform apps, we recommend that you depend
-  on the [platform](https://pub.dartlang.org/packages/platform) package to
+  on the [platform](https://pub.dev/packages/platform) package to
   conditionalize your use of Android APIs.
 
 Reference
 ---------
 
-### [`android`](https://pub.dartlang.org/documentation/flutter_android/latest/android/android-library.html)
+### [`android`](https://pub.dev/documentation/flutter_android/latest/android/android-library.html)
 
     import 'package:flutter_android/android.dart' as android;
 
-### [`android_app`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/android_app-library.html)
+### [`android_app`](https://pub.dev/documentation/flutter_android/latest/android_app/android_app-library.html)
 
     import 'package:flutter_android/android_app.dart' as android_app;
 
-- [`Notification`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/Notification-class.html)
-- [`NotificationAction`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/NotificationAction-class.html)
-- [`WallpaperColors`](https://pub.dartlang.org/documentation/flutter_android/latest/android_app/WallpaperColors-class.html)
+- [`Notification`](https://pub.dev/documentation/flutter_android/latest/android_app/Notification-class.html)
+- [`NotificationAction`](https://pub.dev/documentation/flutter_android/latest/android_app/NotificationAction-class.html)
+- [`WallpaperColors`](https://pub.dev/documentation/flutter_android/latest/android_app/WallpaperColors-class.html)
 
-### [`android_bluetooth`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/android_bluetooth-library.html)
+### [`android_bluetooth`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/android_bluetooth-library.html)
 
     import 'package:flutter_android/android_bluetooth.dart' as android_bluetooth;
 
-- [`BluetoothAdapter`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothAdapter-class.html)
-- [`BluetoothDevice`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothDevice-class.html)
-- [`BluetoothHeadset`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothHeadset-class.html)
-- [`BluetoothLeScanner`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothLeScanner-class.html)
-- [`BluetoothManager`](https://pub.dartlang.org/documentation/flutter_android/latest/android_bluetooth/BluetoothManager-class.html)
+- [`BluetoothAdapter`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/BluetoothAdapter-class.html)
+- [`BluetoothDevice`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/BluetoothDevice-class.html)
+- [`BluetoothHeadset`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/BluetoothHeadset-class.html)
+- [`BluetoothLeScanner`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/BluetoothLeScanner-class.html)
+- [`BluetoothManager`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/BluetoothManager-class.html)
 
-### [`android_content`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/android_content-library.html)
+### [`android_content`](https://pub.dev/documentation/flutter_android/latest/android_content/android_content-library.html)
 
     import 'package:flutter_android/android_content.dart' as android_content;
 
-- [`ComponentName`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/ComponentName-class.html)
-- [`ContentValues`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/ContentValues-class.html)
-- [`Context.cacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/cacheDir.html)
-- [`Context.codeCacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/codeCacheDir.html)
-- [`Context.dataDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/dataDir.html)
-- [`Context.externalCacheDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/externalCacheDir.html)
-- [`Context.externalFilesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/externalFilesDir.html)
-- [`Context.filesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/filesDir.html)
-- [`Context.getSharedPreferences()`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/getSharedPreferences.html)
-- [`Context.getSystemService()`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/getSystemService.html)
-- [`Context.noBackupFilesDir`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/noBackupFilesDir.html)
-- [`Context.packageCodePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageCodePath.html)
-- [`Context.packageName`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageName.html)
-- [`Context.packageResourcePath`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Context/packageResourcePath.html)
-- [`Intent`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/Intent-class.html)
-- [`SharedPreferences`](https://pub.dartlang.org/documentation/flutter_android/latest/android_content/SharedPreferences-class.html)
+- [`ComponentName`](https://pub.dev/documentation/flutter_android/latest/android_content/ComponentName-class.html)
+- [`ContentValues`](https://pub.dev/documentation/flutter_android/latest/android_content/ContentValues-class.html)
+- [`Context.cacheDir`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/cacheDir.html)
+- [`Context.codeCacheDir`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/codeCacheDir.html)
+- [`Context.dataDir`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/dataDir.html)
+- [`Context.externalCacheDir`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/externalCacheDir.html)
+- [`Context.externalFilesDir`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/externalFilesDir.html)
+- [`Context.filesDir`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/filesDir.html)
+- [`Context.getSharedPreferences()`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/getSharedPreferences.html)
+- [`Context.getSystemService()`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/getSystemService.html)
+- [`Context.noBackupFilesDir`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/noBackupFilesDir.html)
+- [`Context.packageCodePath`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/packageCodePath.html)
+- [`Context.packageName`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/packageName.html)
+- [`Context.packageResourcePath`](https://pub.dev/documentation/flutter_android/latest/android_content/Context/packageResourcePath.html)
+- [`Intent`](https://pub.dev/documentation/flutter_android/latest/android_content/Intent-class.html)
+- [`SharedPreferences`](https://pub.dev/documentation/flutter_android/latest/android_content/SharedPreferences-class.html)
 
-### [`android_database`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/android_database-library.html)
+### [`android_database`](https://pub.dev/documentation/flutter_android/latest/android_database/android_database-library.html)
 
     import 'package:flutter_android/android_database.dart' as android_database;
 
-- [`Cursor`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/Cursor-class.html)
-- [`DatabaseUtils`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/DatabaseUtils-class.html)
-- [`MatrixCursor`](https://pub.dartlang.org/documentation/flutter_android/latest/android_database/MatrixCursor-class.html)
+- [`Cursor`](https://pub.dev/documentation/flutter_android/latest/android_database/Cursor-class.html)
+- [`DatabaseUtils`](https://pub.dev/documentation/flutter_android/latest/android_database/DatabaseUtils-class.html)
+- [`MatrixCursor`](https://pub.dev/documentation/flutter_android/latest/android_database/MatrixCursor-class.html)
 
-### [`android_graphics`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/android_graphics-library.html)
+### [`android_graphics`](https://pub.dev/documentation/flutter_android/latest/android_graphics/android_graphics-library.html)
 
     import 'package:flutter_android/android_graphics.dart' as android_graphics;
 
-- [`Bitmap`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/Bitmap-class.html)
-- [`Point`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/Point-class.html)
-- [`PointF`](https://pub.dartlang.org/documentation/flutter_android/latest/android_graphics/PointF-class.html)
+- [`Bitmap`](https://pub.dev/documentation/flutter_android/latest/android_graphics/Bitmap-class.html)
+- [`Point`](https://pub.dev/documentation/flutter_android/latest/android_graphics/Point-class.html)
+- [`PointF`](https://pub.dev/documentation/flutter_android/latest/android_graphics/PointF-class.html)
 
-### [`android_hardware`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/android_hardware-library.html)
+### [`android_hardware`](https://pub.dev/documentation/flutter_android/latest/android_hardware/android_hardware-library.html)
 
     import 'package:flutter_android/android_hardware.dart' as android_hardware;
 
-- [`Sensor`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/Sensor-class.html)
-- [`SensorEvent`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/SensorEvent-class.html)
-- [`SensorEventListener`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/SensorEventListener-class.html)
-- [`SensorManager`](https://pub.dartlang.org/documentation/flutter_android/latest/android_hardware/SensorManager-class.html)
+- [`Sensor`](https://pub.dev/documentation/flutter_android/latest/android_hardware/Sensor-class.html)
+- [`SensorEvent`](https://pub.dev/documentation/flutter_android/latest/android_hardware/SensorEvent-class.html)
+- [`SensorEventListener`](https://pub.dev/documentation/flutter_android/latest/android_hardware/SensorEventListener-class.html)
+- [`SensorManager`](https://pub.dev/documentation/flutter_android/latest/android_hardware/SensorManager-class.html)
 
-### [`android_location`](https://pub.dartlang.org/documentation/flutter_android/latest/android_location/android_location-library.html)
+### [`android_location`](https://pub.dev/documentation/flutter_android/latest/android_location/android_location-library.html)
 
     import 'package:flutter_android/android_location.dart' as android_location;
 
-- [`Location`](https://pub.dartlang.org/documentation/flutter_android/latest/android_location/Location-class.html)
+- [`Location`](https://pub.dev/documentation/flutter_android/latest/android_location/Location-class.html)
 
-### [`android_media`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/android_media-library.html)
+### [`android_media`](https://pub.dev/documentation/flutter_android/latest/android_media/android_media-library.html)
 
     import 'package:flutter_android/android_media.dart' as android_media;
 
-- [`Face`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/Face-class.html)
-- [`FaceDetector`](https://pub.dartlang.org/documentation/flutter_android/latest/android_media/FaceDetector-class.html)
+- [`Face`](https://pub.dev/documentation/flutter_android/latest/android_media/Face-class.html)
+- [`FaceDetector`](https://pub.dev/documentation/flutter_android/latest/android_media/FaceDetector-class.html)
 
-### [`android_os`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/android_os-library.html)
+### [`android_os`](https://pub.dev/documentation/flutter_android/latest/android_os/android_os-library.html)
 
     import 'package:flutter_android/android_os.dart' as android_os;
 
-- [`Bundle`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Bundle-class.html)
-- [`Environment.dataDirectory`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/dataDirectory.html)
-- [`Environment.downloadCacheDirectory`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/downloadCacheDirectory.html)
-- [`Environment.externalStorageDirectory`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/externalStorageDirectory.html)
-- [`Environment.externalStorageState`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/externalStorageState.html)
-- [`Environment.rootDirectory`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/rootDirectory.html)
-- [`Environment.isExternalStorageEmulated`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/isExternalStorageEmulated.html)
-- [`Environment.isExternalStorageRemovable`](https://pub.dartlang.org/documentation/flutter_android/latest/android_os/Environment/isExternalStorageRemovable.html)
+- [`Bundle`](https://pub.dev/documentation/flutter_android/latest/android_os/Bundle-class.html)
+- [`Environment.dataDirectory`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/dataDirectory.html)
+- [`Environment.downloadCacheDirectory`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/downloadCacheDirectory.html)
+- [`Environment.externalStorageDirectory`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/externalStorageDirectory.html)
+- [`Environment.externalStorageState`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/externalStorageState.html)
+- [`Environment.rootDirectory`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/rootDirectory.html)
+- [`Environment.isExternalStorageEmulated`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/isExternalStorageEmulated.html)
+- [`Environment.isExternalStorageRemovable`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/isExternalStorageRemovable.html)
 
 Cross-Reference
 ---------------
@@ -269,5 +269,5 @@ Cross-Reference
 See Also
 --------
 
-- The [flutter_sqlcipher](https://pub.dartlang.org/packages/flutter_sqlcipher) package
+- The [flutter_sqlcipher](https://pub.dev/packages/flutter_sqlcipher) package
   implements encrypted SQLite databases based on the `android.database` APIs.

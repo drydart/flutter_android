@@ -128,7 +128,7 @@ No functional changes.
 
 ## [0.1.8] - 2018-11-20
 ### Added
-- [meta](https://pub.dartlang.org/packages/meta) dependency
+- [meta](https://pub.dev/packages/meta) dependency
 
 ## [0.1.7] - 2018-11-15
 ### Added
@@ -175,7 +175,7 @@ No functional changes.
 
 ## [0.1.2] - 2018-11-14
 ### Added
-- [platform](https://pub.dartlang.org/packages/platform) dependency
+- [platform](https://pub.dev/packages/platform) dependency
 - `android_app` library
 
 ## [0.1.1] - 2018-11-03
