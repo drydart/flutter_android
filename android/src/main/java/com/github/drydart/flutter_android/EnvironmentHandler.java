@@ -3,16 +3,18 @@
 package com.github.drydart.flutter_android;
 
 import android.os.Environment;
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** EnvironmentHandler */
 class EnvironmentHandler extends FlutterMethodCallHandler {
   static final String CHANNEL = "flutter_android/Environment";
 
-  EnvironmentHandler(final Registrar registrar) {
-    super(registrar);
+  EnvironmentHandler(final @NonNull FlutterPlugin.FlutterPluginBinding binding) {
+    super(binding);
   }
 
   @Override

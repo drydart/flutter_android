@@ -4,16 +4,18 @@ package com.github.drydart.flutter_android;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** SharedPreferencesHandler */
 class SharedPreferencesHandler extends FlutterMethodCallHandler {
   static final String CHANNEL = "flutter_android/SharedPreferences";
 
-  SharedPreferencesHandler(final Registrar registrar) {
-    super(registrar);
+  SharedPreferencesHandler(final @NonNull FlutterPlugin.FlutterPluginBinding binding) {
+    super(binding);
   }
 
   @Override
@@ -21,7 +23,7 @@ class SharedPreferencesHandler extends FlutterMethodCallHandler {
     assert(call != null);
     assert(result != null);
 
-    final Context context = registrar.context();
+    final Context context = this.binding.getApplicationContext();
     assert(context != null);
 
     assert(call.method != null);

@@ -3,17 +3,19 @@
 package com.github.drydart.flutter_android;
 
 import android.location.Location;
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** LocationHandler */
 @SuppressWarnings("unchecked")
 class LocationHandler extends FlutterMethodCallHandler {
   static final String CHANNEL = "flutter_android/Location";
 
-  LocationHandler(final Registrar registrar) {
-    super(registrar);
+  LocationHandler(final @NonNull FlutterPlugin.FlutterPluginBinding binding) {
+    super(binding);
   }
 
   @Override

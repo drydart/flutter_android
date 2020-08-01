@@ -6,9 +6,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.media.FaceDetector;
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,8 +23,8 @@ class FaceDetectorHandler extends FlutterMethodCallHandler {
 
   final BitmapFactory.Options options;
 
-  FaceDetectorHandler(final Registrar registrar) {
-    super(registrar);
+  FaceDetectorHandler(final @NonNull FlutterPlugin.FlutterPluginBinding binding) {
+    super(binding);
     options = new BitmapFactory.Options();
     options.inPreferredConfig = Bitmap.Config.RGB_565;
   }

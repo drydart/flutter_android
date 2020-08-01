@@ -5,10 +5,12 @@ package com.github.drydart.flutter_android;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,8 +22,8 @@ class SensorManagerHandler extends FlutterMethodCallHandler {
   private final Map<Integer, Sensor> sensors = new HashMap<>();
   private final Map<Integer, EventChannel> channels = new HashMap<>();
 
-  SensorManagerHandler(final Registrar registrar) {
-    super(registrar);
+  SensorManagerHandler(final @NonNull FlutterPlugin.FlutterPluginBinding binding) {
+    super(binding);
   }
 
   @Override
@@ -40,7 +42,7 @@ class SensorManagerHandler extends FlutterMethodCallHandler {
           result.success(sensorKey);
           break;
         }
-        final Context context = registrar.context();
+        final Context context = this.binding.getApplicationContext();
         final SensorManager sensorManager = (SensorManager)context.getSystemService(Context.SENSOR_SERVICE);
         final Sensor sensor = sensorManager.getDefaultSensor(sensorType);
         if (sensor == null) {
@@ -67,11 +69,11 @@ class SensorManagerHandler extends FlutterMethodCallHandler {
         }
         final int samplingPeriodUs = getOptionalArgument(call, "samplingPeriodUs", SensorManager.SENSOR_DELAY_NORMAL);
         final int maxReportLatencyUs = getOptionalArgument(call, "maxReportLatencyUs", 0);
-        final Context context = registrar.context();
+        final Context context = this.binding.getApplicationContext();
         final SensorManager sensorManager = (SensorManager)context.getSystemService(Context.SENSOR_SERVICE);
         final Sensor sensor = this.sensors.get(sensorKey);
         final String channelID = String.valueOf(sensorKey);
-        final EventChannel channel = new EventChannel(registrar.messenger(), String.format("%s/%d", CHANNEL, sensorKey));
+        final EventChannel channel = new EventChannel(this.binding.getBinaryMessenger(), String.format("%s/%d", CHANNEL, sensorKey));
         channel.setStreamHandler(new SensorEventStream(sensorManager, sensor, samplingPeriodUs, maxReportLatencyUs));
         this.channels.put(sensorKey, channel);
         result.success(channelID);

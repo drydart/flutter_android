@@ -6,29 +6,31 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 import java.io.InputStream;
 import java.io.IOException;
 
 /** FlutterMethodCallHandler */
 @SuppressWarnings("unchecked")
 abstract class FlutterMethodCallHandler implements MethodCallHandler {
-  final Registrar registrar;
+  final protected FlutterPlugin.FlutterPluginBinding binding;
 
-  FlutterMethodCallHandler(final Registrar registrar) {
-    this.registrar = registrar;
+  FlutterMethodCallHandler(final @NonNull FlutterPlugin.FlutterPluginBinding binding) {
+    this.binding = binding;
   }
 
   AssetManager
   getAssets() {
-    return registrar.context().getAssets();
+    return this.binding.getApplicationContext().getAssets();
   }
 
   AssetFileDescriptor
-  openAsset(final String assetName) throws IOException {
-    final String assetKey = registrar.lookupKeyForAsset(assetName);
+  openAsset(final @NonNull String assetName) throws IOException {
+    final String assetKey = this.binding.getFlutterAssets().getAssetFilePathByName(assetName);
     return getAssets().openFd(assetKey);
   }
 

@@ -2,17 +2,19 @@
 
 package com.github.drydart.flutter_android;
 
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** BluetoothManagerHandler */
 @SuppressWarnings("unchecked")
 class BluetoothManagerHandler extends FlutterMethodCallHandler {
   static final String CHANNEL = "flutter_android/BluetoothManager";
 
-  BluetoothManagerHandler(final Registrar registrar) {
-    super(registrar);
+  BluetoothManagerHandler(final @NonNull FlutterPlugin.FlutterPluginBinding binding) {
+    super(binding);
   }
 
   @Override
