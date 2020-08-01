@@ -1,11 +1,12 @@
-# See: https://www.dartlang.org/tools/pub/pubspec
+# See: https://dart.dev/tools/pub/pubspec
 name: flutter_android
 version: 0.5.0
 description: >-
   Flutter plugin for Android platform-specific APIs, to reduce duplication
   of effort by centralizing Android bindings in a single package.
-author: Arto Bendiken <arto@bendiken.net>
 homepage: https://github.com/drydart/flutter_android
+repository: https://github.com/drydart/flutter_android
+issue_tracker: https://github.com/drydart/flutter_android/issues
 documentation:
 dependencies:
   flutter:
@@ -15,7 +16,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  test: '>=1.3.4 <2.0.0'
 dependency_overrides:
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -23,5 +23,7 @@ environment:
 executables:
 flutter:
   plugin:
-    androidPackage: com.github.drydart.flutter_android
-    pluginClass: FlutterAndroidPlugin
+    platforms:
+      android:
+        package: com.github.drydart.flutter_android
+        pluginClass: FlutterAndroidPlugin
