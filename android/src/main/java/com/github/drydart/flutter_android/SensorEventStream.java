@@ -36,6 +36,7 @@ class SensorEventStream implements EventChannel.StreamHandler {
   @Override
   public void onCancel(final Object _arguments) {
     this.sensorManager.unregisterListener(this.sensorEventListener);
+    this.sensorEventListener = null;
   }
 
   SensorEventListener createSensorEventListener(final EventChannel.EventSink events) {
