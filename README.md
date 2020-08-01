@@ -10,6 +10,16 @@ Flutter Android Bindings
 This is a [Flutter](https://flutter.dev) plugin for using Android's
 numerous platform-specific APIs in Flutter apps.
 
+Prerequisites
+-------------
+
+- [Dart](https://dart.dev) 2.7+ and [Flutter](https://flutter.dev) 1.17+
+
+Compatibility
+-------------
+
+Android only.
+
 Features
 --------
 
@@ -26,11 +36,6 @@ Features
 | Distance calculation | `android_location.Location.distanceBetween()` |
 | Heart-rate monitoring | `android_hardware.SensorManager.getDefaultSensor()` |
 | Sensor event streams | `android_hardware.Sensor#subscribe()` |
-
-Compatibility
--------------
-
-Android only.
 
 Examples
 --------
