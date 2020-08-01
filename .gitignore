@@ -4,12 +4,13 @@
 # Editor backup files
 *~
 
-# rst2html outputs
+# Pandoc outputs
 *.html
 
 # Dart artifacts
 .dart_tool/
 .packages
+.pub/
 build/
 pubspec.lock
 
