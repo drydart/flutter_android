@@ -261,6 +261,7 @@ abstract class Cursor extends Iterable<Map<String, dynamic>> {
   ///
   /// Note that this implementation does not support concurrent iterators,
   /// since the returned iterator mutates the cursor state.
+  @override
   Iterator<Map<String, dynamic>> get iterator {
     return _CursorIterator(this);
   }

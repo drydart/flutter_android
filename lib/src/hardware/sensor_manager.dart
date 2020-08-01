@@ -219,8 +219,8 @@ abstract class SensorManager {
   ///
   /// See: https://developer.android.com/reference/android/hardware/SensorManager#getDefaultSensor(int)
   static Future<Sensor> getDefaultSensor(final int type) async {
-    final Map<String, dynamic> request = <String, dynamic>{'type': type};
-    final int key = await _channel.invokeMethod('getDefaultSensor', request);
+    final request = <String, dynamic>{'type': type};
+    final key = await _channel.invokeMethod('getDefaultSensor', request);
     return (key == null)
         ? null
         : Sensor(
@@ -237,13 +237,12 @@ abstract class SensorManager {
   static Future<EventChannel> registerListener(final Sensor sensor,
       {int samplingPeriodUs, int maxReportLatencyUs}) async {
     assert(sensor.key != null);
-    final Map<String, dynamic> request = <String, dynamic>{
+    final request = <String, dynamic>{
       'key': sensor.key,
       'samplingPeriodUs': samplingPeriodUs,
       'maxReportLatencyUs': maxReportLatencyUs,
     };
-    final String channelID =
-        await _channel.invokeMethod('registerListener', request);
+    final channelID = await _channel.invokeMethod('registerListener', request);
     return (channelID != null)
         ? EventChannel('flutter_android/SensorManager/$channelID')
         : null;

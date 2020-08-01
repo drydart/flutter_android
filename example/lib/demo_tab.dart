@@ -60,8 +60,8 @@ class _DemoTabState extends State<DemoTab> {
       padding: EdgeInsets.all(8.0),
       itemCount: demoKeys.length,
       itemBuilder: (final BuildContext context, final int index) {
-        final String demoKey = demoKeys[index];
-        final DemoDescription demo = demos[demoKey];
+        final demoKey = demoKeys[index];
+        final demo = demos[demoKey];
         return GestureDetector(
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(

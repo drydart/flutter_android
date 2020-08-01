@@ -75,20 +75,19 @@ class _SharedPreferences extends SharedPreferences {
   _SharedPreferences(this.name, this.mode);
 
   Future<SharedPreferences> load() async {
-    final Map<String, dynamic> request = <String, dynamic>{
-      'name': name,
-      'mode': mode
-    };
+    final request = <String, dynamic>{'name': name, 'mode': mode};
     _cache = (await _channel.invokeMethod('getAll', request)
             as Map<dynamic, dynamic>)
         .cast<String, dynamic>();
     return this;
   }
 
+  @override
   T get<T>(String key, [T defaultValue]) {
     return _cache[key] ?? defaultValue;
   }
 
+  @override
   Map<String, dynamic> getAll() {
     return Map.unmodifiable(_cache);
   }

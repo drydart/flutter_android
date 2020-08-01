@@ -28,7 +28,7 @@ abstract class DatabaseUtils {
     assert(_platform.isAndroid);
 
     final buffer = StringBuffer();
-    dumpCurrentRowToStringBuffer(cursor, buffer);
+    await dumpCurrentRowToStringBuffer(cursor, buffer);
     return buffer.toString();
   }
 
@@ -40,7 +40,7 @@ abstract class DatabaseUtils {
     assert(_platform.isAndroid);
 
     buffer.write("[");
-    for (int columnIndex = 0;
+    for (var columnIndex = 0;
         columnIndex < cursor.getColumnCount();
         columnIndex++) {
       if (columnIndex > 0) buffer.write(", ");

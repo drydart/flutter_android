@@ -26,9 +26,12 @@ jobs:
       - name: Lint Markdown and YAML files
         uses: docker://github/super-linter:v3.4.0
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_MD: true
           VALIDATE_YAML: true
       - name: Lint Dart source code
         uses: docker://github/super-linter:v3.4.0
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_DART: true
+          DISABLE_ERRORS: true

@@ -83,11 +83,15 @@ TODO
 
 ### [`android`](https://pub.dev/documentation/flutter_android/latest/android/android-library.html)
 
-    import 'package:flutter_android/android.dart' as android;
+```dart
+import 'package:flutter_android/android.dart' as android;
+```
 
 ### [`android_app`](https://pub.dev/documentation/flutter_android/latest/android_app/android_app-library.html)
 
-    import 'package:flutter_android/android_app.dart' as android_app;
+```dart
+import 'package:flutter_android/android_app.dart' as android_app;
+```
 
 - [`Notification`](https://pub.dev/documentation/flutter_android/latest/android_app/Notification-class.html)
 - [`NotificationAction`](https://pub.dev/documentation/flutter_android/latest/android_app/NotificationAction-class.html)
@@ -95,7 +99,9 @@ TODO
 
 ### [`android_bluetooth`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/android_bluetooth-library.html)
 
-    import 'package:flutter_android/android_bluetooth.dart' as android_bluetooth;
+```dart
+import 'package:flutter_android/android_bluetooth.dart' as android_bluetooth;
+```
 
 - [`BluetoothAdapter`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/BluetoothAdapter-class.html)
 - [`BluetoothDevice`](https://pub.dev/documentation/flutter_android/latest/android_bluetooth/BluetoothDevice-class.html)
@@ -105,7 +111,9 @@ TODO
 
 ### [`android_content`](https://pub.dev/documentation/flutter_android/latest/android_content/android_content-library.html)
 
-    import 'package:flutter_android/android_content.dart' as android_content;
+```dart
+import 'package:flutter_android/android_content.dart' as android_content;
+```
 
 - [`ComponentName`](https://pub.dev/documentation/flutter_android/latest/android_content/ComponentName-class.html)
 - [`ContentValues`](https://pub.dev/documentation/flutter_android/latest/android_content/ContentValues-class.html)
@@ -126,7 +134,9 @@ TODO
 
 ### [`android_database`](https://pub.dev/documentation/flutter_android/latest/android_database/android_database-library.html)
 
-    import 'package:flutter_android/android_database.dart' as android_database;
+```dart
+import 'package:flutter_android/android_database.dart' as android_database;
+```
 
 - [`Cursor`](https://pub.dev/documentation/flutter_android/latest/android_database/Cursor-class.html)
 - [`DatabaseUtils`](https://pub.dev/documentation/flutter_android/latest/android_database/DatabaseUtils-class.html)
@@ -134,7 +144,9 @@ TODO
 
 ### [`android_graphics`](https://pub.dev/documentation/flutter_android/latest/android_graphics/android_graphics-library.html)
 
-    import 'package:flutter_android/android_graphics.dart' as android_graphics;
+```dart
+import 'package:flutter_android/android_graphics.dart' as android_graphics;
+```
 
 - [`Bitmap`](https://pub.dev/documentation/flutter_android/latest/android_graphics/Bitmap-class.html)
 - [`Point`](https://pub.dev/documentation/flutter_android/latest/android_graphics/Point-class.html)
@@ -142,7 +154,9 @@ TODO
 
 ### [`android_hardware`](https://pub.dev/documentation/flutter_android/latest/android_hardware/android_hardware-library.html)
 
-    import 'package:flutter_android/android_hardware.dart' as android_hardware;
+```dart
+import 'package:flutter_android/android_hardware.dart' as android_hardware;
+```
 
 - [`Sensor`](https://pub.dev/documentation/flutter_android/latest/android_hardware/Sensor-class.html)
 - [`SensorEvent`](https://pub.dev/documentation/flutter_android/latest/android_hardware/SensorEvent-class.html)
@@ -151,20 +165,26 @@ TODO
 
 ### [`android_location`](https://pub.dev/documentation/flutter_android/latest/android_location/android_location-library.html)
 
-    import 'package:flutter_android/android_location.dart' as android_location;
+```dart
+import 'package:flutter_android/android_location.dart' as android_location;
+```
 
 - [`Location`](https://pub.dev/documentation/flutter_android/latest/android_location/Location-class.html)
 
 ### [`android_media`](https://pub.dev/documentation/flutter_android/latest/android_media/android_media-library.html)
 
-    import 'package:flutter_android/android_media.dart' as android_media;
+```dart
+import 'package:flutter_android/android_media.dart' as android_media;
+```
 
 - [`Face`](https://pub.dev/documentation/flutter_android/latest/android_media/Face-class.html)
 - [`FaceDetector`](https://pub.dev/documentation/flutter_android/latest/android_media/FaceDetector-class.html)
 
 ### [`android_os`](https://pub.dev/documentation/flutter_android/latest/android_os/android_os-library.html)
 
-    import 'package:flutter_android/android_os.dart' as android_os;
+```dart
+import 'package:flutter_android/android_os.dart' as android_os;
+```
 
 - [`Bundle`](https://pub.dev/documentation/flutter_android/latest/android_os/Bundle-class.html)
 - [`Environment.dataDirectory`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/dataDirectory.html)

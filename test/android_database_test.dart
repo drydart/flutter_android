@@ -5,20 +5,20 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_android/android_database.dart';
 
 void main() {
-  group("android_database.DatabaseUtils", () {
-    test("DatabaseUtils.dumpCurrentRowToString", () {
+  group('android_database.DatabaseUtils', () {
+    test('DatabaseUtils.dumpCurrentRowToString', () {
       // TODO
     });
-    test("DatabaseUtils.dumpCurrentRowToStringBuffer", () {
+    test('DatabaseUtils.dumpCurrentRowToStringBuffer', () {
       // TODO
     });
-    test("DatabaseUtils.dumpCursorToString", () {
+    test('DatabaseUtils.dumpCursorToString', () {
       // TODO
     });
   });
 
-  group("android_database.MatrixCursor", () {
-    test("MatrixCursor.empty", () {
+  group('android_database.MatrixCursor', () {
+    test('MatrixCursor.empty', () {
       final Cursor cursor = MatrixCursor.empty();
       expect(cursor, isEmpty);
       expect(cursor.position, equals(-1));
@@ -27,10 +27,14 @@ void main() {
       expect(cursor.position, equals(0));
       expect(cursor.isAfterLast, isTrue);
     });
-    test("MatrixCursor.from", () {
+    test('MatrixCursor.from', () {
       final Cursor cursor = MatrixCursor.from(
         columns: <String>['a', 'b', 'c'],
-        rows: <List<dynamic>>[[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+        rows: <List<dynamic>>[
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]
+        ],
       );
       expect(cursor, isNotEmpty);
       expect(cursor.position, equals(-1));

@@ -125,7 +125,7 @@ class Location implements Parcelable {
   /// See: https://developer.android.com/reference/android/location/Location#distanceBetween(double,%20double,%20double,%20double,%20float[])
   static Future<double> distanceBetween(double startLatitude,
       double startLongitude, double endLatitude, double endLongitude) async {
-    final Map<String, dynamic> request = <String, dynamic>{
+    final request = <String, dynamic>{
       'startLatitude': startLatitude,
       'startLongitude': startLongitude,
       'endLatitude': endLatitude,

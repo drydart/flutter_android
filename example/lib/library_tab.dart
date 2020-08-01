@@ -29,7 +29,7 @@ class _LibraryTabState extends State<LibraryTab> {
       padding: EdgeInsets.all(8.0),
       itemCount: libraryNames.length,
       itemBuilder: (final BuildContext context, final int index) {
-        final String libraryName = libraryNames[index];
+        final libraryName = libraryNames[index];
         return GestureDetector(
           onTap: () => launch(_getURL(libraryName)),
           child: ListTile(

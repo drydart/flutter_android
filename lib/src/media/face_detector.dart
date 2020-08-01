@@ -40,16 +40,15 @@ class FaceDetector {
   ///
   /// See: https://developer.android.com/reference/android/media/FaceDetector#findFaces(android.graphics.Bitmap,%20android.media.FaceDetector.Face[])
   Future<List<Face>> findFaces(final Bitmap bitmap) async {
-    final Map<String, dynamic> request = <String, dynamic>{
+    final request = <String, dynamic>{
       'width': width,
       'height': height,
       'maxFaces': maxFaces,
       'bitmapName': bitmap.assetName, // TODO: support dynamic images as well
     };
-    final List<dynamic> response =
-        await _channel.invokeMethod('findFaces', request);
+    final response = await _channel.invokeMethod('findFaces', request);
     return response.cast<List<dynamic>>().map((final List<dynamic> input) {
-      final List<double> result = input.cast<double>();
+      final result = input.cast<double>();
       return Face(
         confidence: result[0],
         midPoint: PointF(result[1], result[2]),

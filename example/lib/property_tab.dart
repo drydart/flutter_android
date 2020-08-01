@@ -43,8 +43,8 @@ class _PropertyTabState extends State<PropertyTab> {
       padding: EdgeInsets.all(8.0),
       itemCount: propertyKeys.length,
       itemBuilder: (final BuildContext context, final int index) {
-        final String propertyKey = propertyKeys[index];
-        final PropertyItem property = _properties[propertyKey];
+        final propertyKey = propertyKeys[index];
+        final property = _properties[propertyKey];
         return GestureDetector(
           onTap: () => launch(_getURL(property)),
           child: ListTile(
@@ -54,14 +54,15 @@ class _PropertyTabState extends State<PropertyTab> {
               future: _properties[propertyKey].propertyValue,
               builder: (final BuildContext context, final AsyncSnapshot<dynamic> snapshot) {
                 switch (snapshot.connectionState) {
-                  case ConnectionState.none:
-                  case ConnectionState.active:
-                  case ConnectionState.waiting:
-                    return Text("Unknown", style: TextStyle(fontStyle: FontStyle.italic));
                   case ConnectionState.done:
                     return snapshot.hasError ?
                       Text(snapshot.error) :
                       Text(snapshot.data.toString());
+                  case ConnectionState.none:
+                  case ConnectionState.active:
+                  case ConnectionState.waiting:
+                  default:
+                    return Text("Unknown", style: TextStyle(fontStyle: FontStyle.italic));
                 }
               },
             ),
@@ -88,7 +89,7 @@ class _PropertyTabState extends State<PropertyTab> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> _initPlatformState() async {
-    final Map<String, PropertyItem> properties = <String, PropertyItem>{};
+    final properties = <String, PropertyItem>{};
 
     // Platform messages may fail, so we use a try/catch PlatformException.
     metadata.forEach((libraryName, classInfos) {

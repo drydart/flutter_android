@@ -1,4 +1,4 @@
-## Changelog
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -6,31 +6,44 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.5.0] - 2020-08-01
+
 ### Changed
+
 - Required Flutter 1.17+ and Dart 2.7+
 
 ## [0.4.0] - 2019-03-13
+
 ### Added
+
 - `android_hardware.Sensor.*` constants
 - `android_hardware.SensorManager.*` constants
 - `android_location.Location.*` constants
 - `android_os.*.*` constants
+
 ### Removed
+
 - Constants annotated upstream with @hide or @deprecated
 
 ## [0.3.7] - 2019-03-12
+
 ### Added
+
 - `android_bluetooth.Bluetooth{Adapter,Device,Headset,LeScanner}.*` constants
 
 ## [0.3.6] - 2019-02-28
+
 No functional changes.
 
 ## [0.3.5] - 2019-02-15
+
 ### Changed
+
 - Fixed a bug in `android_hardware.SensorManager.registerListener()`
 
 ## [0.3.4] - 2019-02-15
+
 ### Added
+
 - `android_location.Location` class
 - `android_hardware.Sensor#subscribe()` method
 - `android_hardware.SensorEvent` class
@@ -38,12 +51,16 @@ No functional changes.
 - `android_hardware.SensorManager.registerListener()` static method
 
 ## [0.3.3] - 2019-02-15
+
 ### Added
+
 - `android_location.Location` class stub
 - `android_location.Location.distanceBetween()` static method
 
 ## [0.3.2] - 2019-02-15
+
 ### Added
+
 - Declared Bluetooth permissions for the example app
 - Declared body sensor permissions for the example app
 - `android_hardware.Sensor` class stub
@@ -52,7 +69,9 @@ No functional changes.
 - `android_hardware.SensorManager` class stub
 
 ## [0.3.1] - 2019-02-14
+
 ### Added
+
 - `android_bluetooth.BluetoothAdapter` class stub
 - `android_bluetooth.BluetoothDevice` class stub
 - `android_bluetooth.BluetoothHeadset` class stub
@@ -60,9 +79,13 @@ No functional changes.
 - `android_bluetooth.BluetoothManager` class stub
 
 ## [0.3.0] - 2019-02-14
+
 ### Changed
+
 - Required Dart SDK 2.1+
+
 ### Added
+
 - Face detection demo in the example app
 - `android_graphics.Bitmap.fromImage()` static method
 - `android_graphics.Bitmap.fromAssetImage()` static method
@@ -75,84 +98,122 @@ No functional changes.
 - `android_media.FaceDetector` class
 
 ## [0.2.5] - 2019-02-13
+
 ### Added
+
 - `android_graphics` library
 - `android_graphics.Bitmap` class
 
 ## [0.2.4] - 2019-01-28
+
 ### Changed
+
 - Added sanity checks to `android_database.MatrixCursor`
 
 ## [0.2.3] - 2018-12-10
+
 ### Added
+
 - `android_content.Context.getSharedPreferences()` method
 - `android_content.SharedPreferences` class
 
 ## [0.2.2] - 2018-12-08
+
 ### Changed
+
 - Made `android_database.Cursor` iterable
 
 ## [0.2.1] - 2018-12-06
+
 ### Changed
+
 - Enhanced the example application and added a screenshot
 
 ## [0.2.0] - 2018-12-05
+
 ### Changed
+
 - `android_database.Cursor#getBlob()` now returns a `Uint8List`, not a `ByteBuffer`
 
 ## [0.1.14] - 2018-12-04
+
 ### Added
+
 - `android_content.ContentValues` class
 
 ## [0.1.13] - 2018-11-23
+
 ### Added
+
 - `android_app.ActivityManager.isRunningInTestHarness` getter
 
 ## [0.1.12] - 2018-11-22
+
 ### Changed
+
 - Corrected the return value for `android_database.Cursor#moveToNext()`
 
 ## [0.1.11] - 2018-11-21
+
 ### Added
+
 - `android_database.MatrixCursor` class
+
 ### Changed
+
 - Corrected return values for `android_database.Cursor#moveTo*()` methods
 
 ## [0.1.10] - 2018-11-21
+
 ### Added
+
 - `android_database.DatabaseUtils` static methods
 
 ## [0.1.9] - 2018-11-21
+
 ### Added
+
 - `android_app.Notification` class
 - `android_app.NotificationAction` class
 
 ## [0.1.8] - 2018-11-20
+
 ### Added
+
 - [meta](https://pub.dev/packages/meta) dependency
 
 ## [0.1.7] - 2018-11-15
+
 ### Added
+
 - `android_database.Cursor#get()` method
+
 ### Changed
+
 - `android_database.CursorIndexOutOfBoundsException` constructor
 
 ## [0.1.6] - 2018-11-15
+
 ### Added
+
 - `android_database.Cursor` interface
 - `android_database.CursorIndexOutOfBoundsException` exception
 - `android_database.DatabaseUtils` class
 - `android_database.SQLException` exception
 
 ## [0.1.5] - 2018-11-15
+
 ### Added
+
 - `android_app.WallpaperColors` class
 - `android_content.ComponentName` class
 - `android_content.Intent` class
 - `android_os.Bundle` class
 
 ## [0.1.4] - 2018-11-14
+
 ### Added
+
 - `android_bluetooth` library
 - `android_database` library
 - `android_hardware` library
@@ -167,20 +228,28 @@ No functional changes.
 - `android_view` library
 
 ## [0.1.3] - 2018-11-14
+
 ### Added
+
 - `android_content.Context.*_SERVICE` constants
 - `android_content.Context.getSystemService()` method
+
 ### Changed
+
 - All plugin code is now protected by a `LocalPlatform().isAndroid` assertion
 - The appropriate classes now implement `android_os.Parcelable`
 
 ## [0.1.2] - 2018-11-14
+
 ### Added
+
 - [platform](https://pub.dev/packages/platform) dependency
 - `android_app` library
 
 ## [0.1.1] - 2018-11-03
+
 ### Added
+
 - `android_os` library
 - `android_os.Environment.dataDirectory` getter
 - `android_os.Environment.downloadCacheDirectory` getter
@@ -191,7 +260,9 @@ No functional changes.
 - `android_os.Environment.isExternalStorageRemovable` getter
 
 ## [0.1.0] - 2018-11-03
+
 ### Added
+
 - `android_content` library
 - `android_content.Context.cacheDir` getter
 - `android_content.Context.codeCacheDir` getter

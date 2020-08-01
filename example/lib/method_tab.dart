@@ -9,7 +9,7 @@ import 'package:url_launcher/url_launcher.dart' show launch;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-typedef Future<dynamic> MethodCallback();
+typedef MethodCallback = Future<dynamic> Function();
 
 final Map<String, MethodCallback> methods = <String, MethodCallback>{
   // TODO
@@ -40,7 +40,7 @@ class _MethodTabState extends State<MethodTab> {
       padding: EdgeInsets.all(8.0),
       itemCount: methodKeys.length,
       itemBuilder: (final BuildContext context, final int index) {
-        final String methodKey = methodKeys[index];
+        final methodKey = methodKeys[index];
         return GestureDetector(
           onTap: () => launch(_getURL(methodKey)),
           child: ListTile(
@@ -50,14 +50,15 @@ class _MethodTabState extends State<MethodTab> {
               future: _results[methodKey],
               builder: (final BuildContext context, final AsyncSnapshot<dynamic> snapshot) {
                 switch (snapshot.connectionState) {
-                  case ConnectionState.none:
-                  case ConnectionState.active:
-                  case ConnectionState.waiting:
-                    return Text("Unknown");
                   case ConnectionState.done:
                     return snapshot.hasError ?
                       Text(snapshot.error) :
                       Text(snapshot.data.toString());
+                  case ConnectionState.none:
+                  case ConnectionState.active:
+                  case ConnectionState.waiting:
+                  default:
+                    return Text("Unknown");
                 }
               },
             ),
@@ -86,7 +87,7 @@ class _MethodTabState extends State<MethodTab> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> _initPlatformState() async {
-    Map<String, Future<dynamic>> results = <String, Future<dynamic>>{};
+    final results = <String, Future<dynamic>>{};
 
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
