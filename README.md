@@ -1,27 +1,22 @@
-Flutter Android Bindings
-========================
+# Flutter Android Bindings
 
 [![Project license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
-[![Pub package](https://img.shields.io/pub/v/flutter_android.svg)](https://pub.dev/packages/flutter_android)
+[![Dart compatibility](https://img.shields.io/badge/dart-2.7%2B-blue)](https://pub.dev/packages/flutter_android)
 [![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dev/documentation/flutter_android/latest/)
-[![Travis CI build status](https://img.shields.io/travis/drydart/flutter_android/master.svg)](https://travis-ci.org/drydart/flutter_android)
-[![Liberapay patrons](http://img.shields.io/liberapay/patrons/drydart.svg?logo=liberapay)](https://liberapay.com/drydart/donate)
+[![Pub package](https://img.shields.io/pub/v/flutter_android.svg)](https://pub.dev/packages/flutter_android)
 
 This is a [Flutter](https://flutter.dev) plugin for using Android's
 numerous platform-specific APIs in Flutter apps.
 
-Prerequisites
--------------
+## Prerequisites
 
 - [Dart](https://dart.dev) 2.7+ and [Flutter](https://flutter.dev) 1.17+
 
-Compatibility
--------------
+## Compatibility
 
 Android only.
 
-Features
---------
+## Features
 
 - Implements bindings to a growing set of Android's platform-specific APIs.
 
@@ -37,8 +32,7 @@ Features
 | Heart-rate monitoring | `android_hardware.SensorManager.getDefaultSensor()` |
 | Sensor event streams | `android_hardware.Sensor#subscribe()` |
 
-Examples
---------
+## Examples
 
 ### Face detection
 
@@ -73,13 +67,11 @@ events.listen((SensorEvent event) {
 });
 ```
 
-Frequently Asked Questions
---------------------------
+## Frequently Asked Questions
 
 TODO
 
-Caveats
--------
+## Caveats
 
 - **iOS is not and cannot be supported.**
   All `flutter_android` APIs throw an `AssertionError` if they are invoked
@@ -87,8 +79,7 @@ Caveats
   on the [platform](https://pub.dev/packages/platform) package to
   conditionalize your use of Android APIs.
 
-Reference
----------
+## Reference
 
 ### [`android`](https://pub.dev/documentation/flutter_android/latest/android/android-library.html)
 
@@ -184,8 +175,7 @@ Reference
 - [`Environment.isExternalStorageEmulated`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/isExternalStorageEmulated.html)
 - [`Environment.isExternalStorageRemovable`](https://pub.dev/documentation/flutter_android/latest/android_os/Environment/isExternalStorageRemovable.html)
 
-Cross-Reference
----------------
+## Cross-Reference
 
 | Android | Flutter |
 | :--- | :--- |
@@ -266,8 +256,7 @@ Cross-Reference
 | `android.view` | `android_view` |
 | `java.util.Locale` | `dart-ui.Locale` |
 
-See Also
---------
+## See Also
 
 - The [flutter_sqlcipher](https://pub.dev/packages/flutter_sqlcipher) package
   implements encrypted SQLite databases based on the `android.database` APIs.
