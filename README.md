@@ -20,7 +20,7 @@ Android only.
 
 ```yaml
 dependencies:
-  flutter_android: ^0.6.0
+  flutter_android: ^0.6.1
 ```
 
 ## Features
