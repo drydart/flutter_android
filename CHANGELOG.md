@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.6.1] - 2020-08-18
 
+### Fixed
+
+- Build error with the tagged 0.6.0 release
+
 ## [0.6.0] - 2020-08-18
 
 ### Added
@@ -45,9 +49,9 @@ No functional changes.
 
 ## [0.3.5] - 2019-02-15
 
-### Changed
+### Fixed
 
-- Fixed a bug in `android_hardware.SensorManager.registerListener()`
+- Bug in `android_hardware.SensorManager.registerListener()`
 
 ## [0.3.4] - 2019-02-15
 

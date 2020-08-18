@@ -41,7 +41,7 @@ class IntentHandler extends FlutterMethodCallHandler {
         final String component = getOptionalArgument(call, "component");
         final Map<String, Object> extras = getOptionalArgument(call, "extras");
         final Integer flags = getOptionalArgument(call, "flags");
-        final String package = getOptionalArgument(call, "package");
+        final String packageName = getOptionalArgument(call, "package");
 
         final Intent intent = new Intent();
         if (action != null && !action.isEmpty()) {
@@ -76,8 +76,8 @@ class IntentHandler extends FlutterMethodCallHandler {
         if (flags != null) {
           intent.addFlags(flags);
         }
-        if (package != null && !package.isEmpty()) {
-          intent.setPackage(package);
+        if (packageName != null && !packageName.isEmpty()) {
+          intent.setPackage(packageName);
         }
         context.startActivity(intent);
         result.success(null);
