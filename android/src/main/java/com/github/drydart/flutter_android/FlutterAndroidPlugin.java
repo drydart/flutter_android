@@ -52,6 +52,9 @@ public class FlutterAndroidPlugin implements FlutterPlugin {
     (new MethodChannel(messenger, FaceDetectorHandler.CHANNEL))
       .setMethodCallHandler(new FaceDetectorHandler(binding));
 
+    (new MethodChannel(messenger, IntentHandler.CHANNEL))
+      .setMethodCallHandler(new IntentHandler(binding));
+
     (new MethodChannel(messenger, LocationHandler.CHANNEL))
       .setMethodCallHandler(new LocationHandler(binding));
 

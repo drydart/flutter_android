@@ -1,5 +1,9 @@
 /* This is free and unencumbered software released into the public domain. */
 
+import 'dart:async' show Future;
+
+import 'package:flutter/services.dart' show MethodChannel;
+
 import '../os/bundle.dart' show Bundle;
 import '../os/parcelable.dart' show Parcelable;
 import 'component_name.dart';
@@ -14,6 +18,9 @@ import 'component_name.dart';
 ///
 /// See: https://developer.android.com/reference/android/content/Intent
 class Intent implements Parcelable {
+  static const MethodChannel _channel =
+      MethodChannel('flutter_android/Intent');
+
   /// The general action to be performed.
   final String action;
 
@@ -37,6 +44,9 @@ class Intent implements Parcelable {
   /// See: https://developer.android.com/reference/android/content/Intent#flags
   final int flags;
 
+  /// Specifies the application package name this intent is limited to.
+  final String package;
+
   Intent({
     this.action,
     this.data,
@@ -45,10 +55,28 @@ class Intent implements Parcelable {
     this.component,
     this.extras,
     this.flags,
+    this.package,
   });
 
   /// Gives additional information about the action to execute.
   ///
   /// If this intent has multiple categories, returns the first of them.
   String get category => categories.isNotEmpty ? categories.first : null;
+
+  /// Launches a new activity.
+  ///
+  /// See: https://developer.android.com/reference/android/content/Context#startActivity(android.content.Intent)
+  Future<void> startActivity() async {
+    final request = <String, dynamic>{
+      'action': action,
+      'data': data.toString(),
+      'categories': categories,
+      'type': type,
+      'component': component.flattenToString(),
+      'extras': extras.mappings,
+      'flags': flags,
+      'package': package,
+    };
+    await _channel.invokeMethod('startActivity', request);
+  }
 }
