@@ -50,7 +50,7 @@ import 'package:flutter_android/android_content.dart' show Intent;
 await Intent(
   action: "android.intent.action.VIEW", // Intent.ACTION_VIEW
   data: Uri.parse("https://flutter.dev"),
-).startActivity;
+).startActivity();
 ```
 
 ### Face detection
