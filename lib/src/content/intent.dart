@@ -65,17 +65,17 @@ class Intent implements Parcelable {
   /// Launches a new activity.
   ///
   /// See: https://developer.android.com/reference/android/content/Context#startActivity(android.content.Intent)
-  Future<void> startActivity() async {
+  Future<bool> startActivity() async {
     final request = <String, dynamic>{
       'action': action,
-      'data': data.toString(),
+      'data': data?.toString(),
       'categories': categories,
       'type': type,
-      'component': component.flattenToString(),
-      'extras': extras.mappings,
+      'component': component?.flattenToString(),
+      'extras': extras?.mappings,
       'flags': flags,
       'package': package,
     };
-    await _channel.invokeMethod('startActivity', request);
+    return await _channel.invokeMethod('startActivity', request) as bool;
   }
 }

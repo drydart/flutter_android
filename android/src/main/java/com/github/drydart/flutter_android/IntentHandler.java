@@ -2,6 +2,7 @@
 
 package com.github.drydart.flutter_android;
 
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -79,8 +80,13 @@ class IntentHandler extends FlutterMethodCallHandler {
         if (packageName != null && !packageName.isEmpty()) {
           intent.setPackage(packageName);
         }
-        context.startActivity(intent);
-        result.success(null);
+        try {
+          context.startActivity(intent);
+          result.success(true);
+        }
+        catch (final ActivityNotFoundException error) {
+          result.success(false);
+        }
         break;
       }
       default: {

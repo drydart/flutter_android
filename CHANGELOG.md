@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.6.2] - 2020-08-18
 
+### Changed
+
+- Enhanced `android_content.Intent#startActivity()`
+
 ## [0.6.1] - 2020-08-18
 
 ### Fixed
