@@ -62,20 +62,21 @@ class _FaceDetectorPainter extends CustomPainter {
   void paint(final Canvas canvas, final Size size) {
     const eyeRadius = 12.0;
     final line = Paint()
-        ..color = Colors.blue
-        ..strokeCap = StrokeCap.round
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 2;
+      ..color = Colors.blue
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2;
 
     for (final face in faces) {
       if (face.confidence < Face.CONFIDENCE_THRESHOLD) continue;
 
       final midPoint = Offset(face.midPoint.x, face.midPoint.y);
-      final leftEye = midPoint.translate(-(face.eyesDistance/2), 0);
-      final rightEye = midPoint.translate((face.eyesDistance/2), 0);
+      final leftEye = midPoint.translate(-(face.eyesDistance / 2), 0);
+      final rightEye = midPoint.translate((face.eyesDistance / 2), 0);
       final noseBridge = Path()
-        ..moveTo(leftEye.dx+eyeRadius, leftEye.dy)
-        ..quadraticBezierTo(midPoint.dx, midPoint.dy-eyeRadius, rightEye.dx-eyeRadius, rightEye.dy);
+        ..moveTo(leftEye.dx + eyeRadius, leftEye.dy)
+        ..quadraticBezierTo(midPoint.dx, midPoint.dy - eyeRadius,
+            rightEye.dx - eyeRadius, rightEye.dy);
       canvas.drawCircle(leftEye, eyeRadius, line);
       canvas.drawCircle(rightEye, eyeRadius, line);
       canvas.drawPath(noseBridge, line);

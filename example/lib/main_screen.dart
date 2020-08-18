@@ -22,14 +22,14 @@ class _MainScreenState extends State<MainScreen> {
   int _tabIndex = 0;
 
   _MainScreenState()
-    : _tabs = [
-        DemoTab(),
-        PropertyTab(),
-        MethodTab(),
-        ClassTab(),
-        LibraryTab(),
-      ],
-      super();
+      : _tabs = [
+          DemoTab(),
+          PropertyTab(),
+          MethodTab(),
+          ClassTab(),
+          LibraryTab(),
+        ],
+        super();
 
   @override
   void initState() {
@@ -74,6 +74,8 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   void _onTabTapped(final int index) {
-    setState(() { _tabIndex = index; });
+    setState(() {
+      _tabIndex = index;
+    });
   }
 }

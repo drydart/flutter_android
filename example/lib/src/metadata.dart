@@ -22,7 +22,8 @@ class ClassDescription {
   final Map<String, PropertyCallback> properties;
   final Map<String, MethodDescription> methods;
 
-  const ClassDescription(this.name, {
+  const ClassDescription(
+    this.name, {
     this.properties = const {},
     this.methods = const {},
   });

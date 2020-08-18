@@ -15,7 +15,8 @@ class PropertyItem {
   final String propertyName;
   final Future<dynamic> propertyValue;
 
-  const PropertyItem(this.libraryName, this.className, this.propertyName, this.propertyValue);
+  const PropertyItem(
+      this.libraryName, this.className, this.propertyName, this.propertyValue);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -52,17 +53,19 @@ class _PropertyTabState extends State<PropertyTab> {
             title: Text(_getTitle(property)),
             subtitle: FutureBuilder<dynamic>(
               future: _properties[propertyKey].propertyValue,
-              builder: (final BuildContext context, final AsyncSnapshot<dynamic> snapshot) {
+              builder: (final BuildContext context,
+                  final AsyncSnapshot<dynamic> snapshot) {
                 switch (snapshot.connectionState) {
                   case ConnectionState.done:
-                    return snapshot.hasError ?
-                      Text(snapshot.error) :
-                      Text(snapshot.data.toString());
+                    return snapshot.hasError
+                        ? Text(snapshot.error)
+                        : Text(snapshot.data.toString());
                   case ConnectionState.none:
                   case ConnectionState.active:
                   case ConnectionState.waiting:
                   default:
-                    return Text("Unknown", style: TextStyle(fontStyle: FontStyle.italic));
+                    return Text("Unknown",
+                        style: TextStyle(fontStyle: FontStyle.italic));
                 }
               },
             ),
@@ -82,8 +85,8 @@ class _PropertyTabState extends State<PropertyTab> {
 
   String _getURL(final PropertyItem property) {
     final libraryName = property.libraryName,
-          className = property.className,
-          propertyName = property.propertyName;
+        className = property.className,
+        propertyName = property.propertyName;
     return "https://pub.dev/documentation/flutter_android/latest/$libraryName/$className/$propertyName.html";
   }
 
@@ -98,9 +101,9 @@ class _PropertyTabState extends State<PropertyTab> {
         classInfo.properties.forEach((propertyName, propertyCallback) {
           try {
             final propertyKey = "$libraryName.$className.$propertyName";
-            properties[propertyKey] = PropertyItem(libraryName, className, propertyName, propertyCallback());
-          }
-          on PlatformException catch (e) {
+            properties[propertyKey] = PropertyItem(
+                libraryName, className, propertyName, propertyCallback());
+          } on PlatformException catch (e) {
             // TODO: improve error handling
             print(e);
           }
@@ -113,6 +116,8 @@ class _PropertyTabState extends State<PropertyTab> {
     // setState to update our non-existent appearance.
     if (!mounted) return;
 
-    setState(() { _properties = properties; });
+    setState(() {
+      _properties = properties;
+    });
   }
 }

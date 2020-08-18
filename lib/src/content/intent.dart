@@ -18,8 +18,7 @@ import 'component_name.dart';
 ///
 /// See: https://developer.android.com/reference/android/content/Intent
 class Intent implements Parcelable {
-  static const MethodChannel _channel =
-      MethodChannel('flutter_android/Intent');
+  static const MethodChannel _channel = MethodChannel('flutter_android/Intent');
 
   /// The general action to be performed.
   final String action;

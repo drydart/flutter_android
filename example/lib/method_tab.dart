@@ -48,12 +48,13 @@ class _MethodTabState extends State<MethodTab> {
             title: Text(_getTitle(methodKey)),
             subtitle: FutureBuilder<dynamic>(
               future: _results[methodKey],
-              builder: (final BuildContext context, final AsyncSnapshot<dynamic> snapshot) {
+              builder: (final BuildContext context,
+                  final AsyncSnapshot<dynamic> snapshot) {
                 switch (snapshot.connectionState) {
                   case ConnectionState.done:
-                    return snapshot.hasError ?
-                      Text(snapshot.error) :
-                      Text(snapshot.data.toString());
+                    return snapshot.hasError
+                        ? Text(snapshot.error)
+                        : Text(snapshot.data.toString());
                   case ConnectionState.none:
                   case ConnectionState.active:
                   case ConnectionState.waiting:
@@ -94,8 +95,7 @@ class _MethodTabState extends State<MethodTab> {
       methods.forEach((k, v) {
         results[k] = Future.value(""); //v();
       });
-    }
-    on PlatformException {
+    } on PlatformException {
       // TODO: improve error handling
     }
 
@@ -104,6 +104,8 @@ class _MethodTabState extends State<MethodTab> {
     // setState to update our non-existent appearance.
     if (!mounted) return;
 
-    setState(() { _results = results; });
+    setState(() {
+      _results = results;
+    });
   }
 }
