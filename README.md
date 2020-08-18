@@ -2,8 +2,8 @@
 
 [![Project license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
 [![Dart compatibility](https://img.shields.io/badge/dart-2.7%2B-blue)](https://pub.dev/packages/flutter_android)
-[![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dev/documentation/flutter_android/latest/)
 [![Pub package](https://img.shields.io/pub/v/flutter_android.svg)](https://pub.dev/packages/flutter_android)
+[![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dev/documentation/flutter_android/latest/)
 
 This is a [Flutter](https://flutter.dev) plugin for using Android's
 numerous platform-specific APIs in Flutter apps.
@@ -16,6 +16,13 @@ numerous platform-specific APIs in Flutter apps.
 
 Android only.
 
+## Installation
+
+```yaml
+dependencies:
+  flutter_android: ^0.6.0
+```
+
 ## Features
 
 - Implements bindings to a growing set of Android's platform-specific APIs.
@@ -26,6 +33,7 @@ Android only.
 
 | Feature | Flutter API |
 | :--- | :--- |
+| Activity launch | `android_content.Intent#startActivity()` |
 | Bluetooth scanning | `android_bluetooth.BluetoothLeScanner` |
 | Face detection | `android_media.FaceDetector` |
 | Distance calculation | `android_location.Location.distanceBetween()` |
@@ -33,6 +41,17 @@ Android only.
 | Sensor event streams | `android_hardware.Sensor#subscribe()` |
 
 ## Examples
+
+### Activity launch
+
+```dart
+import 'package:flutter_android/android_content.dart' show Intent;
+
+await Intent(
+  action: "android.intent.action.VIEW", // Intent.ACTION_VIEW
+  data: Uri.parse("https://flutter.dev"),
+).startActivity;
+```
 
 ### Face detection
 
@@ -278,5 +297,5 @@ import 'package:flutter_android/android_os.dart' as android_os;
 
 ## See Also
 
-- The [flutter_sqlcipher](https://pub.dev/packages/flutter_sqlcipher) package
-  implements encrypted SQLite databases based on the `android.database` APIs.
+- The [win32](https://pub.dev/packages/win32) package provides bindings to
+  the most common Win32 APIs.
