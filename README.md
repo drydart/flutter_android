@@ -1,7 +1,7 @@
 # Flutter Android Bindings
 
 [![Project license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
-[![Dart compatibility](https://img.shields.io/badge/dart-2.7%2B-blue)](https://pub.dev/packages/flutter_android)
+[![Dart compatibility](https://img.shields.io/badge/dart-2.8%2B-blue)](https://pub.dev/packages/flutter_android)
 [![Pub package](https://img.shields.io/pub/v/flutter_android.svg)](https://pub.dev/packages/flutter_android)
 [![Dartdoc reference](https://img.shields.io/badge/dartdoc-reference-blue.svg)](https://pub.dev/documentation/flutter_android/latest/)
 
@@ -10,7 +10,7 @@ numerous platform-specific APIs in Flutter apps.
 
 ## Prerequisites
 
-- [Dart](https://dart.dev) 2.7+ and [Flutter](https://flutter.dev) 1.17+
+- [Dart](https://dart.dev) 2.8+ and [Flutter](https://flutter.dev) 1.17+
 
 ## Compatibility
 
