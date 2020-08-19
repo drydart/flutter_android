@@ -1,10 +1,9 @@
 /* This is free and unencumbered software released into the public domain. */
 
 import 'dart:async' show Future;
-import 'dart:io' show Directory, File;
+import 'dart:io' show Directory, File, Platform;
 
 import 'package:flutter/services.dart' show MethodChannel;
-import 'package:platform/platform.dart' show Platform, LocalPlatform;
 
 import '../app/activity_manager.dart' show ActivityManager;
 import '../app/alarm_manager.dart' show AlarmManager;
@@ -21,8 +20,6 @@ import '../os/user_manager.dart' show UserManager;
 import '../os/vibrator.dart' show Vibrator;
 
 import 'shared_preferences.dart' show SharedPreferences;
-
-const Platform _platform = LocalPlatform();
 
 /// Interface to global information about an application environment.
 ///
@@ -242,7 +239,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getSystemService(java.lang.String)
   static dynamic getSystemService(final String name) {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     switch (name) {
       case ACTIVITY_SERVICE:
         return ActivityManager();
@@ -278,7 +275,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getCacheDir()
   static Future<Directory> get cacheDir async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(await _channel.invokeMethod('getCacheDir') as String);
   }
 
@@ -287,7 +284,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getCodeCacheDir()
   static Future<Directory> get codeCacheDir async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(await _channel.invokeMethod('getCodeCacheDir') as String);
   }
 
@@ -296,7 +293,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getDataDir()
   static Future<Directory> get dataDir async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(await _channel.invokeMethod('getDataDir') as String);
   }
 
@@ -307,7 +304,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getExternalCacheDir()
   static Future<Directory> get externalCacheDir async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(
         await _channel.invokeMethod('getExternalCacheDir') as String);
   }
@@ -319,7 +316,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getExternalFilesDir(java.lang.String)
   static Future<Directory> get externalFilesDir async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(
         await _channel.invokeMethod('getExternalFilesDir') as String);
   }
@@ -329,7 +326,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getFilesDir()
   static Future<Directory> get filesDir async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(await _channel.invokeMethod('getFilesDir') as String);
   }
 
@@ -338,7 +335,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getNoBackupFilesDir()
   static Future<Directory> get noBackupFilesDir async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(
         await _channel.invokeMethod('getNoBackupFilesDir') as String);
   }
@@ -349,7 +346,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getPackageCodePath()
   static Future<File> get packageCodePath async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return File(await _channel.invokeMethod('getPackageCodePath') as String);
   }
 
@@ -357,7 +354,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getPackageName()
   static Future<String> get packageName async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return await _channel.invokeMethod('getPackageName') as String;
   }
 
@@ -367,7 +364,7 @@ abstract class Context {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#getPackageResourcePath()
   static Future<File> get packageResourcePath async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return File(
         await _channel.invokeMethod('getPackageResourcePath') as String);
   }

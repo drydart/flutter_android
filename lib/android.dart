@@ -4,9 +4,9 @@
 library android;
 
 import 'dart:async' show Future;
+import 'dart:io' show Platform;
 
 import 'package:flutter/services.dart' show MethodChannel;
-import 'package:platform/platform.dart' show Platform, LocalPlatform;
 
 export 'android_app.dart';
 export 'android_bluetooth.dart';
@@ -25,8 +25,6 @@ export 'android_speech.dart';
 export 'android_telephony.dart';
 export 'android_view.dart';
 
-const Platform _platform = LocalPlatform();
-
 /// Android metadata.
 abstract class Android {
   static const MethodChannel _channel =
@@ -34,7 +32,7 @@ abstract class Android {
 
   /// Returns the Android platform version.
   static Future<String> get platformVersion async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return await _channel.invokeMethod('getPlatformVersion');
   }
 }

@@ -1,12 +1,9 @@
 /* This is free and unencumbered software released into the public domain. */
 
 import 'dart:async' show Future;
-import 'dart:io' show Directory;
+import 'dart:io' show Directory, Platform;
 
 import 'package:flutter/services.dart' show MethodChannel;
-import 'package:platform/platform.dart' show Platform, LocalPlatform;
-
-const Platform _platform = LocalPlatform();
 
 /// Provides access to environment variables.
 ///
@@ -124,7 +121,7 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getDataDirectory()
   static Future<Directory> get dataDirectory async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(await _channel.invokeMethod('getDataDirectory') as String);
   }
 
@@ -132,7 +129,7 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getDownloadCacheDirectory()
   static Future<Directory> get downloadCacheDirectory async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(
         await _channel.invokeMethod('getDownloadCacheDirectory') as String);
   }
@@ -146,7 +143,7 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getExternalStorageDirectory()
   static Future<Directory> get externalStorageDirectory async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(
         await _channel.invokeMethod('getExternalStorageDirectory') as String);
   }
@@ -155,7 +152,7 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getExternalStorageState()
   static Future<String> get externalStorageState async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return await _channel.invokeMethod('getExternalStorageState')
         as String; // TODO: enum values
   }
@@ -165,7 +162,7 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#getRootDirectory()
   static Future<Directory> get rootDirectory async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return Directory(await _channel.invokeMethod('getRootDirectory') as String);
   }
 
@@ -173,7 +170,7 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#isExternalStorageEmulated()
   static Future<bool> get isExternalStorageEmulated async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return await _channel.invokeMethod('isExternalStorageEmulated') as bool;
   }
 
@@ -182,7 +179,7 @@ abstract class Environment {
   ///
   /// See: https://developer.android.com/reference/android/os/Environment#isExternalStorageRemovable()
   static Future<bool> get isExternalStorageRemovable async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return await _channel.invokeMethod('isExternalStorageRemovable') as bool;
   }
 }

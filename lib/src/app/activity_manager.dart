@@ -1,11 +1,9 @@
 /* This is free and unencumbered software released into the public domain. */
 
 import 'dart:async' show Future;
+import 'dart:io' show Platform;
 
 import 'package:flutter/services.dart' show MethodChannel;
-import 'package:platform/platform.dart' show Platform, LocalPlatform;
-
-const Platform _platform = LocalPlatform();
 
 /// Gives information about, and interacts with, activities, services, and the
 /// containing process.
@@ -19,7 +17,7 @@ class ActivityManager {
   ///
   /// See: https://developer.android.com/reference/android/app/ActivityManager#isRunningInTestHarness()
   static Future<bool> get isRunningInTestHarness async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return await _channel.invokeMethod('isRunningInTestHarness') as bool;
   }
 }

@@ -1,11 +1,9 @@
 /* This is free and unencumbered software released into the public domain. */
 
 import 'dart:async' show Future;
+import 'dart:io' show Platform;
 
 import 'package:flutter/services.dart' show MethodChannel;
-import 'package:platform/platform.dart' show Platform, LocalPlatform;
-
-const Platform _platform = LocalPlatform();
 
 /// The download manager is a system service that handles long-running HTTP
 /// downloads.
@@ -20,7 +18,7 @@ class DownloadManager {
   ///
   /// See: https://developer.android.com/reference/android/app/DownloadManager#getMaxBytesOverMobile(android.content.Context)
   static Future<int> get maxBytesOverMobile async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return await _channel.invokeMethod('getMaxBytesOverMobile')
         as int; // TODO: implement backend
   }
@@ -31,7 +29,7 @@ class DownloadManager {
   ///
   /// See: https://developer.android.com/reference/android/app/DownloadManager#getRecommendedMaxBytesOverMobile(android.content.Context)
   static Future<int> get recommendedMaxBytesOverMobile async {
-    assert(_platform.isAndroid);
+    assert(Platform.isAndroid);
     return await _channel.invokeMethod('getRecommendedMaxBytesOverMobile')
         as int; // TODO: implement backend
   }

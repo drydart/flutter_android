@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.8.0] - 2020-08-19
 
+### Changed
+
+- Removed the dependency on the [platform](https://pub.dev/packages/platform)
+  package
+
 ## [0.7.0] - 2020-08-19
 
 ### Changed

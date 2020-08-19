@@ -12,7 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
   meta: ^1.1.6
-  platform: ^2.2.0
   typed_data: ^1.2.0
 dev_dependencies:
   flutter_test:
