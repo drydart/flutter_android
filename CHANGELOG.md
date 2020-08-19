@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2020-08-19
+
 ## [0.7.0] - 2020-08-19
 
 ### Changed
@@ -327,6 +329,7 @@ No functional changes.
 - `android_content.Context.packageName` getter
 - `android_content.Context.packageResourcePath` getter
 
+[0.8.0]:  https://github.com/drydart/flutter_android/compare/0.7.0...0.8.0
 [0.7.0]:  https://github.com/drydart/flutter_android/compare/0.6.2...0.7.0
 [0.6.2]:  https://github.com/drydart/flutter_android/compare/0.6.1...0.6.2
 [0.6.1]:  https://github.com/drydart/flutter_android/compare/0.6.0...0.6.1
