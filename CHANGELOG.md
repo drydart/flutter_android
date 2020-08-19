@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the dependency on the [platform](https://pub.dev/packages/platform)
   package
 
+### Added
+
+- `android_os.Parcelable` mixin
+
 ## [0.7.0] - 2020-08-19
 
 ### Changed

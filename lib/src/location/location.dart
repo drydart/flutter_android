@@ -3,6 +3,7 @@
 import 'package:flutter/services.dart' show MethodChannel;
 
 import '../os/bundle.dart' show Bundle;
+import '../os/parcel.dart' show Parcel;
 import '../os/parcelable.dart' show Parcelable;
 
 /// A data class representing a geographic location.
@@ -11,7 +12,7 @@ import '../os/parcelable.dart' show Parcelable;
 /// information such as bearing, altitude and velocity.
 ///
 /// See: https://developer.android.com/reference/android/location/Location
-class Location implements Parcelable {
+class Location with Parcelable {
   static const MethodChannel _channel =
       MethodChannel('flutter_android/Location');
 
@@ -180,5 +181,13 @@ class Location implements Parcelable {
   /// See: https://developer.android.com/reference/android/location/Location#distanceTo(android.location.Location)
   Future<double> distanceTo(final Location dest) {
     return distanceBetween(latitude, longitude, dest.latitude, dest.longitude);
+  }
+
+  @override
+  String get parcelableCreator => "android.location.Location";
+
+  @override
+  void writeToParcel(final Parcel parcel, [final int flags = 0]) {
+    throw UnimplementedError(); // TODO
   }
 }

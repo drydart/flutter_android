@@ -5,6 +5,7 @@ import 'dart:ui' show Color;
 import 'package:flutter/widgets.dart' show Icon;
 
 import '../os/bundle.dart' show Bundle;
+import '../os/parcel.dart' show Parcel;
 import '../os/parcelable.dart' show Parcelable;
 import 'notification_action.dart' show NotificationAction;
 
@@ -15,7 +16,7 @@ import 'notification_action.dart' show NotificationAction;
 /// notifications.
 ///
 /// See: https://developer.android.com/reference/android/app/Notification
-class Notification implements Parcelable {
+class Notification with Parcelable {
   /// See: https://developer.android.com/reference/android/app/Notification#BADGE_ICON_LARGE
   static const int BADGE_ICON_LARGE = 2;
 
@@ -155,4 +156,12 @@ class Notification implements Parcelable {
   ///
   /// See: https://developer.android.com/reference/android/app/Notification#getTimeoutAfter()
   int getTimeoutAfter() => null; // TODO
+
+  @override
+  String get parcelableCreator => "android.app.Notification";
+
+  @override
+  void writeToParcel(final Parcel parcel, [final int flags = 0]) {
+    throw UnimplementedError(); // TODO
+  }
 }

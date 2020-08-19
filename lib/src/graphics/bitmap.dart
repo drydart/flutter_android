@@ -4,12 +4,13 @@ import 'dart:ui' show Image;
 
 import 'package:flutter/painting.dart' show AssetImage;
 
+import '../os/parcel.dart' show Parcel;
 import '../os/parcelable.dart' show Parcelable;
 
 /// Bitmap image.
 ///
 /// See: https://developer.android.com/reference/android/graphics/Bitmap
-abstract class Bitmap implements Parcelable {
+abstract class Bitmap with Parcelable {
   static Bitmap fromImage(final Image image) {
     return _ImageBitmap(image);
   }
@@ -34,6 +35,14 @@ abstract class Bitmap implements Parcelable {
 
   /// Creates an image from this bitmap.
   Image toImage();
+
+  @override
+  String get parcelableCreator => "android.graphics.Bitmap";
+
+  @override
+  void writeToParcel(final Parcel parcel, [final int flags = 0]) {
+    throw UnimplementedError(); // TODO
+  }
 }
 
 class _ImageBitmap extends Bitmap {

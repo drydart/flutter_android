@@ -2,6 +2,7 @@
 
 import 'dart:ui' show Color;
 
+import '../os/parcel.dart' show Parcel;
 import '../os/parcelable.dart' show Parcelable;
 
 /// Provides information about the colors of a wallpaper.
@@ -9,7 +10,7 @@ import '../os/parcelable.dart' show Parcelable;
 /// Exposes the 3 most visually representative colors of a wallpaper.
 ///
 /// See: https://developer.android.com/reference/android/app/WallpaperColors
-class WallpaperColors implements Parcelable {
+class WallpaperColors with Parcelable {
   /// The most visually representative color of the wallpaper.
   ///
   /// See: https://developer.android.com/reference/android/app/WallpaperColors#getPrimaryColor()
@@ -29,4 +30,12 @@ class WallpaperColors implements Parcelable {
   ///
   /// See: https://developer.android.com/reference/android/app/WallpaperColors#WallpaperColors(android.graphics.Color,%20android.graphics.Color,%20android.graphics.Color)
   WallpaperColors(this.primaryColor, this.secondaryColor, this.tertiaryColor);
+
+  @override
+  String get parcelableCreator => "android.app.WallpaperColors";
+
+  @override
+  void writeToParcel(final Parcel parcel, [final int flags = 0]) {
+    throw UnimplementedError(); // TODO
+  }
 }

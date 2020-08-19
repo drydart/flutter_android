@@ -2,6 +2,7 @@
 
 import 'package:flutter/services.dart' show PlatformException;
 
+import '../os/parcel.dart' show Parcel;
 import '../os/parcelable.dart' show Parcelable;
 
 /// Thrown when authentication is needed from the end user before viewing the
@@ -13,4 +14,13 @@ import '../os/parcelable.dart' show Parcelable;
 ///
 /// See: https://developer.android.com/reference/android/app/AuthenticationRequiredException
 class AuthenticationRequiredException extends PlatformException
-    implements Parcelable {}
+    with Parcelable {
+
+  @override
+  String get parcelableCreator => "android.app.AuthenticationRequiredException";
+
+  @override
+  void writeToParcel(final Parcel parcel, [final int flags = 0]) {
+    throw UnimplementedError(); // TODO
+  }
+}

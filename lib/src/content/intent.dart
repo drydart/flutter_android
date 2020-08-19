@@ -5,6 +5,7 @@ import 'dart:async' show Future;
 import 'package:flutter/services.dart' show MethodChannel;
 
 import '../os/bundle.dart' show Bundle;
+import '../os/parcel.dart' show Parcel;
 import '../os/parcelable.dart' show Parcelable;
 import 'component_name.dart';
 
@@ -17,7 +18,7 @@ import 'component_name.dart';
 /// description of an action to be performed.
 ///
 /// See: https://developer.android.com/reference/android/content/Intent
-class Intent implements Parcelable {
+class Intent with Parcelable {
   static const MethodChannel _channel = MethodChannel('flutter_android/Intent');
 
   /// The general action to be performed.
@@ -77,5 +78,13 @@ class Intent implements Parcelable {
       'package': package,
     };
     return await _channel.invokeMethod('startActivity', request) as bool;
+  }
+
+  @override
+  String get parcelableCreator => "android.content.Intent";
+
+  @override
+  void writeToParcel(final Parcel parcel, [final int flags = 0]) {
+    throw UnimplementedError(); // TODO
   }
 }

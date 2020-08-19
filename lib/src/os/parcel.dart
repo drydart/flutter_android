@@ -247,14 +247,15 @@ class Parcel {
     if (bundle == null) {
       return writeInt(-1);
     }
-    throw UnimplementedError(); // TODO: bundle.writeToParcel(this, 0);
+    bundle.writeToParcel(this);
   }
 
   void writeParcelable(final Parcelable parcelable, [int parcelableFlags = 0]) {
     if (parcelable == null) {
       return writeString(null);
     }
-    throw UnimplementedError(); // TODO: parcelable.writeToParcel(this, parcelableFlags);
+    writeString(parcelable.parcelableCreator);
+    parcelable.writeToParcel(this, parcelableFlags);
   }
 
   void _write(final Uint8List data, [int start = 0, int end]) {
