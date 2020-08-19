@@ -11,6 +11,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Required Dart 2.8+
 
+### Added
+
+- `android_os.Parcel.obtain()` static method
+- `android_os.Parcel#asByteData()` method
+- `android_os.Parcel#asUint8List()` method
+- `android_os.Parcel#writeBoolean()` method
+- `android_os.Parcel#writeBooleanArray()` method
+- `android_os.Parcel#writeBundle()` method
+- `android_os.Parcel#writeByte()` method
+- `android_os.Parcel#writeByteArray()` method
+- `android_os.Parcel#writeCharArray()` method
+- `android_os.Parcel#writeDouble()` method
+- `android_os.Parcel#writeDoubleArray()` method
+- `android_os.Parcel#writeFloat()` method
+- `android_os.Parcel#writeFloatArray()` method
+- `android_os.Parcel#writeInt()` method
+- `android_os.Parcel#writeIntArray()` method
+- `android_os.Parcel#writeList()` method
+- `android_os.Parcel#writeLong()` method
+- `android_os.Parcel#writeLongArray()` method
+- `android_os.Parcel#writeMap()` method
+- `android_os.Parcel#writeParcelable()` method
+- `android_os.Parcel#writeString()` method
+- `android_os.Parcel#writeStringArray()` method
+- `android_os.Parcel#writeValue()` method
+
 ## [0.6.2] - 2020-08-18
 
 ### Changed

@@ -35,9 +35,10 @@ dependencies:
 | :--- | :--- |
 | Activity launch | `android_content.Intent#startActivity()` |
 | Bluetooth scanning | `android_bluetooth.BluetoothLeScanner` |
-| Face detection | `android_media.FaceDetector` |
 | Distance calculation | `android_location.Location.distanceBetween()` |
+| Face detection | `android_media.FaceDetector` |
 | Heart-rate monitoring | `android_hardware.SensorManager.getDefaultSensor()` |
+| Parcel serialization | `android_os.Parcel` |
 | Sensor event streams | `android_hardware.Sensor#subscribe()` |
 
 ## Examples
@@ -51,6 +52,24 @@ await Intent(
   action: "android.intent.action.VIEW", // Intent.ACTION_VIEW
   data: Uri.parse("https://flutter.dev"),
 ).startActivity();
+```
+
+### Parcel serialization
+
+```dart
+import 'package:flutter_android/android_os.dart' show Parcel;
+
+var parcel = Parcel.obtain()
+  ..writeBoolean(true)
+  ..writeInt(42)
+  ..writeDouble(3.1415)
+  ..writeString("Hello, world!")
+  ..writeList(<Object>[1, 2, 3])
+  ..writeMap(<String, Object>{"a": 1, "b": 2, "c": 3});
+
+await _channel.invokeMethod('someJavaMethod', parcel.asUint8List());
+
+// In Java, your MethodCallHandler's call.arguments contains the marshaled Parcel
 ```
 
 ### Face detection
