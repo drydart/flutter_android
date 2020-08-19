@@ -243,6 +243,17 @@ class Parcel {
     });
   }
 
+  void writeArrayMap(final Map<String, Object> vals) {
+    if (vals == null) {
+      return writeInt(-1);
+    }
+    writeInt(vals.length);
+    vals.forEach((key, val) {
+      writeString(key);
+      writeValue(val);
+    });
+  }
+
   void writeBundle(final Bundle bundle) {
     if (bundle == null) {
       return writeInt(-1);

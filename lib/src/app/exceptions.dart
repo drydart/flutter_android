@@ -13,6 +13,7 @@ import '../os/parcelable.dart' show Parcelable;
 /// entering authentication credentials, or granting access via other means.
 ///
 /// See: https://developer.android.com/reference/android/app/AuthenticationRequiredException
+/// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/AuthenticationRequiredException.java
 class AuthenticationRequiredException extends PlatformException
     with Parcelable {
 
@@ -21,6 +22,6 @@ class AuthenticationRequiredException extends PlatformException
 
   @override
   void writeToParcel(final Parcel parcel, [final int flags = 0]) {
-    throw UnimplementedError(); // TODO
+    throw UnimplementedError(); // TODO: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/AuthenticationRequiredException.java#L79
   }
 }

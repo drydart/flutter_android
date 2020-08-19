@@ -18,6 +18,7 @@ import 'component_name.dart';
 /// description of an action to be performed.
 ///
 /// See: https://developer.android.com/reference/android/content/Intent
+/// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/content/Intent.java
 class Intent with Parcelable {
   static const MethodChannel _channel = MethodChannel('flutter_android/Intent');
 
@@ -85,6 +86,6 @@ class Intent with Parcelable {
 
   @override
   void writeToParcel(final Parcel parcel, [final int flags = 0]) {
-    throw UnimplementedError(); // TODO
+    throw UnimplementedError(); // TODO: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/content/Intent.java#L10650
   }
 }

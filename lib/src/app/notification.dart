@@ -16,6 +16,7 @@ import 'notification_action.dart' show NotificationAction;
 /// notifications.
 ///
 /// See: https://developer.android.com/reference/android/app/Notification
+/// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/Notification.java
 class Notification with Parcelable {
   /// See: https://developer.android.com/reference/android/app/Notification#BADGE_ICON_LARGE
   static const int BADGE_ICON_LARGE = 2;
@@ -162,6 +163,6 @@ class Notification with Parcelable {
 
   @override
   void writeToParcel(final Parcel parcel, [final int flags = 0]) {
-    throw UnimplementedError(); // TODO
+    throw UnimplementedError(); // TODO: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/Notification.java#L1818
   }
 }

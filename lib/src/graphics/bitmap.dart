@@ -10,6 +10,7 @@ import '../os/parcelable.dart' show Parcelable;
 /// Bitmap image.
 ///
 /// See: https://developer.android.com/reference/android/graphics/Bitmap
+/// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/graphics/java/android/graphics/Bitmap.java
 abstract class Bitmap with Parcelable {
   static Bitmap fromImage(final Image image) {
     return _ImageBitmap(image);

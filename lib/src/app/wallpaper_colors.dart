@@ -10,6 +10,7 @@ import '../os/parcelable.dart' show Parcelable;
 /// Exposes the 3 most visually representative colors of a wallpaper.
 ///
 /// See: https://developer.android.com/reference/android/app/WallpaperColors
+/// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/WallpaperColors.java
 class WallpaperColors with Parcelable {
   /// The most visually representative color of the wallpaper.
   ///
@@ -36,6 +37,6 @@ class WallpaperColors with Parcelable {
 
   @override
   void writeToParcel(final Parcel parcel, [final int flags = 0]) {
-    throw UnimplementedError(); // TODO
+    throw UnimplementedError(); // TODO: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/WallpaperColors.java#L281
   }
 }

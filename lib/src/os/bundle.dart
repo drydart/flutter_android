@@ -6,6 +6,7 @@ import 'parcelable.dart' show Parcelable;
 /// A mapping from [String] keys to various [Parcelable] values.
 ///
 /// See: https://developer.android.com/reference/android/os/Bundle
+/// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/os/Bundle.java
 class Bundle with Parcelable {
   /// The canonical empty bundle.
   ///
@@ -75,6 +76,6 @@ class Bundle with Parcelable {
 
   @override
   void writeToParcel(final Parcel parcel, [final int flags = 0]) {
-    throw UnimplementedError(); // TODO
+    throw UnimplementedError(); // TODO: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/os/BaseBundle.java#L1556
   }
 }

@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `android_content.ComponentName#writeToParcel()` method
+- `android_content.ContentValues#writeToParcel()` method
+- `android_graphics.Point#writeToParcel()` method
+- `android_graphics.PointF#writeToParcel()` method
+- `android_os.Parcel#writeArrayMap()` method
 - `android_os.Parcelable` mixin
 
 ## [0.7.0] - 2020-08-19

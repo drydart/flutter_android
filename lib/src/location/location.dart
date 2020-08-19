@@ -12,6 +12,7 @@ import '../os/parcelable.dart' show Parcelable;
 /// information such as bearing, altitude and velocity.
 ///
 /// See: https://developer.android.com/reference/android/location/Location
+/// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/location/java/android/location/Location.java
 class Location with Parcelable {
   static const MethodChannel _channel =
       MethodChannel('flutter_android/Location');
@@ -105,7 +106,7 @@ class Location with Parcelable {
   /// See: https://developer.android.com/reference/android/location/Location#getVerticalAccuracyMeters()
   final double verticalAccuracyMeters;
 
-  const Location(
+  Location( // FIXME: https://github.com/dart-lang/sdk/issues/40982
     this.latitude,
     this.longitude, {
     this.accuracy,
@@ -188,6 +189,6 @@ class Location with Parcelable {
 
   @override
   void writeToParcel(final Parcel parcel, [final int flags = 0]) {
-    throw UnimplementedError(); // TODO
+    throw UnimplementedError(); // TODO: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/location/java/android/location/Location.java#L1177
   }
 }

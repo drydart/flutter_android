@@ -6,6 +6,7 @@ import '../os/parcelable.dart' show Parcelable;
 /// Identifier for a specific application component that is available.
 ///
 /// See: https://developer.android.com/reference/android/content/ComponentName
+/// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/content/ComponentName.java
 class ComponentName with Parcelable {
   /// The package name of this component.
   ///
@@ -37,6 +38,7 @@ class ComponentName with Parcelable {
 
   @override
   void writeToParcel(final Parcel parcel, [final int flags = 0]) {
-    throw UnimplementedError(); // TODO
+    parcel.writeString(packageName);
+    parcel.writeString(className);
   }
 }
