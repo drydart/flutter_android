@@ -1,5 +1,7 @@
 /* This is free and unencumbered software released into the public domain. */
 
+import 'dart:io' show Platform;
+
 import 'package:flutter/services.dart' show MethodChannel;
 import 'package:flutter/foundation.dart' show required;
 
@@ -40,6 +42,7 @@ class FaceDetector {
   ///
   /// See: https://developer.android.com/reference/android/media/FaceDetector#findFaces(android.graphics.Bitmap,%20android.media.FaceDetector.Face[])
   Future<List<Face>> findFaces(final Bitmap bitmap) async {
+    assert(Platform.isAndroid);
     final request = <String, dynamic>{
       'width': width,
       'height': height,

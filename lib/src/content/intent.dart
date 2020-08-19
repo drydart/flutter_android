@@ -1,6 +1,7 @@
 /* This is free and unencumbered software released into the public domain. */
 
 import 'dart:async' show Future;
+import 'dart:io' show Platform;
 
 import 'package:flutter/services.dart' show MethodChannel;
 
@@ -68,6 +69,7 @@ class Intent with Parcelable {
   ///
   /// See: https://developer.android.com/reference/android/content/Context#startActivity(android.content.Intent)
   Future<bool> startActivity() async {
+    assert(Platform.isAndroid);
     final request = <String, dynamic>{
       'action': action,
       'data': data?.toString(),

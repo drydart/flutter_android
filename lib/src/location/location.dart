@@ -1,5 +1,7 @@
 /* This is free and unencumbered software released into the public domain. */
 
+import 'dart:io' show Platform;
+
 import 'package:flutter/services.dart' show MethodChannel;
 
 import '../os/bundle.dart' show Bundle;
@@ -106,7 +108,8 @@ class Location with Parcelable {
   /// See: https://developer.android.com/reference/android/location/Location#getVerticalAccuracyMeters()
   final double verticalAccuracyMeters;
 
-  Location( // FIXME: https://github.com/dart-lang/sdk/issues/40982
+  Location(
+    // FIXME: https://github.com/dart-lang/sdk/issues/40982
     this.latitude,
     this.longitude, {
     this.accuracy,
@@ -127,6 +130,7 @@ class Location with Parcelable {
   /// See: https://developer.android.com/reference/android/location/Location#distanceBetween(double,%20double,%20double,%20double,%20float[])
   static Future<double> distanceBetween(double startLatitude,
       double startLongitude, double endLatitude, double endLongitude) async {
+    assert(Platform.isAndroid);
     final request = <String, dynamic>{
       'startLatitude': startLatitude,
       'startLongitude': startLongitude,
