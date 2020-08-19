@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Required Dart 2.8+
+- Required the [typed_data](https://pub.dev/packages/typed_data) package
 
 ### Added
 
