@@ -1,8 +1,16 @@
 /* This is free and unencumbered software released into the public domain. */
 
-import 'dart:typed_data' show ByteData, Endian, Float32List, Float64List, Int16List, Int32List, Int64List, Uint8List;
+import 'dart:typed_data'
+    show
+        ByteData,
+        Endian,
+        Float32List,
+        Float64List,
+        Int16List,
+        Int32List,
+        Int64List,
+        Uint8List;
 
-import 'package:flutter/foundation.dart';
 import 'package:typed_data/typed_buffers.dart' show Uint8Buffer;
 
 import 'bundle.dart' show Bundle;
@@ -20,7 +28,7 @@ const int VAL_FLOAT = 7;
 const int VAL_DOUBLE = 8;
 const int VAL_BOOLEAN = 9;
 const int VAL_CHARSEQUENCE = 10;
-const int VAL_LIST  = 11;
+const int VAL_LIST = 11;
 const int VAL_SPARSEARRAY = 12;
 const int VAL_BYTEARRAY = 13;
 const int VAL_STRINGARRAY = 14;
@@ -47,7 +55,6 @@ class Parcel {
   /// See: https://developer.android.com/reference/android/os/Parcel#STRING_CREATOR
   //static const Parcelable.Creator<String> STRING_CREATOR = null; // TODO
 
-WriteBuffer buf;
   final Uint8Buffer _output = Uint8Buffer();
   final ByteData _buffer = ByteData(8);
   Uint8List _bufferAsList;
@@ -59,64 +66,57 @@ WriteBuffer buf;
   void writeValue(final Object val) {
     if (val == null) {
       writeInt(VAL_NULL);
-    }
-    else if (val is String) {
+    } else if (val is String) {
       writeInt(VAL_STRING);
       writeString(val);
-    }
-    else if (val is Map<String, Object>) {
+    } else if (val is Map<String, Object>) {
       writeInt(VAL_MAP);
       writeMap(val);
-    }
-    else if (val is Bundle) { // must come before Parcelable
+    } else if (val is Bundle) {
+      // Must come before Parcelable
       writeInt(VAL_BUNDLE);
       writeBundle(val);
-    }
-    else if (val is Parcelable) { // classes that implement Parcelable must come before this
+    } else if (val is Parcelable) {
+      // Classes that implement Parcelable must come before this
       writeInt(VAL_PARCELABLE);
       writeParcelable(val, 0);
-    }
-    else if (val is int) {
+    } else if (val is int) {
       writeInt(VAL_LONG);
       writeLong(val);
-    }
-    else if (val is double) {
+    } else if (val is double) {
       writeInt(VAL_DOUBLE);
       writeDouble(val);
-    }
-    else if (val is bool) {
+    } else if (val is bool) {
       writeInt(VAL_BOOLEAN);
       writeBoolean(val);
-    }
-    else if (val is Float64List) { // must come before List
+    } else if (val is Float64List) {
+      // Must come before List
       writeInt(VAL_DOUBLEARRAY);
       writeDoubleArray(val);
-    }
-    else if (val is Uint8List) { // must come before List
+    } else if (val is Uint8List) {
+      // Must come before List
       writeInt(VAL_BYTEARRAY);
       writeByteArray(val);
-    }
-    else if (val is Int32List) { // must come before List
+    } else if (val is Int32List) {
+      // Must come before List
       writeInt(VAL_INTARRAY);
       writeIntArray(val);
-    }
-    else if (val is Int64List) { // must come before List
+    } else if (val is Int64List) {
+      // Must come before List
       writeInt(VAL_LONGARRAY);
       writeLongArray(val);
-    }
-    else if (val is List<bool>) { // must come before List
+    } else if (val is List<bool>) {
+      // Must come before List
       writeInt(VAL_BOOLEANARRAY);
       writeBooleanArray(val);
-    }
-    else if (val is List<String>) { // must come before List
+    } else if (val is List<String>) {
+      // Must come before List
       writeInt(VAL_STRINGARRAY);
       writeStringArray(val);
-    }
-    else if (val is List) {
+    } else if (val is List) {
       writeInt(VAL_LIST);
       writeList(val);
-    }
-    else {
+    } else {
       throw ArgumentError("Parcel: unable to marshal value $val");
     }
   }
@@ -140,7 +140,6 @@ WriteBuffer buf;
   }
 
   void writeInt(final int val) {
-    // TODO: alignment
     _buffer.setInt32(0, val, Endian.host);
     _write(_bufferAsList, 0, 4);
   }
@@ -155,7 +154,9 @@ WriteBuffer buf;
       return writeInt(-1);
     }
     writeInt(val.length);
-    _write(Int16List.fromList(val.codeUnits).buffer.asUint8List()); // TODO: optjmize this
+    _write(Int16List.fromList(val.codeUnits) // TODO: optimize this
+        .buffer
+        .asUint8List());
   }
 
   void writeBooleanArray(final List<bool> vals) {
@@ -195,7 +196,8 @@ WriteBuffer buf;
       return writeInt(-1);
     }
     writeInt(vals.length);
-    vals.forEach((val) => writeInt(val)); // can't use buffer.putInt16List(), Android uses writeInt()
+    // Can't use buffer.putInt16List() because Android uses writeInt()
+    vals.forEach((val) => writeInt(val));
   }
 
   void writeIntArray(final Int32List vals) {
