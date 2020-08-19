@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Removed the dependency on the [meta](https://pub.dev/packages/meta) package
 - Removed the dependency on the [platform](https://pub.dev/packages/platform)
   package
 
@@ -81,7 +82,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- Constants annotated upstream with @hide or @deprecated
+- Constants annotated upstream with `@hide` or `@deprecated`
 
 ## [0.3.7] - 2019-03-12
 

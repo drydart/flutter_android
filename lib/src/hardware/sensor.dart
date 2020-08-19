@@ -1,6 +1,6 @@
 /* This is free and unencumbered software released into the public domain. */
 
-import 'package:meta/meta.dart' show required;
+import 'package:flutter/foundation.dart' show required;
 
 import 'sensor_event.dart' show SensorEvent;
 import 'sensor_manager.dart' show SensorManager;

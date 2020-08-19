@@ -1,7 +1,7 @@
 /* This is free and unencumbered software released into the public domain. */
 
 import 'package:flutter/services.dart' show MethodChannel;
-import 'package:meta/meta.dart' show required;
+import 'package:flutter/foundation.dart' show required;
 
 import '../graphics/bitmap.dart' show Bitmap;
 import '../graphics/pointf.dart' show PointF;

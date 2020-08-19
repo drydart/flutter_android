@@ -2,7 +2,7 @@
 
 import 'dart:async' show Future;
 
-import 'package:meta/meta.dart' show experimental, required;
+import 'package:flutter/foundation.dart' show required;
 
 import 'cursor.dart' show Cursor;
 import 'exceptions.dart' show CursorIndexOutOfBoundsException;
@@ -21,7 +21,6 @@ class MatrixCursor extends Cursor {
   MatrixCursor.empty();
 
   /// Constructs a cursor from the provided column/row data.
-  @experimental
   MatrixCursor.from(
       {@required List<String> columns, @required List<List<dynamic>> rows})
       : assert(columns != null),
