@@ -11,7 +11,6 @@ documentation:
 dependencies:
   flutter:
     sdk: flutter
-  meta: ^1.1.6
   typed_data: ^1.2.0
 dev_dependencies:
   flutter_test:
