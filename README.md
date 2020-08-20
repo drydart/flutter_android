@@ -8,6 +8,10 @@
 This is a [Flutter](https://flutter.dev) plugin for using Android's
 numerous platform-specific APIs in Flutter apps.
 
+## Screenshot
+
+<img alt="Screenshot of Android settings" src="https://raw.githubusercontent.com/drydart/flutter_android/master/example/flutter_02.png" width="480"/>
+
 ## Prerequisites
 
 - [Dart](https://dart.dev) 2.8+ and [Flutter](https://flutter.dev) 1.17+
@@ -40,6 +44,8 @@ dependencies:
 | Heart-rate monitoring | `android_hardware.SensorManager.getDefaultSensor()` |
 | Parcel serialization | `android_os.Parcel` |
 | Sensor event streams | `android_hardware.Sensor#subscribe()` |
+
+TODO: dirs
 
 ## Examples
 
